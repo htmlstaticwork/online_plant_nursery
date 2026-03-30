@@ -49,41 +49,6 @@ h1, h2, h3, h4, h5, h6, .font-playfair, .font-display {
     font-family: 'Playfair Display', serif;
 }
 
-/* Standardized Brand Identity */
-.brand-identity {
-    font-family: 'Playfair Display', serif;
-    font-weight: 700;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: var(--primary) !important;
-    transition: color 0.3s ease, transform 0.3s ease;
-    text-decoration: none;
-}
-
-.brand-identity i {
-    color: var(--primary) !important;
-    transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.brand-identity:hover i {
-    transform: rotate(12deg);
-}
-
-.header-logo {
-    font-size: 1.5rem !important; /* 24px - Consistent text-2xl */
-}
-
-.footer-logo {
-    font-size: 1.875rem !important; /* 30px - Consistent text-3xl */
-}
-
-@media (max-width: 768px) {
-    .header-logo {
-        font-size: 1.25rem !important; /* text-xl on mobile */
-    }
-}
-
 /* --- ANIMATION SYSTEM --- */
 @keyframes leafFloat {
     0%, 100% { transform: translateY(0) rotate(0deg); }
