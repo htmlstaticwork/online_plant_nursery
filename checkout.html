@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Checkout | Finalizing Your Collection | Verdant Vault</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Theme Script (Inline to prevent flicker) -->
+    <script>
+        (function() {
+            const theme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', theme);
+            if (theme === 'dark') document.documentElement.classList.add('dark');
+        })();
+    </script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1F3D2B',
+                        secondary: '#F4FAF6',
+                        accentGreen: '#3FA36C',
+                        accentGold: '#D4A853'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-secondary text-primary transition-colors duration-300 grain-effect overflow-x-hidden">
+
+    <!-- Mini-Nav for Checkout -->
+    <nav class="fixed top-0 left-0 w-full z-50 p-8 flex justify-center items-center glass">
+        <a href="index.html" class="text-3xl font-display font-bold flex items-center gap-2 group">
+            <i class="fas fa-leaf text-accentGreen transform group-hover:rotate-12 transition-transform"></i>
+            <span>Verdant Vault</span>
+        </a>
+    </nav>
+
+    <main class="pt-40 pb-24 px-6 lg:px-24">
+        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-20">
+            <!-- Checkout Progress -->
+            <div class="flex-1 space-y-16">
+                <!-- Step Header -->
+                <div class="flex justify-between items-center px-4">
+                    <div class="flex gap-4 items-center group">
+                        <div class="w-10 h-10 bg-accentGreen text-white rounded-full flex items-center justify-center font-bold">1</div>
+                        <h4 class="font-bold uppercase tracking-widest text-sm italic group-hover:text-accentGreen">Shipping Log</h4>
+                    </div>
+                    <div class="flex gap-4 items-center group opacity-20">
+                        <div class="w-10 h-10 border border-primary/20 rounded-full flex items-center justify-center font-bold">2</div>
+                        <h4 class="font-bold uppercase tracking-widest text-sm italic group-hover:text-accentGreen">Collector Fund</h4>
+                    </div>
+                </div>
+
+                <div class="bg-white dark:bg-darkCard p-12 rounded-[3.5rem] border border-primary/5 shadow-inner">
+                    <h2 class="text-3xl font-display font-bold italic mb-10 border-b border-primary/5 pb-8">Destination Specimen.</h2>
+                    
+                    <form class="grid md:grid-cols-2 gap-8">
+                        <div class="md:col-span-2 relative group italic text-sm">
+                           <i class="fas fa-globe absolute right-2 text-accentGreen opacity-20"></i>
+                           International Priority Shipping (FedEx / DHL Expert)
+                        </div>
+
+                        <div class="space-y-2">
+                            <label class="text-[10px] font-bold uppercase tracking-widest opacity-40 ml-4">Given Names</label>
+                            <input type="text" placeholder="Arjun" class="w-full py-4 px-6 bg-secondary/30 border border-primary/5 rounded-2xl outline-none focus:border-accentGreen transition-all">
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-[10px] font-bold uppercase tracking-widest opacity-40 ml-4">Family Name</label>
+                            <input type="text" placeholder="Iyer" class="w-full py-4 px-6 bg-secondary/30 border border-primary/5 rounded-2xl outline-none focus:border-accentGreen transition-all">
+                        </div>
+                        
+                        <div class="md:col-span-2 space-y-2">
+                            <label class="text-[10px] font-bold uppercase tracking-widest opacity-40 ml-4">Address for Botanical Delivery</label>
+                            <input type="text" placeholder="Suite / House Number, Street Name" class="w-full py-4 px-6 bg-secondary/30 border border-primary/5 rounded-2xl outline-none focus:border-accentGreen transition-all">
+                        </div>
+
+                        <div class="space-y-2">
+                            <label class="text-[10px] font-bold uppercase tracking-widest opacity-40 ml-4">City / Zone</label>
+                            <input type="text" placeholder="Mumbai" class="w-full py-4 px-6 bg-secondary/30 border border-primary/5 rounded-2xl outline-none focus:border-accentGreen transition-all">
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-[10px] font-bold uppercase tracking-widest opacity-40 ml-4">PIN / Post Code</label>
+                            <input type="text" placeholder="400001" class="w-full py-4 px-6 bg-secondary/30 border border-primary/5 rounded-2xl outline-none focus:border-accentGreen transition-all">
+                        </div>
+
+                        <div class="md:col-span-2 space-y-2">
+                            <label class="text-[10px] font-bold uppercase tracking-widest opacity-40 ml-4">Contact for Courier</label>
+                            <input type="tel" placeholder="+91 99999 00000" class="w-full py-4 px-6 bg-secondary/30 border border-primary/5 rounded-2xl outline-none focus:border-accentGreen transition-all">
+                        </div>
+
+                        <div class="md:col-span-2 pt-6">
+                            <label class="flex items-start gap-4 cursor-pointer p-6 bg-accentGreen/5 rounded-3xl border border-accentGreen/20">
+                                <input type="checkbox" class="mt-1 accent-accentGreen h-5 w-5" checked>
+                                <div>
+                                    <h4 class="font-bold text-sm">Save as Main Botanical Address</h4>
+                                    <p class="text-[10px] opacity-40 italic">We provide faster checkout for recurring seasonal orders.</p>
+                                </div>
+                            </label>
+                        </div>
+                        
+                        <div class="md:col-span-2 flex justify-between items-center pt-8">
+                           <a href="cart.html" class="text-xs font-bold opacity-30 hover:opacity-100 transition-opacity">Return to Bag</a>
+                           <button class="bg-[#3FA36C] text-white px-12 py-5 rounded-full font-bold uppercase tracking-widest text-sm shadow-xl shadow-accentGreen/10 hover:translate-y-px transition-all">Continue Fund Secure</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Review Summary Sidebar -->
+            <aside class="w-full lg:w-[450px]">
+                <div class="bg-primary text-secondary p-12 rounded-[4rem] shadow-2xl space-y-10 animate-plantGrow">
+                    <h2 class="text-3xl font-display font-bold italic mb-6">Review Specimens</h2>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-6 group">
+                            <div class="relative w-20 h-20 overflow-hidden rounded-2xl">
+                                <img src="https://images.unsplash.com/photo-1614594975525-e45190c55d0b?w=200&q=80" alt="" class="w-full h-full object-cover">
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-xs uppercase tracking-tighter line-clamp-1 mb-1">Monstera Albo #VV-2026-08</h4>
+                                <p class="text-accentGold text-[10px] font-bold">Collector Import</p>
+                            </div>
+                            <p class="text-sm font-bold font-display italic">$450</p>
+                        </div>
+
+                        <div class="flex items-center gap-6 group opacity-70 scale-95">
+                            <div class="relative w-20 h-20 overflow-hidden rounded-2xl">
+                                <img src="https://images.unsplash.com/photo-1604762524889-3e2fcc145683?w=200&q=80" alt="" class="w-full h-full object-cover">
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-xs uppercase tracking-tighter line-clamp-1 mb-1">Pink Princess #55</h4>
+                                <p class="text-blue-400 text-[10px] font-bold">Standard Specimen</p>
+                            </div>
+                            <p class="text-sm font-bold font-display italic">$120</p>
+                        </div>
+                    </div>
+
+                    <div class="h-px bg-white/5 my-10"></div>
+
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center text-xs opacity-60 italic px-2">
+                            <span>Collector Subtotal</span>
+                            <span class="font-bold">$570.00</span>
+                        </div>
+                        <div class="flex justify-between items-center text-xs opacity-60 italic px-2">
+                            <span>Isothermal Shipping (FedEx)</span>
+                            <span class="font-bold text-accentGold">$32.00</span>
+                        </div>
+                        <div class="flex justify-between items-center text-xs opacity-60 italic px-2">
+                            <span>Security Pack</span>
+                            <span class="font-bold text-accentGreen">$12.00</span>
+                        </div>
+                        <div class="flex justify-between items-center text-xs opacity-60 italic px-2">
+                            <span>Botanical Guarantee</span>
+                            <span class="font-bold text-accentGreen">$25.00</span>
+                        </div>
+                    </div>
+
+                    <div class="pt-8 border-t border-white/10 flex flex-col items-center">
+                        <p class="text-xs opacity-40 uppercase font-bold mb-2">Total Amount Secure</p>
+                        <p class="text-5xl font-display font-bold italic mb-8">$639.00</p>
+                        <div class="flex gap-4 opacity-30 pt-6">
+                            <i class="fab fa-cc-visa text-2xl"></i>
+                            <i class="fab fa-cc-mastercard text-2xl"></i>
+                            <i class="fab fa-cc-amex text-2xl"></i>
+                            <i class="fab fa-apple-pay text-2xl"></i>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="py-12 text-center opacity-30 text-[10px] font-bold uppercase tracking-[0.5em]">
+        &copy; 2026 Verdant Vault. Secure Protocol Activated.
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

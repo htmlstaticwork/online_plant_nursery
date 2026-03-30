@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+:root, [data-theme='light'] {
+    --bg-main: #F4FAF6;
+    --text-main: #1F3D2B;
+    --card-bg: #FFFFFF;
+    --border-color: rgba(31, 61, 43, 0.1);
+    --accent-green: #3FA36C;
+    --accent-gold: #D4A853;
+    --primary: #1F3D2B;
+    --secondary: #F4FAF6;
+    --overlay-bg: rgba(255, 255, 255, 0.6);
+}
+
+[data-theme='dark'] {
+    --bg-main: #0F1F17;
+    --text-main: #E8F5EC;
+    --card-bg: #1B3328;
+    --border-color: #2D4A3C;
+    --accent-green: #3FA36C;
+    --accent-gold: #D4A853;
+    --primary: #E8F5EC;
+    --secondary: #0F1F17;
+    --overlay-bg: rgba(0, 0, 0, 0.6);
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+}
+
+.bg-theme-main { background-color: var(--bg-main); }
+.bg-theme-card { background-color: var(--card-bg); }
+.text-theme-main { color: var(--text-main); }
+.border-theme { border-color: var(--border-color); }
+
+[dir="rtl"] {
+    direction: rtl;
+}
+
+body, input, button, select, textarea, .font-dm-sans {
+    font-family: 'DM Sans', sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3, h4, h5, h6, .font-playfair, .font-display {
+    font-family: 'Playfair Display', serif;
+}
+
+/* Standardized Brand Identity */
+.brand-identity {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--primary) !important;
+    transition: color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+}
+
+.brand-identity i {
+    color: var(--primary) !important;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.brand-identity:hover i {
+    transform: rotate(12deg);
+}
+
+.header-logo {
+    font-size: 1.5rem !important; /* 24px - Consistent text-2xl */
+}
+
+.footer-logo {
+    font-size: 1.875rem !important; /* 30px - Consistent text-3xl */
+}
+
+@media (max-width: 768px) {
+    .header-logo {
+        font-size: 1.25rem !important; /* text-xl on mobile */
+    }
+}
+
+/* --- ANIMATION SYSTEM --- */
+@keyframes leafFloat {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-15px) rotate(2deg); }
+}
+
+@keyframes plantGrow {
+    from { transform: scale(0.95); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes sunlightGlow {
+    0%, 100% { box-shadow: 0 0 0 rgba(63, 163, 108, 0); }
+    50% { box-shadow: 0 0 40px rgba(212, 168, 83, 0.3); }
+}
+
+@keyframes mistFloat {
+    0% { opacity: 0; transform: translateY(0) translateX(0); }
+    25% { opacity: 0.4; transform: translateY(-20px) translateX(10px); }
+    50% { opacity: 0.6; transform: translateY(-50px) translateX(-10px); }
+    75% { opacity: 0.3; transform: translateY(-80px) translateX(5px); }
+    100% { opacity: 0; transform: translateY(-110px) translateX(0); }
+}
+
+@keyframes grain {
+    0%, 100% { transform: translate(0, 0); }
+    10% { transform: translate(-5%, -10%); }
+    20% { transform: translate(-15%, 5%); }
+    30% { transform: translate(7%, -25%); }
+    40% { transform: translate(-5%, 25%); }
+    50% { transform: translate(-15%, 10%); }
+    60% { transform: translate(15%, 0%); }
+    70% { transform: translate(0%, 15%); }
+    80% { transform: translate(3%, 35%); }
+    90% { transform: translate(-10%, 10%); }
+}
+
+.animate-leafFloat { animation: leafFloat 6s ease-in-out infinite; }
+.animate-plantGrow { animation: plantGrow 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+.animate-sunlightGlow { animation: sunlightGlow 4s ease-in-out infinite; }
+.animate-mist { animation: mistFloat 8s ease-in-out infinite; }
+
+.grain-effect::before {
+    content: "";
+    position: fixed;
+    top: -100%;
+    left: -100%;
+    width: 300%;
+    height: 300%;
+    background-image: url("https://www.transparenttextures.com/patterns/pollen.png");
+    opacity: 0.03;
+    pointer-events: none;
+    z-index: 50;
+    animation: grain 8s steps(10) infinite;
+}
+
+/* Glassmorphism Classes */
+.glass {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark .glass {
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: var(--secondary);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--accent-green);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary);
+}
+
+/* Marquee */
+.marquee-content {
+    display: flex;
+    white-space: nowrap;
+    animation: marquee 30s linear infinite;
+}
+
+@keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+/* Buttons */
+/* Forms & Inputs */
+input, textarea, select {
+    background-color: var(--card-bg);
+    color: var(--text-main);
+    border: 1px solid var(--border-color);
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+input::placeholder {
+    color: var(--text-main);
+    opacity: 0.4;
+}
+
+input:focus {
+    border-color: var(--accent-green);
+    box-shadow: 0 0 0 2px rgba(63, 163, 108, 0.2);
+}
+
+/* Icon visibility */
+.icon-theme {
+    color: var(--text-main);
+}
+
+.dark .icon-invert {
+    filter: invert(1) brightness(2);
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: #3FA36C;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 9999px;
+    transition: all 0.3s ease-in-out;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #1F3D2B;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+    transform: translateY(-0.25rem);
+}
+
+.btn-secondary {
+    border: 2px solid var(--text-main);
+    color: var(--text-main);
+    padding: 1rem 2rem;
+    border-radius: 9999px;
+    transition: all 0.3s ease-in-out;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.btn-secondary:hover {
+    background-color: var(--text-main);
+    color: var(--bg-main);
+}
+
+/* Card Effects */
+.plant-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+    transition: all 0.5s ease-in-out;
+    background: var(--card-bg);
+}
+
+.plant-card:hover {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    transform: translateY(-0.5rem);
+}
+
+.plant-card img {
+    transition: transform 0.7s ease-in-out;
+}
+
+.plant-card:hover img {
+    transform: scale(1.1);
+}
+
+/* Dashboard Sidebar */
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    border-radius: 0.75rem;
+    transition: all 0.2s ease-in-out;
+    color: var(--text-main);
+}
+
+.sidebar-link:hover {
+    background-color: rgba(63, 163, 108, 0.125);
+}
+
+.sidebar-link.active {
+    background-color: #3FA36C;
+    color: white;
+}
+
+/* Footer Theming */
+.footer-themed {
+    background-color: #1F3D2B; 
+    color: #F4FAF6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+[data-theme='light'] .footer-themed {
+    background-color: #ffffff;
+    color: #1F3D2B;
+    border-top: 1px solid rgba(31, 61, 43, 0.05);
+}
+
+[data-theme='dark'] .footer-themed {
+    background-color: #1B3328;
+    color: #E8F5EC;
+}
+
+/* --- NAVIGATION ACTIVE STATES --- */
+.nav-link-active {
+    color: var(--accent-green) !important;
+    border-bottom: 2px solid var(--accent-green);
+    font-weight: 700;
+}
+
+.mobile-nav-link-active {
+    color: var(--accent-green) !important;
+    background-color: rgba(63, 163, 108, 0.1);
+    border-inline-start: 4px solid var(--accent-green);
+    padding-inline-start: 1rem;
+}
+
+.sidebar-link.active {
+    background-color: rgba(63, 163, 108, 0.1) !important;
+    color: var(--accent-green) !important;
+    border-inline-start: 4px solid var(--accent-green);
+}

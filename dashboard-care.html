@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Care Hub | Collector Portal | Verdant Vault</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: 'var(--text-main)',
+                        secondary: 'var(--bg-main)',
+                        card: 'var(--card-bg)',
+                        border: 'var(--border-color)',
+                        accentGreen: '#3FA36C',
+                        accentGold: '#D4A853'
+                    },
+                    fontFamily: {
+                        'dm-sans': ['DM Sans', 'sans-serif'],
+                        'playfair': ['Playfair Display', 'serif'],
+                        'display': ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-secondary text-primary transition-colors duration-300 grain-effect overflow-x-hidden">
+
+
+
+    <div class="flex min-h-screen relative">
+        <!-- Floating Utility Controls -->
+        <div class="fixed top-8 right-8 z-[60] flex items-center gap-4">
+            <button id="theme-toggle" class="p-4 bg-white dark:bg-darkSurface rounded-2xl border border-primary/5 shadow-xl hover:scale-110 active:scale-90 transition-all text-primary dark:text-secondary" title="Toggle Theme">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button id="rtl-toggle" class="p-4 bg-white dark:bg-darkSurface rounded-2xl border border-primary/5 shadow-xl hover:scale-110 active:scale-90 transition-all text-primary dark:text-secondary" title="Toggle RTL">
+                <i class="fas fa-language"></i>
+            </button>
+        </div>
+        <!-- Sidebar Navigation -->
+        <aside class="w-20 lg:w-72 fixed h-full bg-card border-r border-border p-4 lg:p-8 flex flex-col justify-between transition-all duration-300">
+            <div class="space-y-4">
+                <div class="mb-10 px-4">
+                    <a href="index.html" class="text-xl font-display font-bold flex items-center gap-2">
+                        <i class="fas fa-leaf text-accentGreen"></i>
+                        <span class="hidden lg:block">Verdant Vault</span>
+                    </a>
+                </div>
+                <a href="dashboard.html" class="sidebar-link group" title="Overview">
+                    <i class="fas fa-th-large group-hover:text-accentGreen"></i>
+                    <span class="hidden lg:block">Overview</span>
+                </a>
+                <a href="dashboard-orders.html" class="sidebar-link group" title="Orders">
+                    <i class="fas fa-box-open group-hover:text-accentGreen"></i>
+                    <span class="hidden lg:block">My Orders</span>
+                </a>
+                <a href="dashboard-wishlist.html" class="sidebar-link group" title="Wishlist">
+                    <i class="fas fa-heart group-hover:text-red-400"></i>
+                    <span class="hidden lg:block">Vault Wishlist</span>
+                </a>
+                <a href="dashboard-care.html" class="sidebar-link active" title="Care Guides">
+                    <i class="fas fa-seedling"></i>
+                    <span class="hidden lg:block">Care Guides</span>
+                </a>
+                <div class="h-px bg-primary/5 my-6"></div>
+                <a href="dashboard-profile.html" class="sidebar-link group" title="Profile">
+                    <i class="fas fa-user-circle group-hover:text-accentGreen"></i>
+                    <span class="hidden lg:block">Collector Profile</span>
+                </a>
+                <a href="dashboard-settings.html" class="sidebar-link group" title="Settings">
+                    <i class="fas fa-cog group-hover:rotate-45 transition-transform"></i>
+                    <span class="hidden lg:block">Settings</span>
+                </a>
+                <a href="index.html" class="sidebar-link group text-red-500 hover:bg-red-50 dark:hover:bg-red-900/20" title="Logout">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span class="hidden lg:block">Logout</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Dashboard Content -->
+        <main class="flex-1 ml-20 lg:ml-72 p-6 lg:p-12">
+            
+            <div class="mb-12 animate-plantGrow">
+                <h1 class="text-4xl font-bold font-playfair italic mb-2 text-primary">Care Repository.</h1>
+                <p class="text-primary/50">Expert protocols for your curated collection.</p>
+            </div>
+
+            <!-- Care Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Care Card 1 -->
+                <div class="bg-card rounded-[3rem] border border-border p-8 hover:shadow-xl transition-all group overflow-hidden relative">
+                    <h3 class="text-2xl font-bold font-playfair italic mb-8 flex justify-between items-center">
+                       Weekly Schedule
+                       <a href="#" class="text-accentGreen text-xs font-bold uppercase tracking-widest border-b border-accentGreen/20">Expand View</a>
+                    </h3>
+                    
+                    <div class="space-y-6">
+                       <!-- Day 1: Tuesday (Today) -->
+                       <div class="flex gap-6 items-start">
+                          <div class="text-center w-14">
+                             <p class="text-xs font-bold opacity-30 uppercase">Tue</p>
+                             <p class="text-2xl font-playfair font-bold text-accentGreen">30</p>
+                          </div>
+                          <div class="flex-1 space-y-4">
+                             <div class="p-6 bg-accentGreen/5 rounded-3xl border border-accentGreen/10 flex justify-between items-center group cursor-pointer hover:bg-accentGreen/20 transition-all">
+                                <div>
+                                   <h4 class="font-bold text-sm">Mist Albo Variegata</h4>
+                                   <p class="text-[10px] opacity-50 italic">Kerala Greenhouse Protocol Stage 2</p>
+                                </div>
+                                <i class="fas fa-check-circle text-accentGreen opacity-20 group-hover:opacity-100"></i>
+                             </div>
+                          </div>
+                       </div>
+
+                       <!-- Day 2: Wednesday -->
+                       <div class="flex gap-6 items-start opacity-50">
+                          <div class="text-center w-14">
+                             <p class="text-xs font-bold opacity-30 uppercase">Wed</p>
+                             <p class="text-2xl font-playfair font-bold">31</p>
+                          </div>
+                          <div class="flex-1 space-y-4">
+                             <div class="p-6 bg-secondary dark:bg-darkSurface/50 rounded-3xl border border-primary/5 flex justify-between items-center">
+                                <div>
+                                   <h4 class="font-bold text-sm">Fertilize Pink Princess</h4>
+                                   <p class="text-[10px] opacity-50 italic">Low-Concentration NPK Mix</p>
+                                </div>
+                                <i class="fas fa-lock text-xs"></i>
+                             </div>
+                          </div>
+                       </div>
+                    </div>
+                </div>
+
+                <!-- Guidance / Curator -->
+                <div class="space-y-8">
+                   <div class="p-10 bg-primary text-secondary rounded-[3rem] shadow-2xl relative overflow-hidden group">
+                      <i class="fas fa-leaf absolute -bottom-10 -right-10 text-[15rem] text-white/5 -rotate-12"></i>
+                      <h3 class="text-2xl font-playfair font-bold italic mb-6">Ask the Curator.</h3>
+                      <p class="text-sm opacity-60 leading-relaxed italic mb-8">Direct priority access to Arjun Iyer for specific growth concerns or specimen health reviews.</p>
+                      <button class="bg-accentGreen text-white px-8 py-3 rounded-full text-xs font-bold uppercase tracking-widest hover:scale-105 active:scale-95 transition-all shadow-xl shadow-accentGreen/20">Initialize Consultation</button>
+                   </div>
+
+                   <div class="p-10 bg-white dark:bg-darkCard rounded-[3rem] border border-primary/5 shadow-sm space-y-8">
+                      <h3 class="text-2xl font-bold font-playfair italic">Kerala Micro-Climate</h3>
+                      <div class="flex justify-between items-center">
+                         <div class="text-center">
+                            <p class="text-xs uppercase tracking-widest opacity-40 font-bold mb-2">Humidity</p>
+                            <p class="text-3xl font-display font-bold text-blue-400">82%</p>
+                            <p class="text-[10px] opacity-30 italic mt-1 font-bold">Recommended</p>
+                         </div>
+                         <div class="h-12 w-px bg-primary/10"></div>
+                         <div class="text-center">
+                            <p class="text-xs uppercase tracking-widest opacity-40 font-bold mb-2">Avg Temp</p>
+                            <p class="text-3xl font-display font-bold text-accentGold">24°C</p>
+                            <p class="text-[10px] opacity-30 italic mt-1 font-bold">Stable Node</p>
+                         </div>
+                      </div>
+                      <div class="p-4 bg-primary/2 rounded-2xl flex items-start gap-4">
+                         <i class="fas fa-info-circle text-accentGreen text-xs mt-1"></i>
+                         <p class="text-xs opacity-50 italic">Mimic these parameters as closely as possible for maximum growth speed of your Variegated Specimens.</p>
+                      </div>
+                   </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

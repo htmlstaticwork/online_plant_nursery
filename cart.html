@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Collection Bag | Verdant Vault</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Theme Script (Inline to prevent flicker) -->
+    <script>
+        (function() {
+            const theme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', theme);
+            if (theme === 'dark') document.documentElement.classList.add('dark');
+        })();
+    </script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1F3D2B',
+                        secondary: '#F4FAF6',
+                        accentGreen: '#3FA36C',
+                        accentGold: '#D4A853'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-secondary text-primary transition-colors duration-300 grain-effect overflow-x-hidden">
+
+    <!-- Navigation same as index -->
+    <nav class="fixed top-0 left-0 w-full z-50 transition-all duration-300 py-6 px-6 lg:px-12 flex items-center justify-between glass">
+        <a href="index.html" class="text-2xl font-playfair font-bold flex items-center gap-2 group">
+            <i class="fas fa-leaf text-accentGreen transform group-hover:rotate-12 transition-transform"></i>
+            <span>Verdant Vault</span>
+        </a>
+        
+        <div class="hidden md:flex items-center gap-10 font-medium">
+            <a href="index.html" class="hover:text-accentGreen">Home</a>
+            <a href="shop.html" class="hover:text-accentGreen">Shop Rare</a>
+            <a href="subscriptions.html" class="hover:text-accentGreen">Subscribers</a>
+            <a href="blog.html" class="hover:text-accentGreen">Care Guides</a>
+            <a href="dashboard.html" class="hover:text-accentGreen">Dashboard</a>
+        </div>
+        
+        <div class="flex items-center gap-4">
+            <button id="theme-toggle" class="p-2 rounded-full hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
+                <i class="fas fa-moon"></i>
+            </button>
+            <a href="login.html" class="transition-all hover:scale-110">
+                <i class="fas fa-user-circle text-xl"></i>
+            </a>
+        </div>
+    </nav>
+
+    <main class="pt-40 pb-24 px-6 lg:px-24">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col lg:flex-row gap-20">
+                <!-- Cart Items List -->
+                <div class="flex-1 space-y-12">
+                    <div class="border-b border-primary/5 pb-10 flex justify-between items-end">
+                        <h1 class="text-5xl md:text-7xl font-playfair italic font-bold">The Bag.</h1>
+                        <p class="text-sm opacity-50 uppercase tracking-widest font-bold">2 specimens selected</p>
+                    </div>
+
+                    <div class="space-y-8">
+                        <!-- Cart Item 1 -->
+                        <div class="flex flex-col md:flex-row items-center gap-10 bg-white dark:bg-darkCard p-8 rounded-[3rem] border border-primary/5 group relative overflow-hidden group">
+                            <div class="absolute -right-4 -top-4 text-8xl text-primary/2 opacity-0 group-hover:opacity-100 transition-opacity">#01</div>
+                            <img src="https://images.unsplash.com/photo-1614594975525-e45190c55d0b?w=400&q=80" alt="" class="w-48 h-48 rounded-[2rem] object-cover shadow-2xl group-hover:scale-105 transition-transform duration-700">
+                            <div class="flex-1 space-y-4">
+                                <span class="bg-accentGold/10 text-accentGold px-3 py-1 rounded text-[10px] font-bold uppercase tracking-tighter">Specimen Verified</span>
+                                <h3 class="text-3xl font-playfair font-bold italic">Monstera Albo Variegata</h3>
+                                <p class="text-xs opacity-50 font-bold uppercase tracking-widest"> kerala Greenhouse #VV-2026-08</p>
+                                <div class="flex items-center gap-6 pt-4">
+                                    <div class="flex items-center border border-primary/10 rounded-full px-6 py-2 bg-secondary/50">
+                                        <button class="hover:text-accentGreen"><i class="fas fa-minus text-xs"></i></button>
+                                        <input type="text" value="1" class="w-12 text-center bg-transparent font-bold outline-none text-sm">
+                                        <button class="hover:text-accentGreen"><i class="fas fa-plus text-xs"></i></button>
+                                    </div>
+                                    <button class="text-xs font-bold text-red-400 opacity-60 hover:opacity-100 transition-opacity flex items-center gap-2"><i class="fas fa-trash-alt"></i> REMOVE</button>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-2xl font-bold font-playfair italic transition-colors group-hover:text-accentGreen">$450.00</p>
+                            </div>
+                        </div>
+
+                        <!-- Cart Item 2 -->
+                        <div class="flex flex-col md:flex-row items-center gap-10 bg-white dark:bg-darkCard p-8 rounded-[3rem] border border-primary/5 group relative overflow-hidden group">
+                            <img src="https://images.unsplash.com/photo-1604762524889-3e2fcc145683?w=400&q=80" alt="" class="w-48 h-48 rounded-[2rem] object-cover shadow-2xl group-hover:scale-105 transition-transform duration-700">
+                            <div class="flex-1 space-y-4">
+                                <h3 class="text-3xl font-playfair font-bold italic">Pink Princess Philodendron</h3>
+                                <p class="text-xs opacity-50 font-bold uppercase tracking-widest">Established Root System</p>
+                                <div class="flex items-center gap-6 pt-4">
+                                    <div class="flex items-center border border-primary/10 rounded-full px-6 py-2 bg-secondary/50">
+                                        <button class="hover:text-accentGreen"><i class="fas fa-minus text-xs"></i></button>
+                                        <input type="text" value="1" class="w-12 text-center bg-transparent font-bold outline-none text-sm">
+                                        <button class="hover:text-accentGreen"><i class="fas fa-plus text-xs"></i></button>
+                                    </div>
+                                    <button class="text-xs font-bold text-red-400 opacity-60 hover:opacity-100 transition-opacity flex items-center gap-2"><i class="fas fa-trash-alt"></i> REMOVE</button>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-2xl font-bold font-playfair italic transition-colors group-hover:text-accentGreen">$120.00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Order Summary Sidebar -->
+                <aside class="w-full lg:w-[450px]">
+                    <div class="bg-primary text-secondary p-12 rounded-[4rem] shadow-2xl space-y-10 sticky top-40 animate-plantGrow">
+                        <h2 class="text-3xl font-playfair font-bold italic border-b border-white/10 pb-8">Collection Summary</h2>
+                        
+                        <div class="space-y-6">
+                            <div class="flex justify-between items-center text-sm opacity-60">
+                                <span class="italic">Vault Subtotal</span>
+                                <span class="font-bold">$570.00</span>
+                            </div>
+                            <div class="flex justify-between items-center text-sm opacity-60">
+                                <span class="italic">Isothermal Shipping (Global)</span>
+                                <span class="font-bold text-accentGold">Calculated at Checkout</span>
+                            </div>
+                            <div class="flex justify-between items-center text-sm opacity-60">
+                                <span class="italic">72h Humidity Pack (Recommended)</span>
+                                <span class="font-bold text-accentGreen">$12.00</span>
+                            </div>
+                        </div>
+
+                        <!-- Upsell Add-on -->
+                        <div class="p-6 bg-white/5 rounded-3xl border border-white/5 space-y-4">
+                            <div class="flex items-center gap-4">
+                                <div class="w-10 h-10 bg-accentGreen text-white rounded-full flex items-center justify-center"><i class="fas fa-shield-alt"></i></div>
+                                <div>
+                                    <p class="text-[10px] font-bold uppercase tracking-widest text-accentGreen">Collector Promise</p>
+                                    <p class="text-xs font-medium italic">Add 30-Day Growth Guarantee</p>
+                                </div>
+                                <input type="checkbox" class="ml-auto accent-accentGreen h-5 w-5" checked>
+                            </div>
+                            <p class="text-[10px] opacity-40 leading-relaxed">Full replacement if specimen fails due to shipping stress or acclimation within 30 days (+ $25.00)</p>
+                        </div>
+
+                        <div class="pt-8 border-t border-white/10 flex justify-between items-end">
+                            <div>
+                                <p class="text-xs opacity-40 uppercase font-bold mb-1">Total Premium</p>
+                                <p class="text-5xl font-playfair font-bold italic">$607.00</p>
+                            </div>
+                            <p class="text-[10px] text-accentGold uppercase font-bold tracking-widest">VAT Inclusive</p>
+                        </div>
+
+                        <a href="checkout.html" class="block w-full bg-accentGreen text-white py-6 rounded-full font-bold uppercase tracking-widest text-sm text-center shadow-xl hover:bg-white hover:text-primary transition-all active:scale-95">
+                            Proceed to Secure Vault <i class="fas fa-lock ml-2 text-[10px]"></i>
+                        </a>
+
+                        <div class="text-center">
+                            <button class="text-xs opacity-40 hover:opacity-100 transition-opacity border-b border-white/20 pb-1">Apply Collector Promo Code</button>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-primary text-secondary pt-24 pb-12 px-6 lg:px-24">
+        <!-- same as index footer -->
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

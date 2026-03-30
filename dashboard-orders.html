@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Orders | Collector Portal | Verdant Vault</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: 'var(--text-main)',
+                        secondary: 'var(--bg-main)',
+                        card: 'var(--card-bg)',
+                        border: 'var(--border-color)',
+                        accentGreen: '#3FA36C',
+                        accentGold: '#D4A853'
+                    },
+                    fontFamily: {
+                        'dm-sans': ['DM Sans', 'sans-serif'],
+                        'playfair': ['Playfair Display', 'serif'],
+                        'display': ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-secondary text-primary transition-colors duration-300 grain-effect overflow-x-hidden">
+
+
+
+    <div class="flex min-h-screen relative">
+        <!-- Floating Utility Controls -->
+        <div class="fixed top-8 right-8 z-[60] flex items-center gap-4">
+            <button id="theme-toggle" class="p-4 bg-white dark:bg-darkSurface rounded-2xl border border-primary/5 shadow-xl hover:scale-110 active:scale-90 transition-all text-primary dark:text-secondary" title="Toggle Theme">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button id="rtl-toggle" class="p-4 bg-white dark:bg-darkSurface rounded-2xl border border-primary/5 shadow-xl hover:scale-110 active:scale-90 transition-all text-primary dark:text-secondary" title="Toggle RTL">
+                <i class="fas fa-language"></i>
+            </button>
+        </div>
+        <!-- Sidebar Navigation -->
+        <aside class="w-20 lg:w-72 fixed h-full bg-card border-r border-border p-4 lg:p-8 flex flex-col justify-between transition-all duration-300">
+            <div class="space-y-4">
+                <div class="mb-10 px-4">
+                    <a href="index.html" class="text-xl font-display font-bold flex items-center gap-2">
+                        <i class="fas fa-leaf text-accentGreen"></i>
+                        <span class="hidden lg:block">Verdant Vault</span>
+                    </a>
+                </div>
+                <a href="dashboard.html" class="sidebar-link group" title="Overview">
+                    <i class="fas fa-th-large group-hover:text-accentGreen"></i>
+                    <span class="hidden lg:block">Overview</span>
+                </a>
+                <a href="dashboard-orders.html" class="sidebar-link active" title="Orders">
+                    <i class="fas fa-box-open"></i>
+                    <span class="hidden lg:block">My Orders</span>
+                </a>
+                <a href="dashboard-wishlist.html" class="sidebar-link group" title="Wishlist">
+                    <i class="fas fa-heart group-hover:text-red-400"></i>
+                    <span class="hidden lg:block">Vault Wishlist</span>
+                </a>
+                <a href="dashboard-care.html" class="sidebar-link group" title="Care Guides">
+                    <i class="fas fa-seedling group-hover:text-accentGreen"></i>
+                    <span class="hidden lg:block">Care Guides</span>
+                </a>
+                <div class="h-px bg-primary/5 my-6"></div>
+                <a href="dashboard-profile.html" class="sidebar-link group" title="Profile">
+                    <i class="fas fa-user-circle group-hover:text-accentGreen"></i>
+                    <span class="hidden lg:block">Collector Profile</span>
+                </a>
+                <a href="dashboard-settings.html" class="sidebar-link group" title="Settings">
+                    <i class="fas fa-cog group-hover:rotate-45 transition-transform"></i>
+                    <span class="hidden lg:block">Settings</span>
+                </a>
+                <a href="index.html" class="sidebar-link group text-red-500 hover:bg-red-50 dark:hover:bg-red-900/20" title="Logout">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span class="hidden lg:block">Logout</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Main Dashboard Content -->
+        <main class="flex-1 ml-20 lg:ml-72 p-6 lg:p-12">
+            
+            <div class="mb-12 animate-plantGrow">
+                <h1 class="text-4xl font-bold font-playfair italic mb-2 text-primary">My History.</h1>
+                <p class="text-primary/50">Tracking across 6 botanical specimens.</p>
+            </div>
+
+            <!-- Orders Table / List -->
+            <div class="space-y-8 text-primary">
+                <!-- Order Group March 2026 -->
+                <div class="bg-card rounded-[2.5rem] border border-border overflow-hidden">
+                    <div class="p-8 bg-primary/2 border-b border-border flex flex-col md:flex-row justify-between items-center gap-8">
+                        <div class="flex gap-10">
+                            <div>
+                                <p class="text-[10px] font-bold uppercase opacity-30 mb-1">Order ID</p>
+                                <p class="text-sm font-bold">#VV-98022-K8</p>
+                            </div>
+                            <div>
+                                <p class="text-[10px] font-bold uppercase opacity-30 mb-1">Placed On</p>
+                                <p class="text-sm font-bold">March 28, 2026</p>
+                            </div>
+                            <div>
+                                <p class="text-[10px] font-bold uppercase opacity-30 mb-1">Total Premium</p>
+                                <p class="text-sm font-bold text-accentGreen">$639.00</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                           <button class="bg-primary text-secondary px-6 py-2 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-accentGreen transition-all">Track Packet</button>
+                           <button class="px-6 py-2 border border-primary/10 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-secondary/10 transition-all">Invoice PDF</button>
+                        </div>
+                    </div>
+                    
+                    <div class="p-8 space-y-8">
+                        <div class="flex flex-col md:flex-row items-center gap-10">
+                            <img src="https://images.unsplash.com/photo-1614594975525-e45190c55d0b?w=200&q=80" alt="" class="w-24 h-24 rounded-2xl object-cover shadow-lg">
+                            <div class="flex-1">
+                                <h4 class="text-xl font-bold font-playfair italic">Monstera Albo Variegata #08</h4>
+                                <p class="text-sm opacity-50 italic">Hardened off (Stable Variegation) x 1</p>
+                            </div>
+                            <div class="px-4 py-1 bg-blue-50 text-blue-500 rounded-full text-[10px] font-bold uppercase tracking-widest border border-blue-100">In Transit</div>
+                        </div>
+
+                        <div class="flex flex-col md:flex-row items-center gap-10">
+                            <img src="https://images.unsplash.com/photo-1604762524889-3e2fcc145683?w=200&q=80" alt="" class="w-24 h-24 rounded-2xl object-cover shadow-lg">
+                            <div class="flex-1">
+                                <h4 class="text-xl font-bold font-playfair italic">Pink Princess Philodendron #55</h4>
+                                <p class="text-sm opacity-50 italic">Collector Specimen x 1</p>
+                            </div>
+                            <div class="px-4 py-1 bg-blue-50 text-blue-500 rounded-full text-[10px] font-bold uppercase tracking-widest border border-blue-100">In Transit</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Past Order June 2025 -->
+                <div class="bg-white dark:bg-darkCard rounded-[2.5rem] border border-primary/5 overflow-hidden opacity-60 hover:opacity-100 transition-opacity">
+                    <div class="p-8 bg-primary/2 dark:bg-white/2 border-b border-primary/5 flex flex-col md:flex-row justify-between items-center gap-8">
+                        <div class="flex gap-10">
+                            <div>
+                                <p class="text-[10px] font-bold uppercase opacity-30 mb-1">Order ID</p>
+                                <p class="text-sm font-bold">#VV-88200-Z1</p>
+                            </div>
+                            <div>
+                                <p class="text-[10px] font-bold uppercase opacity-30 mb-1">Placed On</p>
+                                <p class="text-sm font-bold">June 12, 2025</p>
+                            </div>
+                            <div>
+                                <p class="text-[10px] font-bold uppercase opacity-30 mb-1">Total</p>
+                                <p class="text-sm font-bold text-accentGreen">$145.00</p>
+                            </div>
+                        </div>
+                        <button class="px-6 py-2 border border-primary/10 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-secondary/10 transition-all">Order Details</button>
+                    </div>
+                    
+                    <div class="p-8 flex items-center gap-10">
+                       <img src="https://images.unsplash.com/photo-1596547609652-9cf5d8d76921?w=200&q=80" alt="" class="w-16 h-16 rounded-xl object-cover opacity-50">
+                       <div class="flex-1">
+                          <h4 class="font-bold text-lg">Anthurium Clarinervium</h4>
+                          <p class="text-xs opacity-50">Delivered Successfully via Priority</p>
+                       </div>
+                       <div class="px-4 py-1 bg-accentGreen/10 text-accentGreen rounded-full text-[10px] font-bold uppercase tracking-widest border border-accentGreen/20">Delivered</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

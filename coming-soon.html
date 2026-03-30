@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Growing New Drops | Verdant Vault</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .progress-bar { width: 0%; transition: width 4s ease-in-out; }
+    </style>
+</head>
+<body class="bg-primary text-secondary min-h-screen flex items-center justify-center p-6 text-center grain-effect overflow-hidden relative">
+    
+    <!-- Video or Lush Background -->
+    <div class="absolute inset-0 z-0">
+        <img src="https://images.unsplash.com/photo-1596547609652-9cf5d8d76921?w=1600&q=80" alt="Greenhouse" class="w-full h-full object-cover opacity-20 filter grayscale blur-sm">
+        <div class="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent"></div>
+    </div>
+
+    <div class="max-w-3xl space-y-12 animate-plantGrow relative z-10">
+        <div class="space-y-6">
+            <span class="inline-block px-4 py-1 rounded-full bg-accentGreen/20 text-accentGreen text-xs font-bold uppercase tracking-[0.4em] mb-4">Hardening Off the Vault</span>
+            <h1 class="text-6xl md:text-8xl font-display italic font-bold">New Rare Drops Growing Soon...</h1>
+            <p class="text-lg opacity-60 leading-relaxed italic max-w-xl mx-auto font-display">Specialized clones and deep-jungle imports arrive every 72 hours. Our gardeners are preparing the final labels.</p>
+        </div>
+
+        <div class="space-y-4">
+            <div class="flex justify-between text-xs font-bold uppercase tracking-widest opacity-50 px-2">
+                <span>Greenhouse Humidity: 85%</span>
+                <span>Hardening Phase: 92%</span>
+            </div>
+            <div class="h-1 bg-white/10 rounded-full overflow-hidden">
+                <div class="h-full bg-accentGreen progress-bar" id="loadBar" style="width: 92%;"></div>
+            </div>
+        </div>
+
+        <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
+            <input type="email" placeholder="Join the restock alert list..." class="px-8 py-5 rounded-full bg-white/5 border border-white/20 text-white placeholder:text-white/30 outline-none focus:bg-white/10 transition-all min-w-[350px]">
+            <button class="bg-[#3FA36C] text-white px-10 py-5 rounded-full font-bold uppercase tracking-widest shadow-2xl hover:scale-105 active:scale-95 transition-all">Keep Me Updated</button>
+        </div>
+        
+        <p class="text-[10px] uppercase tracking-[0.5em] opacity-40 font-bold">Kerala Greenhouse #08 | India</p>
+
+        <a href="index.html" class="inline-block text-accentGold border-b border-accentGold/20 pb-1 text-sm font-bold uppercase tracking-widest hover:text-white hover:border-white transition-all">Explore Current Vault</a>
+    </div>
+
+    <!-- Background Mist particles -->
+    <div class="hero-section absolute inset-0 pointer-events-none"></div>
+
+    <script src="js/main.js"></script>
+    <script>
+        window.onload = () => {
+            const bar = document.getElementById('loadBar');
+            bar.style.width = '92%'; // Ensuring it animates on load
+        };
+    </script>
+</body>
+</html>

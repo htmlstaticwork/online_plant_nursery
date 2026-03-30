@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pre-Order Rare specimens | Secure Your Specimen | Verdant Vault</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1F3D2B',
+                        secondary: '#F4FAF6',
+                        accentGreen: '#3FA36C',
+                        accentGold: '#D4A853',
+                        darkBg: '#0F1F17',
+                        darkSurface: '#162A21',
+                        darkCard: '#1B3328'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-secondary text-primary transition-colors duration-300 grain-effect overflow-x-hidden">
+
+    <!-- Navigation same as index -->
+    <nav class="fixed top-0 left-0 w-full z-50 transition-all duration-300 py-6 px-6 lg:px-12 flex items-center justify-between glass">
+        <a href="index.html" class="text-2xl font-display font-bold flex items-center gap-2 group">
+            <i class="fas fa-leaf text-accentGreen transform group-hover:rotate-12 transition-transform"></i>
+            <span>Verdant Vault</span>
+        </a>
+        
+        <div class="hidden md:flex items-center gap-10 font-medium">
+            <a href="index.html" class="hover:text-accentGreen">Home</a>
+            <a href="shop.html" class="hover:text-accentGreen">Shop Rare</a>
+            <a href="subscriptions.html" class="hover:text-accentGreen">Subscribers</a>
+            <a href="blog.html" class="hover:text-accentGreen">Care Guides</a>
+            <a href="dashboard.html" class="hover:text-accentGreen">Dashboard</a>
+        </div>
+        
+        <div class="flex items-center gap-4">
+            <button id="theme-toggle" class="p-2 rounded-full hover:bg-black/5">
+                <i class="fas fa-moon"></i>
+            </button>
+            <a href="login.html" class="bg-primary text-white dark:bg-accentGold dark:text-primary px-6 py-2 rounded-full text-sm font-bold">Reserve Now</a>
+        </div>
+    </nav>
+
+    <header class="pt-40 pb-24 px-6 lg:px-24">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">
+            <div class="max-w-2xl space-y-8 animate-plantGrow">
+                <span class="bg-accentGold/10 text-accentGold px-4 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest border border-accentGold/20">The Reserve Protocol</span>
+                <h1 class="text-6xl md:text-7xl font-bold font-display italic">Growing Your Legacy specimens.</h1>
+                <p class="text-lg opacity-60 leading-relaxed italic">
+                    Don't wait for the weekly drop. Secure your specimen early while they harden off in our climate-controlled nursery.
+                </p>
+                <div class="flex items-center gap-8">
+                    <div class="text-center">
+                        <p class="text-4xl font-display font-bold text-accentGreen">04</p>
+                        <p class="text-[10px] font-bold uppercase opacity-40">Species</p>
+                    </div>
+                    <div class="h-10 w-px bg-primary/20"></div>
+                    <div class="text-center">
+                        <p class="text-4xl font-display font-bold text-accentGreen">12</p>
+                        <p class="text-[10px] font-bold uppercase opacity-40">Ready Soon</p>
+                    </div>
+                    <div class="h-10 w-px bg-primary/20"></div>
+                    <div class="text-center">
+                        <p class="text-4xl font-display font-bold text-accentGreen">3k</p>
+                        <p class="text-[10px] font-bold uppercase opacity-40">Wait-listed</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="flex-1 w-full relative">
+                <div class="bg-primary/5 dark:bg-white/5 p-12 rounded-[4rem] border border-primary/5 backdrop-blur-2xl text-center">
+                    <h3 class="text-sm font-bold uppercase tracking-[0.3em] mb-12">Next Drop In Progress</h3>
+                    <div class="grid grid-cols-4 gap-4">
+                        <div><p class="text-3xl font-display font-bold">03</p><p class="text-[10px] opacity-50 font-bold">Days</p></div>
+                        <div><p class="text-3xl font-display font-bold">14</p><p class="text-[10px] opacity-50 font-bold">Hrs</p></div>
+                        <div><p class="text-3xl font-display font-bold">22</p><p class="text-[10px] opacity-50 font-bold">Min</p></div>
+                        <div><p class="text-3xl font-display font-bold">45</p><p class="text-[10px] opacity-50 font-bold">Sec</p></div>
+                    </div>
+                    <div class="h-2 bg-primary/10 rounded-full mt-12 relative overflow-hidden">
+                        <div class="h-full bg-accentGreen w-3/4 absolute left-0 animate-pulse"></div>
+                    </div>
+                    <p class="mt-6 text-xs font-bold opacity-40 italic">Growing at 75% relative humidity</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-6 py-24 mb-32">
+        <h2 class="text-3xl font-display font-bold mb-16 italic">Pre-Order Specimens</h2>
+        
+        <div class="grid md:grid-cols-2 gap-12">
+            <!-- Pre-order card 1 -->
+            <div class="flex flex-col md:flex-row bg-white dark:bg-darkCard rounded-[3rem] border border-primary/5 overflow-hidden group hover:shadow-2xl transition-all border-l-8 border-l-accentGreen">
+                <div class="md:w-1/2 relative overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1614594975525-e45190c55d0b?w=600&q=80" alt="" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000">
+                    <div class="absolute inset-0 bg-black/20 group-hover:bg-accentGreen/10 transition-colors"></div>
+                    <div class="absolute top-6 left-6">
+                        <span class="bg-white/80 backdrop-blur-md text-primary px-4 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest shadow-xl">Growing</span>
+                    </div>
+                </div>
+                <div class="md:w-1/2 p-10 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-3xl font-display font-bold mb-4">Master Variegated Albo #01</h3>
+                        <p class="text-sm opacity-60 leading-relaxed italic mb-8">Currently in the hardening stage. Expected shipment: April 15th, 2026.</p>
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-center gap-3 text-xs opacity-80"><i class="fas fa-check text-accentGreen"></i> High contrast nodes</li>
+                            <li class="flex items-center gap-3 text-xs opacity-80"><i class="fas fa-check text-accentGreen"></i> Stable Genetics</li>
+                        </ul>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <p class="text-2xl font-bold font-display">$850</p>
+                        <button class="bg-primary text-white px-8 py-3 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-accentGreen transition-all">Secure</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pre-order card 2 -->
+            <div class="flex flex-col md:flex-row bg-white dark:bg-darkCard rounded-[3rem] border border-primary/5 overflow-hidden group hover:shadow-2xl transition-all border-l-8 border-l-blue-400">
+                <div class="md:w-1/2 relative overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1604762524889-3e2fcc145683?w=600&q=80" alt="" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000">
+                    <div class="absolute inset-0 bg-black/20 group-hover:bg-blue-400/10 transition-colors"></div>
+                    <div class="absolute top-6 left-6">
+                        <span class="bg-white/80 backdrop-blur-md text-primary px-4 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest shadow-xl">Cloning</span>
+                    </div>
+                </div>
+                <div class="md:w-1/2 p-10 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-3xl font-display font-bold mb-4">Variegated Philodendron #C3</h3>
+                        <p class="text-sm opacity-60 leading-relaxed italic mb-8">Lab-certified cloning process. High stability guaranteed. Expected: May 2026.</p>
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-center gap-3 text-xs opacity-80"><i class="fas fa-check text-blue-400"></i> Lab Hardened</li>
+                            <li class="flex items-center gap-3 text-xs opacity-80"><i class="fas fa-check text-blue-400"></i> Root-Strong Nodes</li>
+                        </ul>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <p class="text-2xl font-bold font-display">$290</p>
+                        <button class="bg-primary text-white px-8 py-3 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-accentGreen transition-all">Secure</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-primary text-secondary pt-24 pb-12 px-6 lg:px-24">
+        <!-- same as index footer -->
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

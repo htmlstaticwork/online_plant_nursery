@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verdant Vault | Every Leaf Tells a Story</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Playfair+Display:ital,wght@1,700;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Theme Script (Inline to prevent flicker) -->
+    <script>
+        (function() {
+            const theme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', theme);
+            if (theme === 'dark') document.documentElement.classList.add('dark');
+        })();
+    </script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: 'var(--primary)',
+                        secondary: 'var(--secondary)',
+                        accentGreen: 'var(--accent-green)',
+                        accentGold: 'var(--accent-gold)',
+                        card: 'var(--card-bg)',
+                        border: 'var(--border-color)',
+                        surface: 'var(--bg-main)'
+                    },
+                    fontFamily: {
+                        'dm-sans': ['DM Sans', 'sans-serif'],
+                        'playfair': ['Playfair Display', 'serif'],
+                        'display': ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .typewriter h1 {
+            overflow: hidden;
+            border-right: .15em solid #3FA36C;
+            white-space: nowrap;
+            margin: 0 auto;
+            letter-spacing: .05em;
+            animation: typing 3.5s steps(30, end), blink-caret .5s step-end infinite;
+        }
+        @keyframes typing { from { width: 0 } to { width: 100% } }
+        @keyframes blink-caret { from, to { border-color: transparent } 50% { border-color: #3FA36C } }
+    </style>
+</head>
+<body class="bg-secondary text-primary transition-colors duration-300 grain-effect overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 inset-x-0 z-[1000] flex items-center justify-between h-16 md:h-[72px] px-6 lg:px-24 w-full bg-secondary border-b border-[#E0E0E0] dark:border-[#2D4A3C] shadow-sm transition-all duration-300">
+        <a href="index.html" class="brand-identity header-logo">
+            <i class="fas fa-leaf"></i>
+            <span>Verdant Vault</span>
+        </a>
+
+        <div class="hidden md:flex items-center gap-10 font-medium">
+            <a href="index.html" class="hover:text-accentGreen">Home 1</a>
+            <a href="home-2.html" class="text-accentGreen">Home 2</a>
+            <a href="shop.html" class="hover:text-accentGreen">Shop</a>
+            <a href="blog.html" class="hover:text-accentGreen">Blog</a>
+            <a href="contact.html" class="hover:text-accentGreen">Contact</a>
+            <a href="dashboard.html" class="hover:text-accentGreen">Dashboard</a>
+        </div>
+
+        <div class="flex items-center gap-4">
+
+            <a href="signup.html" class="hidden lg:block bg-accentGreen text-white px-6 py-2.5 rounded-full text-[10px] font-dm-sans font-bold uppercase tracking-widest hover:bg-primary transition-all shadow-lg active:scale-95">Sign Up</a>
+
+            
+            <button id="theme-toggle" class="p-2.5 rounded-full border border-border/40 hover:bg-black/5 dark:hover:bg-white/5 transition-all shadow-sm"
+                title="Toggle Theme">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button id="rtl-toggle"
+                class="p-2.5 rounded-full border border-border/40 hover:bg-black/5 dark:hover:bg-white/5 transition-all shadow-sm hidden md:block"
+                title="Switch Language Direction">
+                <i class="fas fa-language"></i>
+            </button>
+            <button id="mobile-menu-btn" class="md:hidden p-2">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu"
+        class="fixed inset-0 bg-secondary dark:bg-darkBg z-[60] hidden flex-col items-center justify-center gap-8 text-2xl font-playfair">
+        <button id="close-menu" onclick="document.getElementById('mobile-menu').classList.add('hidden')"
+            class="absolute top-8 right-8">
+            <i class="fas fa-times"></i>
+        </button>
+        <a href="index.html" class="hover:text-accentGreen">Home 1</a>
+        <a href="home-2.html" class="hover:text-accentGreen">Home 2</a>
+        <a href="shop.html" class="hover:text-accentGreen">Shop</a>
+        <a href="blog.html" class="hover:text-accentGreen">Blog</a>
+        <a href="contact.html" class="hover:text-accentGreen">Contact</a>
+        <a href="dashboard.html" class="hover:text-accentGreen">My Jungle</a>
+        <div class="flex gap-6 mt-8">
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-pinterest"></i>
+            <i class="fab fa-twitter"></i>
+        </div>
+    </div>
+
+    <!-- Refined Editorial Hero -->
+    <header class="relative min-h-[85vh] flex items-center bg-secondary overflow-hidden pt-20 px-6 lg:px-24">
+        <!-- Subtle Texture/Grain -->
+        <div class="absolute inset-0 opacity-10 pointer-events-none grain-effect"></div>
+        
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center relative z-10 w-full">
+            <!-- Left: High Content Clarity -->
+            <div class="space-y-10 text-left animate-fadeIn">
+                <h1 class="text-4xl md:text-7xl font-playfair italic font-bold text-primary leading-tight">
+                    Every Leaf Tells a <span class="text-accentGreen">Collector's</span> Story.
+                </h1>
+                <p class="text-lg md:text-xl text-primary opacity-80 leading-relaxed italic max-w-xl font-playfair font-medium">
+                    "We don't just sell plants. We curate living legacies for collectors who seek the extraordinary in every rare node and tropical leaf."
+                </p>
+                
+                <div class="flex flex-wrap items-center gap-6 pt-4">
+                    <a href="shop.html" class="px-10 py-5 bg-accentGreen text-white rounded-full font-bold uppercase tracking-widest text-xs hover:bg-primary transition-all shadow-xl active:scale-95">
+                        Enter the Vault
+                    </a>
+                    <a href="contact.html" class="px-10 py-5 border-2 border-primary text-primary rounded-full font-bold uppercase tracking-widest text-xs hover:bg-primary hover:text-secondary transition-all active:scale-95">
+                        Consult Expert
+                    </a>
+                </div>
+
+                <div class="flex items-center gap-8 pt-10 border-t border-primary/10">
+                    <div class="group cursor-pointer">
+                        <p class="text-[10px] uppercase tracking-[0.3em] text-primary opacity-40 mb-2 font-bold">Next Dispatch</p>
+                        <p class="text-2xl font-playfair italic font-bold text-accentGold group-hover:scale-110 transition-transform">02 : 14 : 45</p>
+                    </div>
+                    <div class="h-10 w-px bg-primary/10"></div>
+                    <div class="flex -space-x-3">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&q=80" alt="" class="w-10 h-10 rounded-full border-2 border-secondary shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80" alt="" class="w-10 h-10 rounded-full border-2 border-secondary shadow-lg">
+                        <div class="w-10 h-10 rounded-full border-2 border-secondary bg-accentGreen flex items-center justify-center text-[10px] text-white font-bold shadow-lg">5k+</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Premium Botanical Image -->
+            <div class="relative group hidden md:block">
+                <div class="absolute -inset-4 bg-accentGreen/10 rounded-[3rem] blur-2xl group-hover:bg-accentGold/10 transition-all duration-1000"></div>
+                <div class="relative rounded-[3rem] overflow-hidden shadow-2xl border border-primary/5 animate-leafFloat">
+                    <img src="https://images.pexels.com/photos/9412401/pexels-photo-9412401.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Rare Plant Specimen" 
+                        class="w-full h-[450px] object-cover transition-transform duration-1000 group-hover:scale-110">
+                    
+                    <!-- Floating Highlight -->
+                    <div class="absolute bottom-6 left-6 right-6 bg-secondary/80 backdrop-blur-md p-6 rounded-2xl border border-primary/5 shadow-xl">
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 bg-accentGreen/10 rounded-full flex items-center justify-center text-accentGreen">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs font-bold uppercase tracking-widest text-primary">Rare Monstera</p>
+                                <p class="text-[10px] italic text-primary/60">Currently available in Vault</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+        <!-- Section 2: Exotic Showcase -->
+        <div class="mt-40">
+            <div class="text-center mb-24">
+                <span class="text-xs font-bold uppercase tracking-[0.5em] text-accentGreen">The Vault Selection</span>
+                <h2 class="text-4xl md:text-6xl font-playfair font-bold italic mt-6">Rarity Redefined.</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-12">
+                <!-- Rare 1 -->
+                <div class="group relative overflow-hidden rounded-[3rem] h-[450px] border border-primary/5">
+                    <img src="https://images.unsplash.com/photo-1614594975525-e45190c55d0b?w=800&q=80" alt="Variegated" class="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-110 grayscale group-hover:grayscale-0">
+                    <div class="absolute inset-x-0 bottom-0 p-10 bg-gradient-to-t from-black/80 via-black/40 to-transparent">
+                        <p class="text-accentGold text-xs font-bold uppercase tracking-widest mb-2">Brazil Archive</p>
+                        <h3 class="text-3xl font-playfair font-bold italic text-white mb-4">Variegated Adansonii</h3>
+                        <p class="text-white/60 text-sm leading-relaxed mb-6 font-playfair">A stable, cream-white variegated specimen with perfect fenestrations.</p>
+                        <a href="shop.html" class="inline-block text-white border-b border-accentGreen pb-1 text-xs font-bold uppercase tracking-widest hover:text-accentGreen transition-colors">View Specimen</a>
+                    </div>
+                </div>
+
+                <!-- Rare 2 -->
+                <div class="group relative overflow-hidden rounded-[3rem] h-[450px] border border-primary/5">
+                    <img src="https://images.unsplash.com/photo-1596547609652-9cf5d8d76921?w=800&q=80" alt="Anthurium" class="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-110 grayscale group-hover:grayscale-0">
+                    <div class="absolute inset-x-0 bottom-0 p-10 bg-gradient-to-t from-black/80 via-black/40 to-transparent">
+                        <p class="text-accentGold text-xs font-bold uppercase tracking-widest mb-2">Madagascar Vault</p>
+                        <h3 class="text-3xl font-playfair font-bold italic text-white mb-4">Anthurium Warocqueanum</h3>
+                        <p class="text-white/60 text-sm leading-relaxed mb-6 font-playfair">Queen Anthurium with velvet leaves reaching up to 3 feet in maturity.</p>
+                        <a href="shop.html" class="inline-block text-white border-b border-accentGreen pb-1 text-xs font-bold uppercase tracking-widest hover:text-accentGreen transition-colors">View Specimen</a>
+                    </div>
+                </div>
+
+                <!-- Rare 3 -->
+                <div class="group relative overflow-hidden rounded-[3rem] h-[450px] border border-primary/5">
+                    <img src="https://images.unsplash.com/photo-1459411552884-841db9b3cc2a?w=800&q=80" alt="Thai" class="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-110 grayscale group-hover:grayscale-0">
+                    <div class="absolute inset-x-0 bottom-0 p-10 bg-gradient-to-t from-black/80 via-black/40 to-transparent">
+                        <p class="text-accentGold text-xs font-bold uppercase tracking-widest mb-2">Private Lab</p>
+                        <h3 class="text-3xl font-playfair font-bold italic text-white mb-4">Thai Constellation</h3>
+                        <p class="text-white/60 text-sm leading-relaxed mb-6 font-playfair">Grown and hardened in Kerala for maximum domestic stability.</p>
+                        <a href="shop.html" class="inline-block text-white border-b border-accentGreen pb-1 text-xs font-bold uppercase tracking-widest hover:text-accentGreen transition-colors">View Specimen</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 3: The Journey -->
+        <div class="mt-40 py-24 bg-primary/5 rounded-[4rem] px-12 border border-primary/10">
+            <div class="grid lg:grid-cols-2 gap-24 items-center">
+                <div class="space-y-12">
+                    <span class="text-xs font-bold uppercase tracking-[0.5em] text-accentGreen">The Collector's Journey</span>
+                    <h2 class="text-4xl md:text-6xl font-playfair font-bold italic leading-tight text-primary">From Single Node to Botanical Legacy.</h2>
+                    
+                    <div class="space-y-10">
+                        <div class="flex gap-8 group">
+                            <span class="flex-shrink-0 w-12 h-12 rounded-full bg-accentGreen text-white flex items-center justify-center font-bold font-playfair italic">01</span>
+                            <div>
+                                <h4 class="text-xl font-bold mb-2 group-hover:text-accentGreen transition-colors">Specimen Curation</h4>
+                                <p class="opacity-60 text-sm italic">We filter through thousands of seedlings to select only the strongest genetic variants for stability.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-8 group">
+                            <span class="flex-shrink-0 w-12 h-12 rounded-full bg-accentGold text-primary flex items-center justify-center font-bold font-playfair italic">02</span>
+                            <div>
+                                <h4 class="text-xl font-bold mb-2 group-hover:text-accentGold transition-colors">Environment Hardening</h4>
+                                <p class="opacity-60 text-sm italic">Plants spend 6 weeks in our Kerala transitions lab to ensure they survive shipping and home environments.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-8 group">
+                            <span class="flex-shrink-0 w-12 h-12 rounded-full bg-primary text-secondary flex items-center justify-center font-bold font-playfair italic">03</span>
+                            <div>
+                                <h4 class="text-xl font-bold mb-2 group-hover:text-accentGreen transition-colors">The Handoff</h4>
+                                <p class="opacity-60 text-sm italic">Delivered in humidity-monitored boxes with a direct line to our curator for 30 days of growth support.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img src="https://images.pexels.com/photos/19225278/pexels-photo-19225278.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Process" 
+                        class="rounded-[3rem] w-full h-[600px] object-cover shadow-2xl">
+                    <div class="absolute -top-12 -left-12 p-8 bg-secondary border border-primary/5 rounded-3xl shadow-xl animate-bounce-slow">
+                        <i class="fas fa-microscope text-3xl text-accentGreen"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 4: Atlas -->
+        <div class="mt-40 mb-20 text-center">
+            <span class="text-xs font-bold uppercase tracking-[0.5em] text-accentGreen">The Specimen Atlas</span>
+            <h2 class="text-4xl md:text-6xl font-playfair font-bold italic mt-6 mb-24">Global Roots.</h2>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="p-12 border border-primary/5 rounded-3xl hover:bg-primary hover:text-secondary transition-all group flex flex-col items-center">
+                    <img src="https://images.pexels.com/photos/2033997/pexels-photo-2033997.jpeg?w=100&q=80" class="w-16 h-16 rounded-full object-cover mb-4 grayscale group-hover:grayscale-0">
+                    <p class="font-bold font-playfair italic">Kerala, IN</p>
+                    <p class="text-[10px] opacity-40 uppercase tracking-widest mt-2">Curation Hub</p>
+                </div>
+                <div class="p-12 border border-primary/5 rounded-3xl hover:bg-primary hover:text-secondary transition-all group flex flex-col items-center">
+                    <img src="https://images.pexels.com/photos/305821/pexels-photo-305821.jpeg?w=100&q=80" class="w-16 h-16 rounded-full object-cover mb-4 grayscale group-hover:grayscale-0">
+                    <p class="font-bold font-playfair italic">Manaus, BR</p>
+                    <p class="text-[10px] opacity-40 uppercase tracking-widest mt-2">Aroid Archive</p>
+                </div>
+                <div class="p-12 border border-primary/5 rounded-3xl hover:bg-primary hover:text-secondary transition-all group flex flex-col items-center">
+                    <img src="https://images.pexels.com/photos/1084510/pexels-photo-1084510.jpeg?w=100&q=80" class="w-16 h-16 rounded-full object-cover mb-4 grayscale group-hover:grayscale-0">
+                    <p class="font-bold font-playfair italic">Sava, MG</p>
+                    <p class="text-[10px] opacity-40 uppercase tracking-widest mt-2">Anthurium Vault</p>
+                </div>
+                <div class="p-12 border border-primary/5 rounded-3xl hover:bg-primary hover:text-secondary transition-all group flex flex-col items-center">
+                    <img src="https://images.pexels.com/photos/1002703/pexels-photo-1002703.jpeg?w=100&q=80" class="w-16 h-16 rounded-full object-cover mb-4 grayscale group-hover:grayscale-0">
+                    <p class="font-bold font-playfair italic">Phuket, TH</p>
+                    <p class="text-[10px] opacity-40 uppercase tracking-widest mt-2">Laboratory</p>
+                </div>
+            </div>
+        </div>
+    <!-- Newsletter CTA -->
+    <section class="max-w-7xl mx-auto px-6 mb-32 mt-40">
+        <div class="bg-accentGreen p-12 lg:p-24 rounded-[4rem] text-white flex flex-col md:flex-row items-center justify-between gap-12 relative overflow-hidden">
+            <i class="fas fa-seedling absolute -top-8 -left-8 text-[15rem] text-white/5 -rotate-12"></i>
+            <div class="max-w-lg relative z-10">
+                <span class="text-xs font-bold uppercase tracking-[0.3em] mb-4 inline-block">Collector's Inner Circle</span>
+                <h2 class="text-4xl lg:text-5xl font-playfair font-bold italic mb-6">Get Notified Before the Restock Drops.</h2>
+                <p class="text-white/70 italic">Join 2,500+ collectors receiving weekly dossiers on rare species and care hacks. No spam, only chlorophyll.</p>
+            </div>
+            <div class="w-full md:w-auto relative z-10">
+                <form class="flex flex-col md:flex-row gap-4">
+                    <input type="email" placeholder="Your best email..." class="px-8 py-5 rounded-full bg-white/10 border border-white/20 text-white placeholder:text-white/40 outline-none focus:bg-white/20 transition-all min-w-[300px]">
+                    <button class="bg-white text-accentGreen px-10 py-5 rounded-full font-bold uppercase tracking-widest shadow-xl hover:scale-105 active:scale-95 transition-all">Cultivate</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-themed pt-24 pb-12 px-6 lg:px-24">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
+                <!-- Brand Content -->
+                <div class="md:col-span-2">
+                    <a href="index.html" class="brand-identity footer-logo mb-6">
+                        <i class="fas fa-leaf"></i>
+                        <span>Verdant Vault</span>
+                    </a>
+                    <p class="max-w-md opacity-60 mb-8 leading-relaxed">
+                        Curating the world's most rare and exotic botanical specimens for the discerning plant
+                        collector. Based in Kerala, shipping worldwide.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="https://instagram.com"
+                            class="w-10 h-10 border border-border rounded-full flex items-center justify-center hover:bg-accentGreen hover:border-accentGreen hover:scale-110 hover:rotate-[10deg] transition-all duration-300"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://pinterest.com"
+                            class="w-10 h-10 border border-border rounded-full flex items-center justify-center hover:bg-accentGreen hover:border-accentGreen hover:scale-110 hover:rotate-[10deg] transition-all duration-300"><i
+                                class="fab fa-pinterest-p"></i></a>
+                        <a href="#"
+                            class="w-10 h-10 border border-border rounded-full flex items-center justify-center hover:bg-accentGreen hover:border-accentGreen hover:scale-110 hover:rotate-[10deg] transition-all duration-300"><i
+                                class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-bold mb-8 uppercase tracking-widest text-sm text-accentGreen">The Studio</h4>
+                    <ul class="space-y-4 opacity-70">
+                        <li><a href="shop.html" class="hover:text-accentGreen transition-colors">Rare Plants</a></li>
+                        <li><a href="subscriptions.html" class="hover:text-accentGreen transition-colors">Plant Clubs</a></li>
+                        <li><a href="blog.html" class="hover:text-accentGreen transition-colors">Care Tutorials</a></li>
+                        <li><a href="pre-orders.html" class="hover:text-accentGreen transition-colors">Pre-orders</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold mb-8 uppercase tracking-widest text-sm text-accentGreen">Expertise</h4>
+                    <ul class="space-y-4 opacity-70">
+                        <li><a href="#" class="hover:text-accentGreen transition-colors">Shipping Guarantee</a></li>
+                        <li><a href="#" class="hover:text-accentGreen transition-colors">Returns Policy</a></li>
+                        <li><a href="dashboard.html" class="hover:text-accentGreen transition-colors">Plant Tracker</a></li>
+                        <li><a href="#" class="hover:text-accentGreen transition-colors">Contact Curator</a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter Column -->
+                <div class="min-w-[200px]">
+                    <h4 class="font-bold mb-8 uppercase tracking-widest text-sm text-accentGreen">Newsletter</h4>
+                    <p class="text-xs opacity-60 mb-6 italic">Subscribe for rare specimen alerts.</p>
+                    <form class="space-y-3">
+                        <input type="email" placeholder="collector@email.com" class="w-full bg-card/50 border border-border rounded-xl px-4 py-3 text-sm italic outline-none focus:border-accentGreen transition-colors">
+                        <button class="w-full bg-primary text-secondary py-3 rounded-xl text-[10px] font-bold uppercase tracking-widest hover:bg-accentGreen transition-colors">Enroll</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="pt-12 border-t border-border flex flex-col items-center justify-center text-center gap-6 text-sm opacity-50 relative w-full">
+                <p>&copy; 2026 Verdant Vault. All Rights Reserved.</p>
+                <!-- Back to top arrow -->
+                <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="md:absolute md:right-0 w-10 h-10 bg-accentGreen text-white rounded-full flex items-center justify-center hover:scale-110 transition-transform shadow-lg">
+                    <i class="fas fa-arrow-up"></i>
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
