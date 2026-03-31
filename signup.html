@@ -47,12 +47,12 @@
 
     <!-- Floating Controls -->
     <div class="fixed top-8 right-8 z-[1000] flex items-center gap-4">
-        <button id="theme-toggle" class="p-3 rounded-full bg-theme-card border border-theme text-theme-main hover:scale-110 transition-all shadow-lg"
+        <button id="theme-toggle" class="w-12 h-12 flex items-center justify-center rounded-full bg-theme-card border border-theme text-theme-main hover:scale-110 transition-all shadow-lg"
             title="Toggle Theme">
             <i class="fas fa-moon"></i>
         </button>
         <button id="rtl-toggle"
-            class="p-3 rounded-full bg-theme-card border border-theme text-theme-main hover:scale-110 transition-all shadow-lg hidden md:block"
+            class="w-12 h-12 flex items-center justify-center rounded-full bg-theme-card border border-theme text-theme-main hover:scale-110 transition-all shadow-lg"
             title="Switch Language Direction">
             <i class="fas fa-language"></i>
         </button>
@@ -73,7 +73,7 @@
                 <!-- Select Login/Signup Toggle -->
                 <div class="flex gap-2 p-1 bg-theme-main rounded-full border border-theme mb-8 mx-auto max-w-[240px]">
                     <a href="login.html" class="flex-1 py-2 text-theme-main rounded-full font-bold text-xs text-center hover:bg-black/5 dark:hover:bg-white/5 transition-all">Login</a>
-                    <a href="signup.html" class="flex-1 py-2 bg-accentGreen text-white rounded-full font-bold text-xs text-center transition-all shadow-sm">Signup</a>
+                    <a href="signup.html" class="flex-1 py-2 bg-accentGreen text-white rounded-full font-bold text-xs text-center transition-all shadow-sm btn-signup-main">Signup</a>
                 </div>
             </div>
 
@@ -131,7 +131,7 @@
                 </div>
 
                 <button type="submit" 
-                    class="w-full py-4 bg-[#3FA36C] text-white rounded-md font-bold uppercase tracking-widest text-sm hover:translate-y-[-2px] transition-all shadow-lg shadow-accentGreen/20 active:scale-[0.98] mt-4">
+                    class="w-full py-4 bg-accentGreen text-white rounded-md font-bold uppercase tracking-widest text-sm hover:translate-y-[-2px] transition-all shadow-lg shadow-accentGreen/20 active:scale-[0.98] mt-4 btn-signup-main">
                     Create Account
                 </button>
             </form>
@@ -142,7 +142,7 @@
             </div>
 
             <div class="grid grid-cols-2 gap-4">
-                <button type="button" class="flex items-center justify-center gap-3 py-3 px-4 border border-theme rounded-xl text-theme-main hover:bg-white hover:text-black hover:border-transparent hover:shadow-xl transition-all text-[10px] font-bold uppercase tracking-widest active:scale-95 group">
+                <button type="button" class="flex items-center justify-center gap-3 py-3 px-4 border border-theme rounded-xl text-theme-main hover:border-accentGreen hover:text-accentGreen hover:shadow-xl hover:bg-accentGreen/5 transition-all text-[10px] font-bold uppercase tracking-widest active:scale-95 group">
                     <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" class="w-4 h-4 group-hover:scale-110 transition-transform" alt="Google">
                     Google
                 </button>

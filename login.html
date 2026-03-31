@@ -49,12 +49,12 @@
 
     <!-- Floating Controls -->
     <div class="fixed top-8 right-8 z-[1000] flex items-center gap-4">
-        <button id="theme-toggle" class="p-3 rounded-full bg-theme-card border border-theme text-theme-main hover:scale-110 transition-all shadow-lg"
+        <button id="theme-toggle" class="w-12 h-12 flex items-center justify-center rounded-full bg-theme-card border border-theme text-theme-main hover:scale-110 transition-all shadow-lg"
             title="Toggle Theme">
             <i class="fas fa-moon"></i>
         </button>
         <button id="rtl-toggle"
-            class="p-3 rounded-full bg-theme-card border border-theme text-theme-main hover:scale-110 transition-all shadow-lg hidden md:block"
+            class="w-12 h-12 flex items-center justify-center rounded-full bg-theme-card border border-theme text-theme-main hover:scale-110 transition-all shadow-lg"
             title="Switch Language Direction">
             <i class="fas fa-language"></i>
         </button>
@@ -75,7 +75,7 @@
             <form class="space-y-6">
                 <!-- Select Login/Signup -->
                 <div class="flex gap-2 p-1 bg-theme-main rounded-full border border-theme mb-8">
-                    <a href="login.html" class="flex-1 py-3 bg-accentGreen text-white rounded-full font-bold text-sm text-center transition-all shadow-md">Login</a>
+                    <a href="login.html" class="flex-1 py-3 bg-accentGreen text-white rounded-full font-bold text-sm text-center transition-all shadow-md btn-signup-main">Login</a>
                     <a href="signup.html" class="flex-1 py-3 text-theme-main rounded-full font-bold text-sm text-center hover:bg-black/5 dark:hover:bg-white/5 transition-all">Signup</a>
                 </div>
 
@@ -102,7 +102,7 @@
                     <a href="#" class="hover:text-accentGreen transition-all">Forgotten Key?</a>
                 </div>
 
-                <button type="submit" class="w-full bg-[#3FA36C] text-white py-4 rounded-2xl font-bold tracking-widest text-sm hover:translate-y-[-2px] transition-all shadow-lg shadow-accentGreen/20 uppercase">
+                <button type="submit" class="w-full bg-accentGreen text-white py-4 rounded-2xl font-bold tracking-widest text-sm hover:translate-y-[-2px] transition-all shadow-lg shadow-accentGreen/20 uppercase btn-signup-main">
                     Enter the Greenhouse
                 </button>
 
@@ -112,8 +112,8 @@
                 </div>
 
                 <div class="grid grid-cols-2 gap-4">
-                    <button type="button" class="flex items-center justify-center gap-3 py-3 px-4 border border-theme rounded-xl text-theme-main hover:bg-white hover:text-black hover:border-transparent hover:shadow-xl transition-all text-xs font-bold uppercase tracking-widest active:scale-95">
-                        <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" class="w-4 h-4" alt="Google">
+                    <button type="button" class="flex items-center justify-center gap-3 py-3 px-4 border border-theme rounded-xl text-theme-main hover:border-accentGreen hover:text-accentGreen hover:shadow-xl hover:bg-accentGreen/5 transition-all text-xs font-bold uppercase tracking-widest active:scale-95 group">
+                        <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" class="w-4 h-4 group-hover:scale-110 transition-transform" alt="Google">
                         Google
                     </button>
                     <button type="button" class="flex items-center justify-center gap-3 py-3 px-4 border border-theme rounded-xl text-theme-main hover:bg-[#1877F2] hover:text-white hover:border-transparent hover:shadow-xl transition-all text-xs font-bold uppercase tracking-widest active:scale-95">

@@ -15,7 +15,11 @@ const updateThemeIcon = (theme) => {
     if (!themeToggle) return;
     const icon = themeToggle.querySelector('i');
     if (icon) {
-        icon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+        if (theme === 'dark') {
+            icon.className = 'fas fa-sun text-accentGold';
+        } else {
+            icon.className = 'fas fa-moon text-accentGreen';
+        }
     }
 };
 
@@ -129,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelectorAll('nav a, #mobile-menu a, aside a');
 
     navLinks.forEach(link => {
-        if (link.classList.contains('brand-logo')) return;
+        if (link.classList.contains('brand-logo') || link.innerText.toLowerCase().includes('sign up')) return;
 
         const linkHref = link.getAttribute('href');
         if (linkHref === currentPath) {

@@ -38,13 +38,13 @@
 <body class="bg-secondary text-primary transition-colors duration-300 grain-effect overflow-x-hidden">
 
     <!-- Navigation -->
-    <nav class="fixed top-0 inset-x-0 z-[1000] flex items-center justify-between h-16 md:h-[72px] px-6 lg:px-24 w-full bg-secondary border-b border-[#E0E0E0] dark:border-[#2D4A3C] shadow-sm transition-all duration-300">
-        <a href="index.html" class="brand-logo text-3xl font-playfair font-bold flex items-center gap-2 group">
+    <nav class="fixed top-0 inset-x-0 z-[1000] flex items-center justify-between h-16 md:h-[72px] px-6 lg:px-12 xl:px-24 w-full bg-secondary border-b border-[#E0E0E0] dark:border-[#2D4A3C] shadow-sm transition-all duration-300">
+        <a href="index.html" class="brand-logo text-xl sm:text-2xl lg:text-3xl font-playfair font-bold flex items-center gap-2 group whitespace-nowrap">
             <i class="fas fa-leaf text-accentGreen transform group-hover:rotate-12 transition-transform"></i>
-            <span>Verdant Vault</span>
+            <span class="whitespace-nowrap">Verdant Vault</span>
         </a>
 
-        <div class="hidden md:flex items-center gap-10 font-medium">
+        <div class="hidden lg:flex items-center gap-5 xl:gap-10 font-medium ml-auto mr-8 xl:mr-12 whitespace-nowrap">
             <a href="index.html" class="hover:text-accentGreen">Home 1</a>
             <a href="home-2.html" class="hover:text-accentGreen">Home 2</a>
             <a href="shop.html" class="hover:text-accentGreen">Shop</a>
@@ -68,38 +68,55 @@
                 title="Switch Language Direction">
                 <i class="fas fa-language"></i>
             </button>
-            <button id="mobile-menu-btn" class="md:hidden p-2">
+            <button id="mobile-menu-btn" class="lg:hidden p-2 text-primary">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
     </nav>
 
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu-overlay" class="fixed inset-0 bg-black/50 z-[1500] hidden opacity-0 transition-opacity duration-300"></div>
+
     <!-- Mobile Menu -->
     <div id="mobile-menu"
-        class="fixed inset-0 bg-secondary z-[60] hidden flex-col items-center justify-center gap-8 text-2xl font-playfair">
-        <button id="close-menu" onclick="document.getElementById('mobile-menu').classList.add('hidden')"
-            class="absolute top-8 right-8">
-            <i class="fas fa-times"></i>
-        </button>
-        <a href="index.html" class="hover:text-accentGreen">Home 1</a>
-        <a href="home-2.html" class="hover:text-accentGreen">Home 2</a>
-        <a href="shop.html" class="hover:text-accentGreen">Shop</a>
-        <a href="blog.html" class="hover:text-accentGreen">Blog</a>
-        <a href="subscriptions.html" class="hover:text-accentGreen">Pricing</a>
-        <a href="contact.html" class="hover:text-accentGreen">Contact</a>
-        <a href="dashboard.html" class="hover:text-accentGreen">My Jungle</a>
-        <div class="flex gap-6 mt-8">
-            <i class="fab fa-instagram"></i>
-            <i class="fab fa-pinterest"></i>
-            <i class="fab fa-twitter"></i>
+        class="fixed top-0 right-0 h-full w-[300px] bg-secondary dark:bg-darkBg z-[2000] flex flex-col p-8 transform translate-x-full transition-transform duration-300 ease-in-out shadow-2xl overflow-y-auto">
+        <div class="flex items-center justify-between mb-12">
+            <a href="index.html" class="brand-logo text-2xl font-playfair font-bold flex items-center gap-2">
+                <i class="fas fa-leaf text-accentGreen"></i>
+                <span>Verdant Vault</span>
+            </a>
+            <button id="close-menu" class="p-2 text-2xl focus:outline-none">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="flex flex-col gap-6 text-xl font-medium">
+            <a href="index.html" class="hover:text-accentGreen">Home 1</a>
+            <a href="home-2.html" class="hover:text-accentGreen">Home 2</a>
+            <a href="shop.html" class="hover:text-accentGreen">Shop</a>
+            <a href="blog.html" class="hover:text-accentGreen">Blog</a>
+            <a href="subscriptions.html" class="hover:text-accentGreen transition-colors">Pricing</a>
+            <a href="contact.html" class="hover:text-accentGreen transition-colors">Contact</a>
+            <a href="dashboard.html" class="hover:text-accentGreen transition-colors">Dashboard</a>
+            <a href="signup.html" class="bg-accentGreen text-white px-6 py-3 rounded-xl text-center font-bold uppercase tracking-widest hover:bg-primary transition-all shadow-lg mt-4">Sign Up</a>
+        </div>
+
+        <div class="mt-auto pt-12 border-t border-border">
+            <p class="text-xs uppercase tracking-widest opacity-50 mb-6">Stay Connected</p>
+            <div class="flex gap-6">
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-pinterest"></i>
+                <i class="fab fa-twitter"></i>
+            </div>
         </div>
     </div>
 
-    <header class="pt-40 pb-24 px-6 lg:px-24 bg-primary text-secondary rounded-b-[5rem]">
-        <div class="max-w-4xl mx-auto text-center space-y-8 animate-plantGrow">
-            <span class="text-xs font-bold uppercase tracking-[0.4em] text-accentGreen block">The Collector Tier System</span>
-            <h1 class="text-6xl md:text-8xl font-bold font-display italic">Curated Collections, Delivered Monthly.</h1>
-            <p class="text-lg opacity-60 max-w-2xl mx-auto italic leading-relaxed">
+    <header class="pt-40 pb-32 px-6 lg:px-24 rounded-b-[5rem] relative overflow-hidden bg-cover bg-center" 
+            style="background-image: url('https://images.unsplash.com/photo-1463936575829-25148e1db1b8?w=1600&q=80');">
+        <div class="absolute inset-0 bg-black/50 backdrop-blur-[2px]"></div>
+        <div class="max-w-4xl mx-auto text-center space-y-8 animate-plantGrow relative z-10 text-white">
+            <span class="text-xs font-bold uppercase tracking-[0.4em] text-accentGold block">The Collector Tier System</span>
+            <h1 class="text-6xl md:text-8xl font-bold font-display italic drop-shadow-lg">Curated Collections, Delivered Monthly.</h1>
+            <p class="text-lg opacity-90 max-w-2xl mx-auto italic leading-relaxed drop-shadow-md">
                 Unlock early access to the vault. Every month, we hand-pick specimens that tell a story of growth and luxury.
             </p>
         </div>
@@ -110,35 +127,35 @@
             
             <!-- Tier 1: Starter Jungle -->
             <div class="bg-card p-12 rounded-[3.5rem] border border-primary/5 flex flex-col justify-between hover:scale-105 transition-transform duration-500 shadow-sm relative group">
-                <div>
-                    <div class="w-16 h-16 bg-accentGreen/10 rounded-3xl flex items-center justify-center text-accentGreen text-2xl mb-8 group-hover:rotate-12 transition-transform">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-accentGreen/10 rounded-3xl flex items-center justify-center text-accentGreen text-2xl mb-8 mx-auto group-hover:rotate-12 transition-transform shadow-inner">
                         <i class="fas fa-seedling"></i>
                     </div>
                     <h3 class="text-3xl font-display font-bold mb-4">Starter Jungle</h3>
                     <p class="text-primary/50 text-sm mb-10 leading-relaxed italic">The perfect entry point for new collectors looking to build a resilient, aesthetic base.</p>
-                    
-                    <div class="space-y-6 mb-12">
-                        <div class="flex items-center gap-4 text-sm">
-                            <i class="fas fa-check text-accentGreen"></i>
-                            <span class="opacity-80">1 High-Aesthetic Tropical Plant</span>
-                        </div>
-                        <div class="flex items-center gap-4 text-sm">
-                            <i class="fas fa-check text-accentGreen"></i>
-                            <span class="opacity-80">Boutique Ceramic Pot</span>
-                        </div>
-                        <div class="flex items-center gap-4 text-sm">
-                            <i class="fas fa-check text-accentGreen"></i>
-                            <span class="opacity-80">Foundation Care Blueprint</span>
-                        </div>
-                        <div class="flex items-center gap-4 text-sm opacity-30">
-                            <i class="fas fa-times"></i>
-                            <span>No Rare / Variegated Species</span>
-                        </div>
+                </div>
+                
+                <div class="flex flex-col items-center lg:items-start space-y-6 mb-12">
+                    <div class="flex items-center gap-4 text-sm text-center lg:text-left">
+                        <i class="fas fa-check text-accentGreen"></i>
+                        <span class="opacity-80">1 High-Aesthetic Tropical Plant</span>
+                    </div>
+                    <div class="flex items-center gap-4 text-sm text-center lg:text-left">
+                        <i class="fas fa-check text-accentGreen"></i>
+                        <span class="opacity-80">Boutique Ceramic Pot</span>
+                    </div>
+                    <div class="flex items-center gap-4 text-sm text-center lg:text-left">
+                        <i class="fas fa-check text-accentGreen"></i>
+                        <span class="opacity-80">Foundation Care Blueprint</span>
+                    </div>
+                    <div class="flex items-center gap-4 text-sm opacity-30 text-center lg:text-left">
+                        <i class="fas fa-times"></i>
+                        <span>No Rare / Variegated Species</span>
                     </div>
                 </div>
                 
                 <div class="pt-8 border-t border-primary/5">
-                    <div class="flex items-end gap-2 mb-8">
+                    <div class="flex items-end justify-center lg:justify-start gap-2 mb-8">
                         <span class="text-5xl font-bold font-display italic">$45</span>
                         <span class="text-sm opacity-40 mb-2">/ month</span>
                     </div>
@@ -155,35 +172,35 @@
                     <i class="fas fa-leaf"></i>
                 </div>
                 
-                <div>
-                    <div class="w-16 h-16 bg-white/10 rounded-3xl flex items-center justify-center text-accentGold text-2xl mb-8 group-hover:-rotate-12 transition-transform">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-white/10 rounded-3xl flex items-center justify-center text-accentGold text-2xl mb-8 mx-auto group-hover:-rotate-12 transition-transform shadow-inner">
                         <i class="fas fa-certificate"></i>
                     </div>
                     <h3 class="text-3xl font-display font-bold mb-4">Collector Box</h3>
                     <p class="text-secondary/50 text-sm mb-10 leading-relaxed italic">Our signature experience. Featuring stable variegation and mid-tier rare species.</p>
-                    
-                    <div class="space-y-6 mb-12">
-                        <div class="flex items-center gap-4 text-sm">
-                            <i class="fas fa-star text-accentGold"></i>
-                            <span class="opacity-80">1 High-Variegation Specimen</span>
-                        </div>
-                        <div class="flex items-center gap-4 text-sm">
-                            <i class="fas fa-check text-accentGold"></i>
-                            <span class="opacity-80">Artisanal Terracotta Vessel</span>
-                        </div>
-                        <div class="flex items-center gap-4 text-sm">
-                            <i class="fas fa-check text-accentGold"></i>
-                            <span class="opacity-80">Curator's Growth Log</span>
-                        </div>
-                        <div class="flex items-center gap-4 text-sm">
-                            <i class="fas fa-check text-accentGold"></i>
-                            <span class="opacity-80">Early Restock SMS Alerts</span>
-                        </div>
+                </div>
+                
+                <div class="flex flex-col items-center lg:items-start space-y-6 mb-12">
+                    <div class="flex items-center gap-4 text-sm text-center lg:text-left">
+                        <i class="fas fa-star text-accentGold"></i>
+                        <span class="opacity-80">1 High-Variegation Specimen</span>
+                    </div>
+                    <div class="flex items-center gap-4 text-sm text-center lg:text-left">
+                        <i class="fas fa-check text-accentGold"></i>
+                        <span class="opacity-80">Artisanal Terracotta Vessel</span>
+                    </div>
+                    <div class="flex items-center gap-4 text-sm text-center lg:text-left">
+                        <i class="fas fa-check text-accentGold"></i>
+                        <span class="opacity-80">Curator's Growth Log</span>
+                    </div>
+                    <div class="flex items-center gap-4 text-sm text-center lg:text-left">
+                        <i class="fas fa-check text-accentGold"></i>
+                        <span class="opacity-80">Early Restock SMS Alerts</span>
                     </div>
                 </div>
                 
                 <div class="pt-8 border-t border-white/10">
-                    <div class="flex items-end gap-2 mb-8">
+                    <div class="flex items-end justify-center lg:justify-start gap-2 mb-8">
                         <span class="text-5xl font-bold font-display italic">$125</span>
                         <span class="text-sm opacity-40 mb-2">/ month</span>
                     </div>
@@ -193,35 +210,35 @@
 
             <!-- Tier 3: Rare Drop Club -->
             <div class="bg-card p-12 rounded-[3.5rem] border border-primary/5 flex flex-col justify-between hover:scale-105 transition-transform duration-500 shadow-sm relative group">
-                <div>
-                    <div class="w-16 h-16 bg-accentGold/10 rounded-3xl flex items-center justify-center text-accentGold text-2xl mb-8 group-hover:rotate-12 transition-transform">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-accentGold/10 rounded-3xl flex items-center justify-center text-accentGold text-2xl mb-8 mx-auto group-hover:rotate-12 transition-transform shadow-inner">
                         <i class="fas fa-gem"></i>
                     </div>
                     <h3 class="text-3xl font-display font-bold mb-4">Rare Drop Club</h3>
                     <p class="text-primary/50 text-sm mb-10 leading-relaxed italic">For the elite botanical investor. Monthly imports of ultra-rare, high-value nodes.</p>
-                    
-                    <div class="space-y-6 mb-12">
-                        <div class="flex items-center gap-4 text-sm">
-                            <i class="fas fa-crown text-accentGold"></i>
-                            <span class="opacity-80 font-bold uppercase tracking-tighter">1 Ultra-Rare specimen (e.g. Albo)</span>
-                        </div>
-                        <div class="flex items-center gap-4 text-sm">
-                            <i class="fas fa-check text-accentGold"></i>
-                            <span class="opacity-80">Personalized Greenhouse Consultant</span>
-                        </div>
-                        <div class="flex items-center gap-4 text-sm">
-                            <i class="fas fa-check text-accentGold"></i>
-                            <span class="opacity-80">Climate-Controlled Vault Case</span>
-                        </div>
-                        <div class="flex items-center gap-4 text-sm">
-                            <i class="fas fa-check text-accentGold"></i>
-                            <span class="opacity-80">Guaranteed Stable Variegation</span>
-                        </div>
+                </div>
+                
+                <div class="flex flex-col items-center lg:items-start space-y-6 mb-12">
+                    <div class="flex items-center gap-4 text-sm text-center lg:text-left">
+                        <i class="fas fa-crown text-accentGold"></i>
+                        <span class="opacity-80 font-bold uppercase tracking-tighter">1 Ultra-Rare specimen (e.g. Albo)</span>
+                    </div>
+                    <div class="flex items-center gap-4 text-sm text-center lg:text-left">
+                        <i class="fas fa-check text-accentGold"></i>
+                        <span class="opacity-80">Personalized Greenhouse Consultant</span>
+                    </div>
+                    <div class="flex items-center gap-4 text-sm text-center lg:text-left">
+                        <i class="fas fa-check text-accentGold"></i>
+                        <span class="opacity-80">Climate-Controlled Vault Case</span>
+                    </div>
+                    <div class="flex items-center gap-4 text-sm text-center lg:text-left">
+                        <i class="fas fa-check text-accentGold"></i>
+                        <span class="opacity-80">Guaranteed Stable Variegation</span>
                     </div>
                 </div>
                 
                 <div class="pt-8 border-t border-primary/5">
-                    <div class="flex items-end gap-2 mb-8">
+                    <div class="flex items-end justify-center lg:justify-start gap-2 mb-8">
                         <span class="text-5xl font-bold font-display italic text-accentGreen">$350</span>
                         <span class="text-sm opacity-40 mb-2">/ month</span>
                     </div>
@@ -229,29 +246,51 @@
                 </div>
             </div>
         </div>
-
+        
         <!-- FAQ Section -->
         <section class="mt-40 max-w-3xl mx-auto">
             <h2 class="text-4xl font-display font-bold italic mb-16 text-center">Frequently Asked by Collectors</h2>
             
-            <div class="space-y-8">
-                <div class="p-8 bg-card rounded-[2rem] border border-primary/5">
-                    <h4 class="text-lg font-bold mb-4 flex items-center gap-4"><span class="w-8 h-8 bg-accentGreen text-white rounded-full flex items-center justify-center text-xs">Q</span> Can I skip a month?</h4>
-                    <p class="text-primary/60 text-sm leading-relaxed italic pl-12">Absolutely. Most of our collectors skip during winter months or when they travel. One-click skip in your dashboard.</p>
-                </div>
+            <div class="space-y-6">
+                <!-- FAQ 1 -->
+                <details class="group bg-card rounded-[2.5rem] border border-primary/10 overflow-hidden transition-all duration-300">
+                    <summary class="flex items-center justify-between p-8 cursor-pointer list-none list-inside outline-none">
+                        <div class="flex items-center gap-6">
+                            <span class="w-10 h-10 bg-accentGreen/10 text-accentGreen rounded-full flex items-center justify-center text-xs font-bold leading-none">Q</span>
+                            <h4 class="text-xl font-bold font-playfair italic">Can I skip a month?</h4>
+                        </div>
+                        <i class="fas fa-chevron-down text-accentGreen/40 group-open:rotate-180 transition-transform duration-300"></i>
+                    </summary>
+                    <div class="px-8 pb-8 pl-24">
+                        <p class="text-primary/60 leading-relaxed italic border-l-2 border-accentGreen/20 pl-6">
+                            Absolutely. Most of our collectors skip during winter months or when they travel. One-click skip in your dashboard. No hidden fees or re-activation penalties.
+                        </p>
+                    </div>
+                </details>
                 
-                <div class="p-8 bg-card rounded-[2rem] border border-primary/5">
-                    <h4 class="text-lg font-bold mb-4 flex items-center gap-4"><span class="w-8 h-8 bg-accentGreen text-white rounded-full flex items-center justify-center text-xs">Q</span> How do you ship in winter?</h4>
-                    <p class="text-primary/60 text-sm leading-relaxed italic pl-12">We use 72-hour UniHeat packs and extra-thick isothermal padding for all subscription shipments during colder seasons.</p>
-                </div>
+                <!-- FAQ 2 -->
+                <details class="group bg-card rounded-[2.5rem] border border-primary/10 overflow-hidden transition-all duration-300">
+                    <summary class="flex items-center justify-between p-8 cursor-pointer list-none list-inside outline-none">
+                        <div class="flex items-center gap-6">
+                            <span class="w-10 h-10 bg-accentGreen/10 text-accentGreen rounded-full flex items-center justify-center text-xs font-bold leading-none">Q</span>
+                            <h4 class="text-xl font-bold font-playfair italic">How do you ship in winter?</h4>
+                        </div>
+                        <i class="fas fa-chevron-down text-accentGreen/40 group-open:rotate-180 transition-transform duration-300"></i>
+                    </summary>
+                    <div class="px-8 pb-8 pl-24">
+                        <p class="text-primary/60 leading-relaxed italic border-l-2 border-accentGreen/20 pl-6">
+                            We use 72-hour UniHeat packs and extra-thick isothermal padding for all subscription shipments during colder seasons. Every specimen is double-boxed to maintain an internal temperature of at least 15°C (60°F) during transit.
+                        </p>
+                    </div>
+                </details>
             </div>
         </section>
     </main>
 
     <footer class="bg-secondary text-primary transition-colors duration-300 pt-24 pb-12 px-6 lg:px-24 rounded-t-[5rem] mt-24">
         <div class="max-w-7xl mx-auto">
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
-                <div>
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
+                <div class="col-span-2">
                     <a href="index.html" class="brand-logo text-3xl font-playfair font-bold flex items-center gap-2 mb-6 group">
                         <i class="fas fa-leaf text-accentGreen transform group-hover:rotate-12 transition-transform"></i>
                         <span>Verdant Vault</span>
@@ -294,7 +333,7 @@
                 </div>
 
                 <!-- Newsletter Column -->
-                <div class="min-w-[200px]">
+                <div class="col-span-2 lg:col-span-1 min-w-[200px]">
                     <h4 class="font-bold mb-8 uppercase tracking-widest text-sm text-accentGreen">Newsletter</h4>
                     <p class="text-xs opacity-60 mb-6 italic">Subscribe for rare specimen alerts.</p>
                     <form class="space-y-3">

@@ -58,13 +58,13 @@
 <body class="bg-secondary text-primary transition-colors duration-300 grain-effect overflow-x-hidden">
 
     <!-- Navigation -->
-    <nav class="fixed top-0 inset-x-0 z-[1000] flex items-center justify-between h-16 md:h-[72px] px-6 lg:px-24 w-full bg-secondary border-b border-[#E0E0E0] dark:border-[#2D4A3C] shadow-sm transition-all duration-300">
-        <a href="index.html" class="brand-logo text-3xl font-playfair font-bold flex items-center gap-2 group">
+    <nav class="fixed top-0 inset-x-0 z-[1000] flex items-center justify-between h-16 md:h-[72px] px-6 lg:px-12 xl:px-24 w-full bg-secondary border-b border-[#E0E0E0] dark:border-[#2D4A3C] shadow-sm transition-all duration-300">
+        <a href="index.html" class="brand-logo text-xl sm:text-2xl lg:text-3xl font-playfair font-bold flex items-center gap-2 group whitespace-nowrap">
             <i class="fas fa-leaf text-accentGreen transform group-hover:rotate-12 transition-transform"></i>
-            <span>Verdant Vault</span>
+            <span class="whitespace-nowrap">Verdant Vault</span>
         </a>
 
-        <div class="hidden md:flex items-center gap-10 font-medium">
+        <div class="hidden lg:flex items-center gap-5 xl:gap-10 font-medium ml-auto mr-8 xl:mr-12 whitespace-nowrap">
             <a href="index.html" class="hover:text-accentGreen">Home 1</a>
             <a href="home-2.html" class="text-accentGreen">Home 2</a>
             <a href="shop.html" class="hover:text-accentGreen">Shop</a>
@@ -76,9 +76,9 @@
 
         <div class="flex items-center gap-4">
 
-            <a href="signup.html" class="hidden lg:block bg-accentGreen text-white px-6 py-2.5 rounded-full text-[10px] font-dm-sans font-bold uppercase tracking-widest hover:bg-primary transition-all shadow-lg active:scale-95">Sign Up</a>
-
-            
+            <a href="signup.html"
+                class="hidden lg:block bg-accentGreen text-white px-6 py-2.5 rounded-full text-[10px] font-dm-sans font-bold uppercase tracking-widest hover:bg-primary hover:text-secondary transition-all shadow-xl active:scale-95">Sign
+                Up</a>     
             <button id="theme-toggle" class="p-2.5 rounded-full border border-border/40 hover:bg-black/5 dark:hover:bg-white/5 transition-all shadow-sm"
                 title="Toggle Theme">
                 <i class="fas fa-moon"></i>
@@ -88,30 +88,45 @@
                 title="Switch Language Direction">
                 <i class="fas fa-language"></i>
             </button>
-            <button id="mobile-menu-btn" class="md:hidden p-2">
+            <button id="mobile-menu-btn" class="lg:hidden p-2">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
     </nav>
 
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu-overlay" class="fixed inset-0 bg-black/50 z-[1500] hidden opacity-0 transition-opacity duration-300"></div>
+
     <!-- Mobile Menu -->
     <div id="mobile-menu"
-        class="fixed inset-0 bg-secondary dark:bg-darkBg z-[60] hidden flex-col items-center justify-center gap-8 text-2xl font-playfair">
-        <button id="close-menu" onclick="document.getElementById('mobile-menu').classList.add('hidden')"
-            class="absolute top-8 right-8">
-            <i class="fas fa-times"></i>
-        </button>
-        <a href="index.html" class="hover:text-accentGreen">Home 1</a>
-        <a href="home-2.html" class="hover:text-accentGreen">Home 2</a>
-        <a href="shop.html" class="hover:text-accentGreen">Shop</a>
-        <a href="blog.html" class="hover:text-accentGreen">Blog</a>
-        <a href="subscriptions.html" class="hover:text-accentGreen">Pricing</a>
-        <a href="contact.html" class="hover:text-accentGreen">Contact</a>
-        <a href="dashboard.html" class="hover:text-accentGreen">My Jungle</a>
-        <div class="flex gap-6 mt-8">
-            <i class="fab fa-instagram"></i>
-            <i class="fab fa-pinterest"></i>
-            <i class="fab fa-twitter"></i>
+        class="fixed top-0 right-0 h-full w-[300px] bg-secondary dark:bg-darkBg z-[2000] flex flex-col p-8 transform translate-x-full transition-transform duration-300 ease-in-out shadow-2xl overflow-y-auto">
+        <div class="flex items-center justify-between mb-12">
+            <a href="index.html" class="brand-logo text-2xl font-playfair font-bold flex items-center gap-2">
+                <i class="fas fa-leaf text-accentGreen"></i>
+                <span>Verdant Vault</span>
+            </a>
+            <button id="close-menu" class="p-2 text-2xl focus:outline-none">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="flex flex-col gap-6 text-xl font-medium">
+            <a href="index.html" class="hover:text-accentGreen">Home 1</a>
+            <a href="home-2.html" class="hover:text-accentGreen">Home 2</a>
+            <a href="shop.html" class="hover:text-accentGreen">Shop</a>
+            <a href="blog.html" class="hover:text-accentGreen">Blog</a>
+            <a href="subscriptions.html" class="hover:text-accentGreen transition-colors">Pricing</a>
+            <a href="contact.html" class="hover:text-accentGreen transition-colors">Contact</a>
+            <a href="dashboard.html" class="hover:text-accentGreen transition-colors">Dashboard</a>
+            <a href="signup.html" class="bg-accentGreen text-white px-6 py-3 rounded-xl text-center font-bold uppercase tracking-widest hover:bg-primary transition-all shadow-lg mt-4">Sign Up</a>
+        </div>
+
+        <div class="mt-auto pt-12 border-t border-border">
+            <p class="text-xs uppercase tracking-widest opacity-50 mb-6">Stay Connected</p>
+            <div class="flex gap-6">
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-pinterest"></i>
+                <i class="fab fa-twitter"></i>
+            </div>
         </div>
     </div>
 
@@ -120,18 +135,18 @@
         <!-- Subtle Texture/Grain -->
         <div class="absolute inset-0 opacity-10 pointer-events-none grain-effect"></div>
         
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center relative z-10 w-full">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10 w-full">
             <!-- Left: High Content Clarity -->
-            <div class="space-y-10 text-left animate-fadeIn">
+            <div class="space-y-10 text-center lg:text-left flex flex-col items-center lg:items-start animate-fadeIn">
                 <h1 class="text-4xl md:text-7xl font-playfair italic font-bold text-primary leading-tight">
                     Every Leaf Tells a <span class="text-accentGreen">Collector's</span> Story.
                 </h1>
-                <p class="text-lg md:text-xl text-primary opacity-80 leading-relaxed italic max-w-xl font-playfair font-medium">
+                <p class="text-lg md:text-xl text-primary leading-relaxed italic max-w-xl font-playfair font-medium opacity-100 mx-auto lg:mx-0">
                     "We don't just sell plants. We curate living legacies for collectors who seek the extraordinary in every rare node and tropical leaf."
                 </p>
                 
-                <div class="flex flex-wrap items-center gap-6 pt-4">
-                    <a href="shop.html" class="px-10 py-5 bg-accentGreen text-white rounded-full font-bold uppercase tracking-widest text-xs hover:bg-primary transition-all shadow-xl active:scale-95">
+                <div class="flex flex-wrap items-center justify-center lg:justify-start gap-6 pt-4 w-full">
+                    <a href="shop.html" class="px-10 py-5 bg-accentGreen text-white rounded-full font-bold uppercase tracking-widest text-xs hover:bg-primary hover:text-secondary transition-all shadow-xl active:scale-95">
                         Enter the Vault
                     </a>
                     <a href="contact.html" class="px-10 py-5 border-2 border-primary text-primary rounded-full font-bold uppercase tracking-widest text-xs hover:bg-primary hover:text-secondary transition-all active:scale-95">
@@ -155,20 +170,20 @@
 
             <!-- Right: Premium Botanical Image -->
             <div class="relative group hidden md:block">
-                <div class="absolute -inset-4 bg-accentGreen/10 rounded-[3rem] blur-2xl group-hover:bg-accentGold/10 transition-all duration-1000"></div>
+                <div class="absolute -inset-4 rounded-[3rem] blur-2xl transition-all duration-1000" style="background-color: rgba(63, 163, 108, 0.1)"></div>
                 <div class="relative rounded-[3rem] overflow-hidden shadow-2xl border border-primary/5 animate-leafFloat">
                     <img src="https://images.pexels.com/photos/9412401/pexels-photo-9412401.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Rare Plant Specimen" 
                         class="w-full h-[450px] object-cover transition-transform duration-1000 group-hover:scale-110">
                     
                     <!-- Floating Highlight -->
-                    <div class="absolute bottom-6 left-6 right-6 bg-secondary/80 backdrop-blur-md p-6 rounded-2xl border border-primary/5 shadow-xl">
+                    <div class="absolute bottom-6 left-6 right-6 p-6 rounded-2xl border border-primary/10 shadow-2xl backdrop-blur-xl bg-white/80 dark:bg-black/60">
                         <div class="flex items-center gap-4">
-                            <div class="w-10 h-10 bg-accentGreen/10 rounded-full flex items-center justify-center text-accentGreen">
-                                <i class="fas fa-certificate"></i>
+                            <div class="w-10 h-10 bg-accentGreen/20 rounded-full flex items-center justify-center text-accentGreen">
+                                <i class="fas fa-certificate text-xl"></i>
                             </div>
                             <div>
-                                <p class="text-xs font-bold uppercase tracking-widest text-primary">Rare Monstera</p>
-                                <p class="text-[10px] italic text-primary/60">Currently available in Vault</p>
+                                <p class="text-xs font-bold uppercase tracking-[0.2em] text-primary">Rare Monstera</p>
+                                <p class="text-[10px] italic text-primary/70">Currently available in Vault</p>
                             </div>
                         </div>
                     </div>
@@ -188,40 +203,46 @@
                 <!-- Rare 1 -->
                 <div class="group relative overflow-hidden rounded-[3rem] h-[450px] border border-primary/5">
                     <img src="https://images.unsplash.com/photo-1614594975525-e45190c55d0b?w=800&q=80" alt="Variegated" class="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-110 grayscale group-hover:grayscale-0">
-                    <div class="absolute inset-x-0 bottom-0 p-10 bg-gradient-to-t from-black/80 via-black/40 to-transparent">
-                        <p class="text-accentGold text-xs font-bold uppercase tracking-widest mb-2">Brazil Archive</p>
-                        <h3 class="text-3xl font-playfair font-bold italic text-white mb-4">Variegated Adansonii</h3>
-                        <p class="text-white/60 text-sm leading-relaxed mb-6 font-playfair">A stable, cream-white variegated specimen with perfect fenestrations.</p>
-                        <a href="shop.html" class="inline-block text-white border-b border-accentGreen pb-1 text-xs font-bold uppercase tracking-widest hover:text-accentGreen transition-colors">View Specimen</a>
+                    <div class="absolute inset-0 p-10 bg-gradient-to-t from-black via-black/70 to-transparent flex flex-col justify-end px-10 pb-10">
+                        <div class="drop-shadow-lg">
+                            <p class="text-accentGold text-xs font-bold uppercase tracking-widest mb-2 opacity-100">Brazil Archive</p>
+                            <h3 class="text-3xl font-playfair font-bold italic text-white mb-4">Variegated Adansonii</h3>
+                            <p class="text-white/90 text-sm leading-relaxed mb-6 font-playfair">A stable, cream-white variegated specimen with perfect fenestrations.</p>
+                            <a href="shop.html" class="inline-block text-white border-b border-accentGreen pb-1 text-xs font-bold uppercase tracking-widest hover:text-accentGreen transition-colors">View Specimen</a>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Rare 2 -->
                 <div class="group relative overflow-hidden rounded-[3rem] h-[450px] border border-primary/5">
                     <img src="https://images.unsplash.com/photo-1596547609652-9cf5d8d76921?w=800&q=80" alt="Anthurium" class="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-110 grayscale group-hover:grayscale-0">
-                    <div class="absolute inset-x-0 bottom-0 p-10 bg-gradient-to-t from-black/80 via-black/40 to-transparent">
-                        <p class="text-accentGold text-xs font-bold uppercase tracking-widest mb-2">Madagascar Vault</p>
-                        <h3 class="text-3xl font-playfair font-bold italic text-white mb-4">Anthurium Warocqueanum</h3>
-                        <p class="text-white/60 text-sm leading-relaxed mb-6 font-playfair">Queen Anthurium with velvet leaves reaching up to 3 feet in maturity.</p>
-                        <a href="shop.html" class="inline-block text-white border-b border-accentGreen pb-1 text-xs font-bold uppercase tracking-widest hover:text-accentGreen transition-colors">View Specimen</a>
+                    <div class="absolute inset-0 p-10 bg-gradient-to-t from-black via-black/70 to-transparent flex flex-col justify-end px-10 pb-10">
+                        <div class="drop-shadow-lg">
+                            <p class="text-accentGold text-xs font-bold uppercase tracking-widest mb-2 opacity-100">Madagascar Vault</p>
+                            <h3 class="text-3xl font-playfair font-bold italic text-white mb-4">Anthurium Warocqueanum</h3>
+                            <p class="text-white/90 text-sm leading-relaxed mb-6 font-playfair">Queen Anthurium with velvet leaves reaching up to 3 feet in maturity.</p>
+                            <a href="shop.html" class="inline-block text-white border-b border-accentGreen pb-1 text-xs font-bold uppercase tracking-widest hover:text-accentGreen transition-colors">View Specimen</a>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Rare 3 -->
                 <div class="group relative overflow-hidden rounded-[3rem] h-[450px] border border-primary/5">
                     <img src="https://images.unsplash.com/photo-1459411552884-841db9b3cc2a?w=800&q=80" alt="Thai" class="w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-110 grayscale group-hover:grayscale-0">
-                    <div class="absolute inset-x-0 bottom-0 p-10 bg-gradient-to-t from-black/80 via-black/40 to-transparent">
-                        <p class="text-accentGold text-xs font-bold uppercase tracking-widest mb-2">Private Lab</p>
-                        <h3 class="text-3xl font-playfair font-bold italic text-white mb-4">Thai Constellation</h3>
-                        <p class="text-white/60 text-sm leading-relaxed mb-6 font-playfair">Grown and hardened in Kerala for maximum domestic stability.</p>
-                        <a href="shop.html" class="inline-block text-white border-b border-accentGreen pb-1 text-xs font-bold uppercase tracking-widest hover:text-accentGreen transition-colors">View Specimen</a>
+                    <div class="absolute inset-0 p-10 bg-gradient-to-t from-black via-black/70 to-transparent flex flex-col justify-end px-10 pb-10">
+                        <div class="drop-shadow-lg">
+                            <p class="text-accentGold text-xs font-bold uppercase tracking-widest mb-2 opacity-100">Private Lab</p>
+                            <h3 class="text-3xl font-playfair font-bold italic text-white mb-4">Thai Constellation</h3>
+                            <p class="text-white/90 text-sm leading-relaxed mb-6 font-playfair">Grown and hardened in Kerala for maximum domestic stability.</p>
+                            <a href="shop.html" class="inline-block text-white border-b border-accentGreen pb-1 text-xs font-bold uppercase tracking-widest hover:text-accentGreen transition-colors">View Specimen</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
         <!-- Section 3: The Journey -->
-        <div class="mt-40 py-24 bg-primary/5 rounded-[4rem] px-12 border border-primary/10">
+        <div class="mt-40 py-24 rounded-[4rem] px-12 border border-theme-border" style="background-color: rgba(63, 163, 108, 0.05)">
             <div class="grid lg:grid-cols-2 gap-24 items-center">
                 <div class="space-y-12">
                     <span class="text-xs font-bold uppercase tracking-[0.5em] text-accentGreen">The Collector's Journey</span>
@@ -251,11 +272,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="relative">
+                <div class="relative mt-20 lg:mt-0">
                     <img src="https://images.pexels.com/photos/19225278/pexels-photo-19225278.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Process" 
-                        class="rounded-[3rem] w-full h-[600px] object-cover shadow-2xl">
-                    <div class="absolute -top-12 -left-12 p-8 bg-secondary border border-primary/5 rounded-3xl shadow-xl animate-bounce-slow">
-                        <i class="fas fa-microscope text-3xl text-accentGreen"></i>
+                        class="rounded-[3rem] w-full h-[350px] md:h-[600px] object-cover shadow-2xl">
+                    <div class="absolute -top-6 -left-6 md:-top-12 md:-left-12 p-4 md:p-8 bg-secondary border border-primary/5 rounded-3xl shadow-xl animate-bounce-slow">
+                        <i class="fas fa-microscope text-xl md:text-3xl text-accentGreen"></i>
                     </div>
                 </div>
             </div>
@@ -266,26 +287,26 @@
             <span class="text-xs font-bold uppercase tracking-[0.5em] text-accentGreen">The Specimen Atlas</span>
             <h2 class="text-4xl md:text-6xl font-playfair font-bold italic mt-6 mb-24">Global Roots.</h2>
             
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div class="p-12 border border-primary/5 rounded-3xl hover:bg-primary hover:text-secondary transition-all group flex flex-col items-center">
-                    <img src="https://images.pexels.com/photos/2033997/pexels-photo-2033997.jpeg?w=100&q=80" class="w-16 h-16 rounded-full object-cover mb-4 grayscale group-hover:grayscale-0">
-                    <p class="font-bold font-playfair italic">Kerala, IN</p>
-                    <p class="text-[10px] opacity-40 uppercase tracking-widest mt-2">Curation Hub</p>
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="p-12 border border-primary/10 rounded-3xl hover:bg-primary transition-all group flex flex-col items-center">
+                    <img src="https://images.pexels.com/photos/2033997/pexels-photo-2033997.jpeg?w=100&q=80" class="w-16 h-16 rounded-full object-cover mb-4 grayscale group-hover:grayscale-0 transition-all">
+                    <p class="font-bold font-playfair italic text-primary group-hover:text-secondary transition-colors">Kerala, IN</p>
+                    <p class="text-[10px] text-primary/60 group-hover:text-secondary group-hover:opacity-100 font-bold uppercase tracking-[0.2em] mt-2 transition-all">Curation Hub</p>
                 </div>
-                <div class="p-12 border border-primary/5 rounded-3xl hover:bg-primary hover:text-secondary transition-all group flex flex-col items-center">
-                    <img src="https://images.pexels.com/photos/305821/pexels-photo-305821.jpeg?w=100&q=80" class="w-16 h-16 rounded-full object-cover mb-4 grayscale group-hover:grayscale-0">
-                    <p class="font-bold font-playfair italic">Manaus, BR</p>
-                    <p class="text-[10px] opacity-40 uppercase tracking-widest mt-2">Aroid Archive</p>
+                <div class="p-12 border border-primary/10 rounded-3xl hover:bg-primary transition-all group flex flex-col items-center">
+                    <img src="https://images.pexels.com/photos/305821/pexels-photo-305821.jpeg?w=100&q=80" class="w-16 h-16 rounded-full object-cover mb-4 grayscale group-hover:grayscale-0 transition-all">
+                    <p class="font-bold font-playfair italic text-primary group-hover:text-secondary transition-colors">Manaus, BR</p>
+                    <p class="text-[10px] text-primary/60 group-hover:text-secondary group-hover:opacity-100 font-bold uppercase tracking-[0.2em] mt-2 transition-all">Aroid Archive</p>
                 </div>
-                <div class="p-12 border border-primary/5 rounded-3xl hover:bg-primary hover:text-secondary transition-all group flex flex-col items-center">
-                    <img src="https://images.pexels.com/photos/1084510/pexels-photo-1084510.jpeg?w=100&q=80" class="w-16 h-16 rounded-full object-cover mb-4 grayscale group-hover:grayscale-0">
-                    <p class="font-bold font-playfair italic">Sava, MG</p>
-                    <p class="text-[10px] opacity-40 uppercase tracking-widest mt-2">Anthurium Vault</p>
+                <div class="p-12 border border-primary/10 rounded-3xl hover:bg-primary transition-all group flex flex-col items-center">
+                    <img src="https://images.pexels.com/photos/1084510/pexels-photo-1084510.jpeg?w=100&q=80" class="w-16 h-16 rounded-full object-cover mb-4 grayscale group-hover:grayscale-0 transition-all">
+                    <p class="font-bold font-playfair italic text-primary group-hover:text-secondary transition-colors">Sava, MG</p>
+                    <p class="text-[10px] text-primary/60 group-hover:text-secondary group-hover:opacity-100 font-bold uppercase tracking-[0.2em] mt-2 transition-all">Anthurium Vault</p>
                 </div>
-                <div class="p-12 border border-primary/5 rounded-3xl hover:bg-primary hover:text-secondary transition-all group flex flex-col items-center">
-                    <img src="https://images.pexels.com/photos/1002703/pexels-photo-1002703.jpeg?w=100&q=80" class="w-16 h-16 rounded-full object-cover mb-4 grayscale group-hover:grayscale-0">
-                    <p class="font-bold font-playfair italic">Phuket, TH</p>
-                    <p class="text-[10px] opacity-40 uppercase tracking-widest mt-2">Laboratory</p>
+                <div class="p-12 border border-primary/10 rounded-3xl hover:bg-primary transition-all group flex flex-col items-center">
+                    <img src="https://images.pexels.com/photos/1002703/pexels-photo-1002703.jpeg?w=100&q=80" class="w-16 h-16 rounded-full object-cover mb-4 grayscale group-hover:grayscale-0 transition-all">
+                    <p class="font-bold font-playfair italic text-primary group-hover:text-secondary transition-colors">Phuket, TH</p>
+                    <p class="text-[10px] text-primary/60 group-hover:text-secondary group-hover:opacity-100 font-bold uppercase tracking-[0.2em] mt-2 transition-all">Laboratory</p>
                 </div>
             </div>
         </div>
@@ -293,12 +314,12 @@
     <section class="max-w-7xl mx-auto px-6 mb-32 mt-40">
         <div class="bg-accentGreen p-12 lg:p-24 rounded-[4rem] text-white flex flex-col md:flex-row items-center justify-between gap-12 relative overflow-hidden">
             <i class="fas fa-seedling absolute -top-8 -left-8 text-[15rem] text-white/5 -rotate-12"></i>
-            <div class="max-w-lg relative z-10">
+            <div class="max-w-2xl relative z-10 text-left">
                 <span class="text-xs font-bold uppercase tracking-[0.3em] mb-4 inline-block">Collector's Inner Circle</span>
                 <h2 class="text-4xl lg:text-5xl font-playfair font-bold italic mb-6">Get Notified Before the Restock Drops.</h2>
                 <p class="text-white/70 italic">Join 2,500+ collectors receiving weekly dossiers on rare species and care hacks. No spam, only chlorophyll.</p>
             </div>
-            <div class="w-full md:w-auto relative z-10">
+            <div class="w-full md:w-auto relative z-10 shrink-0">
                 <form class="flex flex-col md:flex-row gap-4">
                     <input type="email" placeholder="Your best email..." class="px-8 py-5 rounded-full bg-white/10 border border-white/20 text-white placeholder:text-white/40 outline-none focus:bg-white/20 transition-all min-w-[300px]">
                     <button class="bg-white text-accentGreen px-10 py-5 rounded-full font-bold uppercase tracking-widest shadow-xl hover:scale-105 active:scale-95 transition-all">Cultivate</button>
@@ -310,9 +331,9 @@
     <!-- Footer -->
     <footer class="bg-secondary text-primary transition-colors duration-300 pt-24 pb-12 px-6 lg:px-24 rounded-t-[5rem] mt-24">
         <div class="max-w-7xl mx-auto">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
+            <div class="grid grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
                 <!-- Brand Content -->
-                <div class="md:col-span-2">
+                <div class="col-span-2">
                     <a href="index.html" class="brand-logo text-3xl font-playfair font-bold flex items-center gap-2 mb-6 group">
                         <i class="fas fa-leaf text-accentGreen transform group-hover:rotate-12 transition-transform"></i>
                         <span>Verdant Vault</span>
@@ -355,7 +376,7 @@
                 </div>
 
                 <!-- Newsletter Column -->
-                <div class="min-w-[200px]">
+                <div class="col-span-2 lg:col-span-1 min-w-[200px]">
                     <h4 class="font-bold mb-8 uppercase tracking-widest text-sm text-accentGreen">Newsletter</h4>
                     <p class="text-xs opacity-60 mb-6 italic">Subscribe for rare specimen alerts.</p>
                     <form class="space-y-3">

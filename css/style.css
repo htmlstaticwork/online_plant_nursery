@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
 
 :root, [data-theme='light'] {
+    color-scheme: light;
     --bg-main: #F4FAF6;
     --text-main: #1F3D2B;
     --card-bg: #FFFFFF;
@@ -13,6 +14,7 @@
 }
 
 [data-theme='dark'] {
+    color-scheme: dark;
     --bg-main: #0F1F17;
     --text-main: #E8F5EC;
     --card-bg: #1B3328;
@@ -22,6 +24,11 @@
     --primary: #E8F5EC;
     --secondary: #0F1F17;
     --overlay-bg: rgba(0, 0, 0, 0.6);
+}
+
+select option {
+    background-color: var(--card-bg);
+    color: var(--text-main);
 }
 
 body {
@@ -295,6 +302,27 @@ input:focus {
     color: var(--accent-green) !important;
     border-bottom: 2px solid var(--accent-green);
     font-weight: 700;
+}
+
+/* Sign Up Button Fixes */
+nav a[href="signup.html"].bg-accentGreen,
+#mobile-menu a[href="signup.html"].bg-accentGreen,
+.btn-signup-main {
+    color: white !important;
+    background-color: var(--accent-green) !important;
+}
+
+nav a[href="signup.html"].bg-accentGreen:hover,
+#mobile-menu a[href="signup.html"].bg-accentGreen:hover,
+.btn-signup-main:hover {
+    background-color: var(--primary) !important;
+    color: white !important;
+}
+
+[data-theme='dark'] nav a[href="signup.html"].bg-accentGreen:hover,
+[data-theme='dark'] #mobile-menu a[href="signup.html"].bg-accentGreen:hover,
+[data-theme='dark'] .btn-signup-main:hover {
+    color: var(--secondary) !important; /* This is dark green in dark mode */
 }
 
 .mobile-nav-link-active {
