@@ -62,20 +62,35 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
     const closeMenu = document.getElementById('close-menu');
+    const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
     
     if (mobileMenuBtn && mobileMenu) {
         mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-            mobileMenu.classList.toggle('flex');
+            mobileMenu.classList.add('active');
+            mobileMenuOverlay.classList.remove('hidden');
+            setTimeout(() => mobileMenuOverlay.classList.add('active'), 10);
+            document.body.classList.add('overflow-hidden');
         });
     }
     
-    if (closeMenu && mobileMenu) {
-        closeMenu.addEventListener('click', () => {
-            mobileMenu.classList.add('hidden');
-            mobileMenu.classList.remove('flex');
-        });
-    }
+    const closeMobileMenu = () => {
+        if (!mobileMenu) return;
+        mobileMenu.classList.remove('active');
+        if (mobileMenuOverlay) {
+            mobileMenuOverlay.classList.remove('active');
+            setTimeout(() => mobileMenuOverlay.classList.add('hidden'), 300);
+        }
+        document.body.classList.remove('overflow-hidden');
+    };
+
+    if (closeMenu) closeMenu.addEventListener('click', closeMobileMenu);
+    if (mobileMenuOverlay) mobileMenuOverlay.addEventListener('click', closeMobileMenu);
+
+    // Close on link click
+    const mobileLinks = mobileMenu ? mobileMenu.querySelectorAll('a') : [];
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', closeMobileMenu);
+    });
 
     // Mist Particles Generator
     function createMist() {

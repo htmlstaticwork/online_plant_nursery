@@ -26,10 +26,13 @@
                     colors: {
                         primary: 'var(--text-main)',
                         secondary: 'var(--bg-main)',
+                        accentGreen: 'var(--accent-green)',
+                        accentGold: 'var(--accent-gold)',
                         card: 'var(--card-bg)',
                         border: 'var(--border-color)',
-                        accentGreen: '#3FA36C',
-                        accentGold: '#D4A853'
+                        surface: 'var(--bg-main)',
+                        darkCard: 'var(--card-bg)',
+                        darkSurface: 'var(--bg-main)'
                     },
                     fontFamily: {
                         'dm-sans': ['DM Sans', 'sans-serif'],
@@ -60,8 +63,8 @@
         <aside class="w-20 lg:w-72 fixed h-full bg-card border-r border-border p-4 lg:p-8 flex flex-col justify-between transition-all duration-300">
             <div class="space-y-4">
                 <div class="mb-10 px-4">
-                    <a href="index.html" class="text-xl font-playfair font-bold flex items-center gap-2">
-                        <i class="fas fa-leaf text-accentGreen"></i>
+                    <a href="index.html" class="text-xl font-playfair font-bold flex items-center gap-2 group">
+                        <i class="fas fa-leaf text-accentGreen transform group-hover:rotate-12 transition-transform"></i>
                         <span class="hidden lg:block">Verdant Vault</span>
                     </a>
                 </div>
