@@ -50,11 +50,8 @@
         <div id="sidebar-overlay" class="fixed inset-0 bg-black/50 z-[45] hidden opacity-0 transition-opacity duration-300"></div>
 
         <!-- Dashboard Header -->
-        <header class="fixed top-0 inset-x-0 lg:ps-72 h-24 bg-secondary/80 backdrop-blur-md border-b border-border z-[45] flex items-center justify-between px-8 lg:px-12 transition-all duration-300">
+        <header class="fixed top-0 inset-x-0 lg:ps-72 h-24 bg-secondary/80 backdrop-blur-md border-b border-border z-[45] flex items-center justify-between px-4 lg:px-6 transition-all duration-300">
             <div class="flex items-center gap-4">
-                <span class="text-xs font-bold uppercase tracking-[0.2em] opacity-40 hidden md:block">Vault</span>
-                <div class="h-4 w-px bg-primary/10 hidden md:block"></div>
-                <h2 class="text-sm font-bold uppercase tracking-widest text-accentGreen">Vault Settings</h2>
             </div>
             <div class="flex items-center gap-4 ms-auto">
                 <button id="dashboard-hamburger" class="lg:hidden p-3 bg-white dark:bg-darkSurface rounded-2xl border border-primary/5 shadow-sm hover:scale-110 active:scale-90 transition-all text-primary dark:text-primary" title="Open Menu">
@@ -119,16 +116,18 @@
 
                 <a href="index.html" class="sidebar-link text-red-500 hover:bg-red-50" title="Logout">
                     <i class="fas fa-sign-out-alt"></i>
-                    <span class="hidden lg:block">Logout</span>
+                    <span>Logout</span>
                 </a>
             </div>
         </aside>
 
         <!-- Main Dashboard Content -->
-        <main class="flex-1 ms-0 lg:ms-72 pt-32 p-6 lg:p-12 transition-all duration-300">
+        <main class="flex-1 ms-0 lg:ms-72 pt-24 p-6 lg:p-12 transition-all duration-300">
+            <!-- Architectural Spacer to clear fixed header -->
+            <div class="h-12 pointer-events-none"></div>
             <div class="mb-12 animate-plantGrow">
-                <h1 class="text-4xl font-bold font-playfair italic mb-2 text-primary">Vault Preferences.</h1>
-                <p class="text-primary/50">Configure your botanical experience.</p>
+                <h1 class="text-4xl font-bold font-playfair italic mb-3 text-primary drop-shadow-sm">Vault Preferences.</h1>
+                <p class="text-primary opacity-70 font-medium tracking-wide">Configure your botanical experience.</p>
             </div>
 
             <div class="max-w-3xl space-y-12">
@@ -162,15 +161,16 @@
                 <section class="bg-card p-10 rounded-[3rem] border border-border shadow-sm">
                     <h3 class="text-xl font-bold font-playfair italic mb-8">Advanced Options</h3>
                     <div class="space-y-8">
-                       <div class="flex items-center justify-between p-6 bg-primary/2 rounded-3xl border border-primary/5">
+                       <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between p-6 bg-primary/2 rounded-3xl border border-primary/5 gap-6">
                           <div class="flex items-center gap-4">
-                             <i class="fas fa-moon text-accentGold"></i>
-                             <div>
-                                <h4 class="text-sm font-bold">Automatic Botanical Mode</h4>
-                                <p class="text-[10px] opacity-40 uppercase tracking-widest font-bold">Sync theme with seasonal Kerala daylight</p>
+                             <i class="fas fa-moon text-accentGold shrink-0"></i>
+                             <div class="min-w-0">
+                                <h4 class="text-sm font-bold truncate md:whitespace-normal">Automatic Botanical Mode</h4>
+                                <p class="text-[10px] opacity-40 uppercase tracking-widest font-bold whitespace-normal sm:whitespace-nowrap">Sync theme with seasonal Kerala daylight</p>
                              </div>
                           </div>
-                          <button class="text-xs font-bold text-accentGreen uppercase tracking-widest transition-all duration-300 hover:bg-accentGreen hover:text-white hover:px-5 hover:py-2 hover:rounded-full hover:-translate-y-0.5 shadow-sm hover:shadow-md">Activate</button>
+                          <button class="text-xs font-bold text-accentGreen uppercase tracking-widest transition-all duration-300 hover:bg-accentGreen hover:text-white hover:px-5 hover:py-2 hover:rounded-full hover:-translate-y-0.5 shadow-sm hover:shadow-md whitespace-nowrap shrink-0">Activate</button>
+                       </div>
                        </div>
                     </div>
                 </section>

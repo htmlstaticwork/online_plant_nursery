@@ -48,15 +48,15 @@
     </div>
 
     <!-- Floating Controls -->
-    <div class="fixed top-8 right-8 z-[1000] flex items-center gap-4">
-        <button id="theme-toggle" class="w-12 h-12 flex items-center justify-center rounded-full bg-theme-card border border-theme text-theme-main hover:scale-110 transition-all shadow-lg"
+    <div class="fixed top-3 right-3 sm:top-8 sm:right-8 z-[1001] flex items-center gap-2">
+        <button id="theme-toggle" class="w-9 h-9 sm:w-12 sm:h-12 flex items-center justify-center rounded-full bg-theme-card border border-theme text-theme-main hover:scale-110 transition-all shadow-lg"
             title="Toggle Theme">
-            <i class="fas fa-moon"></i>
+            <i class="fas fa-moon text-xs sm:text-base"></i>
         </button>
         <button id="rtl-toggle"
-            class="w-12 h-12 flex items-center justify-center rounded-full bg-theme-card border border-theme text-theme-main hover:scale-110 transition-all shadow-lg"
+            class="w-9 h-9 sm:w-12 sm:h-12 flex items-center justify-center rounded-full bg-theme-card border border-theme text-theme-main hover:scale-110 transition-all shadow-lg"
             title="Switch Language Direction">
-            <i class="fas fa-language"></i>
+            <i class="fas fa-language text-xs sm:text-base"></i>
         </button>
     </div>
 
@@ -94,12 +94,12 @@
                     </div>
                 </div>
 
-                <div class="flex justify-between items-center text-xs text-theme-main opacity-60 px-2 font-bold uppercase tracking-tighter">
-                    <label class="flex items-center gap-2 cursor-pointer group">
+                <div class="flex flex-wrap justify-between items-center text-[10px] md:text-xs text-theme-main opacity-60 px-2 font-bold uppercase tracking-widest gap-4">
+                    <label class="flex items-center gap-2 cursor-pointer group shrink-0">
                         <input type="checkbox" class="accent-accentGreen w-4 h-4">
-                        <span class="group-hover:text-accentGreen transition-all">Remember Session</span>
+                        <span class="group-hover:text-accentGreen transition-all whitespace-nowrap">Remember Me</span>
                     </label>
-                    <a href="#" class="hover:text-accentGreen transition-all">Forgotten Key?</a>
+                    <a href="#" class="hover:text-accentGreen transition-all whitespace-nowrap">Forgot Password?</a>
                 </div>
 
                 <button type="submit" class="w-full bg-accentGreen text-white py-4 rounded-2xl font-bold tracking-widest text-sm hover:translate-y-[-2px] transition-all shadow-lg shadow-accentGreen/20 uppercase btn-signup-main">

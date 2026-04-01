@@ -60,7 +60,7 @@
 
         <!-- Dashboard Header -->
         <header
-            class="fixed top-0 inset-x-0 lg:ps-72 h-24 bg-secondary/80 backdrop-blur-md border-b border-border z-[45] flex items-center justify-between px-8 lg:px-12 transition-all duration-300">
+            class="fixed top-0 inset-x-0 lg:ps-72 h-24 bg-secondary/80 backdrop-blur-md border-b border-border z-[45] flex items-center justify-between px-4 lg:px-6 transition-all duration-300">
             <div class="flex items-center gap-4">
             </div>
             <div class="flex items-center gap-4 ms-auto">
@@ -151,22 +151,24 @@
 
                 <a href="index.html" class="sidebar-link text-red-500 hover:bg-red-50" title="Logout">
                     <i class="fas fa-sign-out-alt"></i>
-                    <span class="hidden lg:block">Logout</span>
+                    <span>Logout</span>
                 </a>
             </div>
         </aside>
 
         <!-- Main Dashboard Content -->
-        <main class="flex-1 ms-0 lg:ms-72 pt-32 p-6 lg:p-12 transition-all duration-300">
+        <main class="flex-1 ms-0 lg:ms-72 pt-24 p-6 lg:p-12 transition-all duration-300">
+            <!-- Architectural Spacer to clear fixed header -->
+            <div class="h-12 pointer-events-none"></div>
 
             <!-- Welcome Header -->
             <div class="mb-12 animate-plantGrow">
-                <h1 class="text-4xl font-bold font-playfair italic mb-2 text-primary">Grow with us, Meera K.</h1>
-                <p class="text-primary/50">Tracking 3 rare specimens in transit.</p>
+                <h1 class="text-4xl font-bold font-playfair italic mb-3 text-primary drop-shadow-sm">Grow with us, Meera K.</h1>
+                <p class="text-primary opacity-70 font-medium tracking-wide">Tracking 3 rare specimens in transit.</p>
             </div>
 
             <!-- Stats Overview -->
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12 text-primary">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-6 mb-12 text-primary">
                 <div class="bg-card p-8 rounded-[2rem] border border-border shadow-sm hover:shadow-lg transition-all">
                     <p class="text-xs uppercase tracking-widest opacity-50 mb-4 font-bold">Plants Owned</p>
                     <div class="flex items-end gap-3">
