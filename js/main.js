@@ -48,14 +48,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // RTL Toggle Logic
-    const rtlToggle = document.getElementById('rtl-toggle');
-    if (rtlToggle) {
-        rtlToggle.addEventListener('click', () => {
+    const rtlToggles = document.querySelectorAll('#rtl-toggle, #mobile-rtl-toggle, #dashboard-rtl-toggle');
+    rtlToggles.forEach(toggle => {
+        toggle.addEventListener('click', () => {
             const isRTL = document.documentElement.getAttribute('dir') === 'rtl';
             document.documentElement.setAttribute('dir', isRTL ? 'ltr' : 'rtl');
             localStorage.setItem('dir', isRTL ? 'ltr' : 'rtl');
         });
-    }
+    });
 
     // Restore RTL state
     if (localStorage.getItem('dir') === 'rtl') {
@@ -152,6 +152,46 @@ document.addEventListener('DOMContentLoaded', () => {
             
             link.setAttribute('aria-current', 'page');
         }
+    });
+
+    // Dashboard Sidebar Logic
+    const dashHamburger = document.getElementById('dashboard-hamburger');
+    const dashSidebar = document.getElementById('dashboard-sidebar');
+    const closeDashSidebar = document.getElementById('close-sidebar');
+    const sidebarOverlay = document.getElementById('sidebar-overlay');
+
+    if (dashHamburger && dashSidebar) {
+        dashHamburger.addEventListener('click', () => {
+            dashSidebar.classList.remove('-translate-x-full');
+            if (sidebarOverlay) {
+                sidebarOverlay.classList.remove('hidden');
+                setTimeout(() => sidebarOverlay.classList.add('opacity-100'), 10);
+            }
+            document.body.classList.add('overflow-hidden');
+        });
+    }
+
+    const hideDashSidebar = () => {
+        if (!dashSidebar) return;
+        dashSidebar.classList.add('-translate-x-full');
+        if (sidebarOverlay) {
+            sidebarOverlay.classList.remove('opacity-100');
+            setTimeout(() => sidebarOverlay.classList.add('hidden'), 300);
+        }
+        document.body.classList.remove('overflow-hidden');
+    };
+
+    if (closeDashSidebar) closeDashSidebar.addEventListener('click', hideDashSidebar);
+    if (sidebarOverlay) sidebarOverlay.addEventListener('click', hideDashSidebar);
+
+    // Close dashboard sidebar on link click (mobile only)
+    const dashSidebarLinks = dashSidebar ? dashSidebar.querySelectorAll('a') : [];
+    dashSidebarLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (window.innerWidth < 1024) {
+                hideDashSidebar();
+            }
+        });
     });
 });
 

@@ -29,7 +29,9 @@
                         accentGold: 'var(--accent-gold)',
                         card: 'var(--card-bg)',
                         border: 'var(--border-color)',
-                        surface: 'var(--bg-main)'
+                        surface: 'var(--bg-main)',
+                        darkCard: 'var(--card-bg)',
+                        darkSurface: 'var(--bg-main)'
                     }
                 }
             }
@@ -90,11 +92,6 @@
         <a href="subscriptions.html" class="hover:text-accentGreen">Pricing</a>
         <a href="contact.html" class="hover:text-accentGreen">Contact</a>
         <a href="dashboard.html" class="hover:text-accentGreen">My Jungle</a>
-        <div class="flex gap-6 mt-8">
-            <i class="fab fa-instagram"></i>
-            <i class="fab fa-pinterest"></i>
-            <i class="fab fa-twitter"></i>
-        </div>
     </div>
 
     <main class="pt-40 pb-24 px-6 lg:px-24">
@@ -109,7 +106,7 @@
 
                     <div class="space-y-8">
                         <!-- Cart Item 1 -->
-                        <div class="flex flex-col md:flex-row items-center gap-10 bg-white dark:bg-darkCard p-8 rounded-[3rem] border border-primary/5 group relative overflow-hidden group">
+                        <div class="flex flex-col md:flex-row items-center gap-10 bg-card p-8 rounded-[3rem] border border-border group relative overflow-hidden group">
                             <div class="absolute -right-4 -top-4 text-8xl text-primary/2 opacity-0 group-hover:opacity-100 transition-opacity">#01</div>
                             <img src="https://images.unsplash.com/photo-1614594975525-e45190c55d0b?w=400&q=80" alt="" class="w-48 h-48 rounded-[2rem] object-cover shadow-2xl group-hover:scale-105 transition-transform duration-700">
                             <div class="flex-1 space-y-4">

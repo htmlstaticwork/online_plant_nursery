@@ -22,10 +22,15 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: '#1F3D2B',
-                        secondary: '#F4FAF6',
-                        accentGreen: '#3FA36C',
-                        accentGold: '#D4A853'
+                        primary: 'var(--text-main)',
+                        secondary: 'var(--bg-main)',
+                        accentGreen: 'var(--accent-green)',
+                        accentGold: 'var(--accent-gold)',
+                        card: 'var(--card-bg)',
+                        border: 'var(--border-color)',
+                        surface: 'var(--bg-main)',
+                        darkCard: 'var(--card-bg)',
+                        darkSurface: 'var(--bg-main)'
                     }
                 }
             }
@@ -59,7 +64,7 @@
                     </div>
                 </div>
 
-                <div class="bg-white dark:bg-darkCard p-12 rounded-[3.5rem] border border-primary/5 shadow-inner">
+                <div class="bg-card p-12 rounded-[3.5rem] border border-border shadow-inner">
                     <h2 class="text-3xl font-display font-bold italic mb-10 border-b border-primary/5 pb-8">Destination Specimen.</h2>
                     
                     <form class="grid md:grid-cols-2 gap-8">
