@@ -63,8 +63,8 @@ h1, h2, h3, h4, h5, h6, .font-playfair, .font-display {
 }
 
 @keyframes plantGrow {
-    from { transform: scale(0.95); opacity: 0; }
-    to { transform: scale(1); opacity: 1; }
+    from { transform: translateY(15px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
 }
 
 @keyframes sunlightGlow {
@@ -94,7 +94,13 @@ h1, h2, h3, h4, h5, h6, .font-playfair, .font-display {
 }
 
 .animate-leafFloat { animation: leafFloat 6s ease-in-out infinite; }
-.animate-plantGrow { animation: plantGrow 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+.animate-plantGrow { 
+    animation: plantGrow 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    will-change: transform, opacity;
+    transform: translateZ(0); /* Force GPU */
+}
 .animate-sunlightGlow { animation: sunlightGlow 4s ease-in-out infinite; }
 .animate-mist { animation: mistFloat 8s ease-in-out infinite; }
 

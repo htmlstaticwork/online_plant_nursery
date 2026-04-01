@@ -42,8 +42,13 @@
         <div id="sidebar-overlay" class="fixed inset-0 bg-black/50 z-[45] hidden opacity-0 transition-opacity duration-300"></div>
 
         <!-- Dashboard Header -->
-        <header class="fixed top-0 left-0 lg:left-72 right-0 h-24 bg-secondary/80 backdrop-blur-md border-b border-border z-[45] flex items-center justify-between px-8 lg:px-12 transition-all duration-300">
-            <div class="flex items-center gap-4 ml-auto">
+        <header class="fixed top-0 inset-x-0 lg:ps-72 h-24 bg-secondary/80 backdrop-blur-md border-b border-border z-[45] flex items-center justify-between px-8 lg:px-12 transition-all duration-300">
+            <div class="flex items-center gap-4">
+                <span class="text-xs font-bold uppercase tracking-[0.2em] opacity-40 hidden md:block">Vault</span>
+                <div class="h-4 w-px bg-primary/10 hidden md:block"></div>
+                <h2 class="text-sm font-bold uppercase tracking-widest text-accentGreen">Care Repository</h2>
+            </div>
+            <div class="flex items-center gap-4 ms-auto">
                 <button id="dashboard-hamburger" class="lg:hidden p-3 bg-white dark:bg-darkSurface rounded-2xl border border-primary/5 shadow-sm hover:scale-110 active:scale-90 transition-all text-primary dark:text-primary" title="Open Menu">
                     <i class="fas fa-bars"></i>
                 </button>
@@ -56,7 +61,7 @@
             </div>
         </header>
         <!-- Sidebar Navigation -->
-        <aside id="dashboard-sidebar" class="w-72 fixed h-full bg-card border-r border-border p-8 flex flex-col justify-between transition-all duration-300 z-50 transform -translate-x-full lg:translate-x-0">
+        <aside id="dashboard-sidebar" class="w-72 fixed inset-y-0 start-0 bg-card border-e border-border p-8 flex flex-col justify-between transition-all duration-300 z-50 transform -translate-x-full rtl:translate-x-full lg:translate-x-0 rtl:lg:translate-x-0">
             <div class="space-y-4">
                 <div class="mb-10 px-4 flex items-center justify-between">
                     <a href="index.html" class="text-xl font-display font-bold flex items-center gap-2 group">
@@ -101,7 +106,7 @@
         </aside>
 
         <!-- Main Dashboard Content -->
-        <main class="flex-1 ml-0 lg:ml-72 pt-32 p-6 lg:p-12 transition-all duration-300">
+        <main class="flex-1 ms-0 lg:ms-72 pt-32 p-6 lg:p-12 transition-all duration-300">
             
             <div class="mb-12 animate-plantGrow">
                 <h1 class="text-4xl font-bold font-playfair italic mb-2 text-primary">Care Repository.</h1>
@@ -114,7 +119,7 @@
                 <div class="bg-card rounded-[3rem] border border-border p-8 hover:shadow-xl transition-all group overflow-hidden relative">
                     <h3 class="text-2xl font-bold font-playfair italic mb-8 flex justify-between items-center">
                        Weekly Schedule
-                       <a href="#" class="text-accentGreen text-xs font-bold uppercase tracking-widest border-b border-accentGreen/20">Expand View</a>
+                       <a href="#" class="text-accentGreen text-xs font-bold uppercase tracking-widest border-b border-accentGreen/20 hover:text-primary hover:border-accentGreen transition-all">Expand View</a>
                     </h3>
                     
                     <div class="space-y-6">
@@ -125,12 +130,12 @@
                              <p class="text-2xl font-playfair font-bold text-accentGreen">30</p>
                           </div>
                           <div class="flex-1 space-y-4">
-                             <div class="p-6 bg-accentGreen/5 rounded-3xl border border-accentGreen/10 flex justify-between items-center group cursor-pointer hover:bg-accentGreen/20 transition-all">
+                              <div class="p-6 bg-accentGreen/5 rounded-3xl border border-accentGreen/10 flex justify-between items-center group cursor-pointer hover:bg-accentGreen/20 transition-all">
                                 <div>
                                    <h4 class="font-bold text-sm">Mist Albo Variegata</h4>
                                    <p class="text-[10px] opacity-50 italic whitespace-nowrap">Kerala Greenhouse Protocol Stage 2</p>
                                 </div>
-                                <i class="fas fa-check-circle text-accentGreen opacity-20 group-hover:opacity-100"></i>
+                                <i class="fas fa-check-circle text-accentGreen opacity-20 ms-8 group-hover:opacity-100 transition-all"></i>
                              </div>
                           </div>
                        </div>
@@ -156,11 +161,11 @@
 
                 <!-- Guidance / Curator -->
                 <div class="space-y-8">
-                   <div class="p-10 bg-primary text-secondary rounded-[3rem] shadow-2xl relative overflow-hidden group">
+                   <div class="p-10 bg-accentGreen text-white rounded-[3rem] shadow-2xl relative overflow-hidden group">
                       <i class="fas fa-leaf absolute -bottom-10 -right-10 text-[15rem] text-white/5 -rotate-12"></i>
                       <h3 class="text-2xl font-playfair font-bold italic mb-6">Ask the Curator.</h3>
-                      <p class="text-sm opacity-60 leading-relaxed italic mb-8">Direct priority access to Arjun Iyer for specific growth concerns or specimen health reviews.</p>
-                      <button class="bg-accentGreen text-white px-8 py-3 rounded-full text-xs font-bold uppercase tracking-widest hover:scale-105 active:scale-95 transition-all shadow-xl shadow-accentGreen/20">Initialize Consultation</button>
+                      <p class="text-sm opacity-80 leading-relaxed italic mb-8">Direct priority access to Arjun Iyer for specific growth concerns or specimen health reviews.</p>
+                      <button class="bg-white text-accentGreen px-8 py-3 rounded-full text-xs font-bold uppercase tracking-widest hover:scale-105 active:scale-95 transition-all shadow-xl shadow-black/20">Initialize Consultation</button>
                    </div>
 
                    <div class="p-10 bg-card rounded-[3rem] border border-primary/5 shadow-sm space-y-8">

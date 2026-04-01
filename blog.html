@@ -54,12 +54,13 @@
     <nav
         class="fixed top-0 inset-x-0 z-[1000] flex items-center justify-between h-16 md:h-[72px] px-6 lg:px-12 xl:px-24 w-full bg-secondary border-b border-[#E0E0E0] dark:border-[#2D4A3C] shadow-sm transition-all duration-300">
         <a href="index.html"
-            class="brand-logo text-xl sm:text-2xl lg:text-3xl font-playfair font-bold flex items-center gap-2 group whitespace-nowrap">
+            class="brand-logo text-xl sm:text-2xl xl:text-3xl font-playfair font-bold flex items-center gap-2 group whitespace-nowrap">
             <i class="fas fa-leaf text-accentGreen transform group-hover:rotate-12 transition-transform"></i>
             <span class="whitespace-nowrap">Verdant Vault</span>
         </a>
 
-        <div class="hidden lg:flex items-center gap-5 xl:gap-10 font-medium ml-auto mr-8 xl:mr-12 whitespace-nowrap">
+        <div
+            class="hidden lg:flex items-center gap-3 xl:gap-8 font-medium ml-auto mr-4 xl:mr-12 text-sm xl:text-base whitespace-nowrap">
             <a href="index.html" class="hover:text-accentGreen">Home 1</a>
             <a href="home-2.html" class="hover:text-accentGreen">Home 2</a>
             <a href="shop.html" class="hover:text-accentGreen">Shop</a>
@@ -71,10 +72,10 @@
 
         <div class="flex items-center gap-4">
             <a href="signup.html"
-                class="hidden lg:block bg-accentGreen text-white px-6 py-2.5 rounded-full text-[10px] font-dm-sans font-bold uppercase tracking-widest hover:bg-primary transition-all shadow-lg active:scale-95">Sign
+                class="hidden lg:block bg-accentGreen text-white px-6 py-2.5 rounded-full text-[10px] font-dm-sans font-bold uppercase tracking-widest hover:bg-primary whitespace-nowrap transition-all shadow-lg active:scale-95">Sign
                 Up</a>
             <button id="theme-toggle"
-                class="p-2.5 rounded-full border border-border/40 hover:bg-black/5 dark:hover:bg-white/5 transition-all shadow-sm"
+                class="hidden lg:block p-2.5 rounded-full border border-border/40 hover:bg-black/5 dark:hover:bg-white/5 transition-all shadow-sm"
                 title="Toggle Theme">
                 <i class="fas fa-moon"></i>
             </button>
@@ -90,7 +91,8 @@
     </nav>
 
     <!-- Mobile Menu Overlay -->
-    <div id="mobile-menu-overlay" class="fixed inset-0 bg-black/50 z-[1500] hidden opacity-0 transition-opacity duration-300"></div>
+    <div id="mobile-menu-overlay"
+        class="fixed inset-0 bg-black/50 z-[1500] hidden opacity-0 transition-opacity duration-300"></div>
 
     <!-- Mobile Menu -->
     <div id="mobile-menu"
@@ -112,11 +114,20 @@
             <a href="subscriptions.html" class="hover:text-accentGreen transition-colors">Pricing</a>
             <a href="contact.html" class="hover:text-accentGreen transition-colors">Contact</a>
             <a href="dashboard.html" class="hover:text-accentGreen transition-colors">Dashboard</a>
-            <a href="signup.html" class="bg-accentGreen text-white px-6 py-3 rounded-xl text-center font-bold uppercase tracking-widest hover:bg-primary transition-all shadow-lg mt-4">Sign Up</a>
+            <a href="signup.html"
+                class="bg-accentGreen text-white px-6 py-3 rounded-xl text-center font-bold uppercase tracking-widest hover:bg-primary transition-all shadow-lg mt-4">Sign
+                Up</a>
         </div>
 
-        <div class="mt-auto pt-8 border-t border-border flex justify-center">
-            <button id="mobile-rtl-toggle" class="p-4 bg-white dark:bg-card rounded-2xl border border-border shadow-md hover:scale-110 active:scale-95 transition-all text-accentGreen" title="Switch Language Direction">
+        <div class="mt-auto pt-8 border-t border-border flex justify-center gap-4">
+            <button id="mobile-theme-toggle"
+                class="p-4 bg-white dark:bg-card rounded-2xl border border-border shadow-md hover:scale-110 active:scale-95 transition-all text-accentGreen"
+                title="Toggle Theme">
+                <i class="fas fa-moon text-2xl"></i>
+            </button>
+            <button id="mobile-rtl-toggle"
+                class="p-4 bg-white dark:bg-card rounded-2xl border border-border shadow-md hover:scale-110 active:scale-95 transition-all text-accentGreen"
+                title="Switch Language Direction">
                 <i class="fas fa-language text-2xl"></i>
             </button>
         </div>
@@ -154,7 +165,7 @@
 
                     <div class="relative flex items-center group w-full max-w-sm mx-auto lg:mx-0 mt-8">
                         <input type="text" placeholder="Search care for a plant species..."
-                            class="w-full py-4 pl-6 pr-14 bg-card text-primary border border-primary/20 rounded-2xl outline-none focus:ring-4 focus:ring-accentGreen/10 transition-all placeholder:text-primary/40">
+                            class="w-full py-4 pl-6 pr-16 bg-card text-sm md:text-base text-primary border border-primary/20 rounded-2xl outline-none focus:ring-4 focus:ring-accentGreen/10 transition-all placeholder:text-primary/40">
                         <button
                             class="absolute right-4 w-10 h-10 bg-accentGreen text-white rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg">
                             <i class="fas fa-search text-sm"></i>
@@ -248,7 +259,7 @@
                         class="text-2xl font-bold font-playfair italic mb-4 group-hover:text-accentGreen transition-colors line-clamp-2">
                         Substrate Secrets: Why Potting Soil is Killing Your Collector Aroids</h3>
                     <p class="text-sm opacity-60 leading-relaxed line-clamp-3 mb-6">Unveiling the chunky mix formula
-                        used by top growers in Singapore and Kerala today worldwide...</p>
+                        used by top growers in Singapore and Kerala worldwide...</p>
                     <a href="#"
                         class="inline-block border-b-2 border-accentGreen/20 text-accentGreen text-xs font-bold pb-1 hover:border-accentGreen transition-all">Read
                         Guide <i class="fas fa-arrow-right ml-2 text-[8px]"></i></a>
@@ -344,17 +355,23 @@
 
     <!-- Newsletter CTA -->
     <section class="max-w-7xl mx-auto px-6 mb-32 mt-40">
-        <div class="bg-accentGreen p-12 lg:p-24 rounded-[4rem] text-white flex flex-col xl:flex-row items-center justify-between gap-12 relative overflow-hidden">
+        <div
+            class="bg-accentGreen p-12 lg:p-24 rounded-[4rem] text-white flex flex-col xl:flex-row items-center justify-between gap-12 relative overflow-hidden">
             <i class="fas fa-seedling absolute -top-8 -left-8 text-[15rem] text-white/5 -rotate-12"></i>
             <div class="max-w-2xl relative z-10 text-center xl:text-left">
-                <span class="text-xs font-bold uppercase tracking-[0.3em] mb-4 inline-block">Collector's Inner Circle</span>
-                <h2 class="text-4xl lg:text-5xl font-playfair font-bold italic mb-6">Get Notified Before the Restock Drops.</h2>
-                <p class="text-white/70 italic">Join 2,500+ collectors receiving weekly dossiers on rare species and care hacks. No spam, only chlorophyll.</p>
+                <span class="text-xs font-bold uppercase tracking-[0.3em] mb-4 inline-block">Collector's Inner
+                    Circle</span>
+                <h2 class="text-4xl lg:text-5xl font-playfair font-bold italic mb-6">Get Notified Before the Restock
+                    Drops.</h2>
+                <p class="text-white/70 italic">Join 2,500+ collectors receiving weekly dossiers on rare species and
+                    care hacks. No spam, only chlorophyll.</p>
             </div>
             <div class="w-full xl:w-auto relative z-10 shrink-0 flex justify-center">
                 <form class="flex flex-col md:flex-row gap-4 w-full md:w-auto">
-                    <input type="email" placeholder="Your best email..." class="px-8 py-5 rounded-full bg-white/10 border border-white/20 text-white placeholder:text-white/40 outline-none focus:bg-white/20 transition-all min-w-[300px]">
-                    <button class="bg-white text-accentGreen px-10 py-5 rounded-full font-bold uppercase tracking-widest shadow-xl hover:scale-105 active:scale-95 transition-all">Cultivate</button>
+                    <input type="email" placeholder="Your best email..."
+                        class="px-8 py-5 rounded-full bg-white/10 border border-white/20 text-white placeholder:text-white/40 outline-none focus:bg-white/20 transition-all min-w-[300px]">
+                    <button
+                        class="bg-white text-accentGreen px-10 py-5 rounded-full font-bold uppercase tracking-widest shadow-xl hover:scale-105 active:scale-95 transition-all">Cultivate</button>
                 </form>
             </div>
         </div>

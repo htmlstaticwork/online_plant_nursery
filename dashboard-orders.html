@@ -41,8 +41,13 @@
         <div id="sidebar-overlay" class="fixed inset-0 bg-black/50 z-[45] hidden opacity-0 transition-opacity duration-300"></div>
 
         <!-- Dashboard Header -->
-        <header class="fixed top-0 left-0 lg:left-72 right-0 h-24 bg-secondary/80 backdrop-blur-md border-b border-border z-[45] flex items-center justify-between px-8 lg:px-12 transition-all duration-300">
-            <div class="flex items-center gap-4 ml-auto">
+        <header class="fixed top-0 inset-x-0 lg:ps-72 h-24 bg-secondary/80 backdrop-blur-md border-b border-border z-[45] flex items-center justify-between px-8 lg:px-12 transition-all duration-300">
+            <div class="flex items-center gap-4">
+                <span class="text-xs font-bold uppercase tracking-[0.2em] opacity-40 hidden md:block">Vault</span>
+                <div class="h-4 w-px bg-primary/10 hidden md:block"></div>
+                <h2 class="text-sm font-bold uppercase tracking-widest text-accentGreen">Orders</h2>
+            </div>
+            <div class="flex items-center gap-4 ms-auto">
                 <button id="dashboard-hamburger" class="lg:hidden p-3 bg-white dark:bg-darkSurface rounded-2xl border border-primary/5 shadow-sm hover:scale-110 active:scale-90 transition-all text-primary dark:text-primary" title="Open Menu">
                     <i class="fas fa-bars"></i>
                 </button>
@@ -55,7 +60,7 @@
             </div>
         </header>
         <!-- Sidebar Navigation -->
-        <aside id="dashboard-sidebar" class="w-72 fixed h-full bg-card border-r border-border p-8 flex flex-col justify-between transition-all duration-300 z-50 transform -translate-x-full lg:translate-x-0">
+        <aside id="dashboard-sidebar" class="w-72 fixed inset-y-0 start-0 bg-card border-e border-border p-8 flex flex-col justify-between transition-all duration-300 z-50 transform -translate-x-full rtl:translate-x-full lg:translate-x-0 rtl:lg:translate-x-0">
             <div class="space-y-4">
                 <div class="mb-10 px-4 flex items-center justify-between">
                     <a href="index.html" class="text-xl font-display font-bold flex items-center gap-2 group">
@@ -100,7 +105,7 @@
         </aside>
 
         <!-- Main Dashboard Content -->
-        <main class="flex-1 ml-0 lg:ml-72 pt-32 p-6 lg:p-12 transition-all duration-300">
+        <main class="flex-1 ms-0 lg:ms-72 pt-32 p-6 lg:p-12 transition-all duration-300">
             
             <div class="mb-12 animate-plantGrow">
                 <h1 class="text-4xl font-bold font-playfair italic mb-2 text-primary">My History.</h1>
@@ -114,16 +119,16 @@
                     <div class="p-8 bg-primary/2 border-b border-border flex flex-col md:flex-row justify-between items-center gap-8">
                         <div class="flex gap-10">
                             <div>
-                                <p class="text-[10px] font-bold uppercase opacity-30 mb-1">Order ID</p>
-                                <p class="text-sm font-bold">#VV-98022-K8</p>
+                                <p class="text-xs font-bold uppercase opacity-50 mb-1 tracking-wider">Order ID</p>
+                                <p class="text-base font-bold">#VV-98022-K8</p>
                             </div>
                             <div>
-                                <p class="text-[10px] font-bold uppercase opacity-30 mb-1">Placed On</p>
-                                <p class="text-sm font-bold">March 28, 2026</p>
+                                <p class="text-xs font-bold uppercase opacity-50 mb-1 tracking-wider">Placed On</p>
+                                <p class="text-base font-bold">March 28, 2026</p>
                             </div>
                             <div>
-                                <p class="text-[10px] font-bold uppercase opacity-30 mb-1">Total Premium</p>
-                                <p class="text-sm font-bold text-accentGreen">$639.00</p>
+                                <p class="text-xs font-bold uppercase opacity-50 mb-1 tracking-wider">Total Premium</p>
+                                <p class="text-base font-bold text-accentGreen">$639.00</p>
                             </div>
                         </div>
                         <div class="flex gap-4">
@@ -137,9 +142,9 @@
                             <img src="https://images.unsplash.com/photo-1614594975525-e45190c55d0b?w=200&q=80" alt="" class="w-24 h-24 rounded-2xl object-cover shadow-lg">
                             <div class="flex-1">
                                 <h4 class="text-xl font-bold font-playfair italic">Monstera Albo Variegata #08</h4>
-                                <p class="text-sm opacity-50 italic">Hardened off (Stable Variegation) x 1</p>
+                                <p class="text-sm font-medium opacity-70 italic">Hardened off (Stable Variegation) x 1</p>
                             </div>
-                            <div class="px-4 py-1 bg-blue-50 text-blue-500 rounded-full text-[10px] font-bold uppercase tracking-widest border border-blue-100">In Transit</div>
+                            <div class="px-4 py-1.5 bg-blue-50 text-blue-600 rounded-full text-xs font-bold uppercase tracking-widest border border-blue-100">In Transit</div>
                         </div>
 
                         <div class="flex flex-col md:flex-row items-center gap-10">
@@ -158,16 +163,16 @@
                     <div class="p-8 bg-primary/5 border-b border-border flex flex-col md:flex-row justify-between items-center gap-8">
                         <div class="flex gap-10">
                             <div>
-                                <p class="text-[10px] font-bold uppercase opacity-30 mb-1">Order ID</p>
-                                <p class="text-sm font-bold">#VV-88200-Z1</p>
+                                <p class="text-xs font-bold uppercase opacity-50 mb-1 tracking-wider">Order ID</p>
+                                <p class="text-base font-bold">#VV-88200-Z1</p>
                             </div>
                             <div>
-                                <p class="text-[10px] font-bold uppercase opacity-30 mb-1">Placed On</p>
-                                <p class="text-sm font-bold">June 12, 2025</p>
+                                <p class="text-xs font-bold uppercase opacity-50 mb-1 tracking-wider">Placed On</p>
+                                <p class="text-base font-bold">June 12, 2025</p>
                             </div>
                             <div>
-                                <p class="text-[10px] font-bold uppercase opacity-30 mb-1">Total</p>
-                                <p class="text-sm font-bold text-accentGreen">$145.00</p>
+                                <p class="text-xs font-bold uppercase opacity-50 mb-1 tracking-wider">Total</p>
+                                <p class="text-base font-bold text-accentGreen">$145.00</p>
                             </div>
                         </div>
                         <button class="px-6 py-2 border border-primary/20 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-accentGreen hover:text-white hover:border-transparent transition-all duration-300 hover:-translate-y-0.5 shadow-sm hover:shadow-md">Order Details</button>
@@ -177,9 +182,9 @@
                        <img src="https://images.unsplash.com/photo-1596547609652-9cf5d8d76921?w=200&q=80" alt="" class="w-16 h-16 rounded-xl object-cover opacity-50">
                        <div class="flex-1">
                           <h4 class="font-bold text-lg">Anthurium Clarinervium</h4>
-                          <p class="text-xs opacity-50">Delivered Successfully via Priority</p>
+                          <p class="text-sm font-medium opacity-70">Delivered Successfully via Priority</p>
                        </div>
-                       <div class="px-4 py-1 bg-accentGreen/10 text-accentGreen rounded-full text-[10px] font-bold uppercase tracking-widest border border-accentGreen/20">Delivered</div>
+                       <div class="px-4 py-1.5 bg-accentGreen/10 text-accentGreen rounded-full text-xs font-bold uppercase tracking-widest border border-accentGreen/20">Delivered</div>
                     </div>
                 </div>
             </div>

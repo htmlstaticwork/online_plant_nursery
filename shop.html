@@ -52,12 +52,12 @@
 
     <!-- Navigation -->
     <nav class="fixed top-0 inset-x-0 z-[1000] flex items-center justify-between h-16 md:h-[72px] px-6 lg:px-12 xl:px-24 w-full bg-secondary border-b border-[#E0E0E0] dark:border-[#2D4A3C] shadow-sm transition-all duration-300">
-        <a href="index.html" class="brand-logo text-xl sm:text-2xl lg:text-3xl font-playfair font-bold flex items-center gap-2 group whitespace-nowrap">
+        <a href="index.html" class="brand-logo text-xl sm:text-2xl xl:text-3xl font-playfair font-bold flex items-center gap-2 group whitespace-nowrap">
             <i class="fas fa-leaf text-accentGreen transform group-hover:rotate-12 transition-transform"></i>
             <span class="whitespace-nowrap">Verdant Vault</span>
         </a>
 
-        <div class="hidden lg:flex items-center gap-5 xl:gap-10 font-medium ml-auto mr-8 xl:mr-12 whitespace-nowrap">
+        <div class="hidden lg:flex items-center gap-3 xl:gap-8 font-medium ml-auto mr-4 xl:mr-12 text-sm xl:text-base whitespace-nowrap">
             <a href="index.html" class="hover:text-accentGreen">Home 1</a>
             <a href="home-2.html" class="hover:text-accentGreen">Home 2</a>
             <a href="shop.html" class="hover:text-accentGreen">Shop</a>
@@ -69,10 +69,9 @@
 
         <div class="flex items-center gap-4">
             <a href="signup.html"
-                class="hidden lg:block bg-accentGreen text-white px-6 py-2.5 rounded-full text-[10px] font-dm-sans font-bold uppercase tracking-widest hover:bg-primary hover:text-secondary transition-all shadow-xl active:scale-95">Sign
-                Up</a>
+                class="hidden lg:block bg-accentGreen text-white px-6 py-2.5 rounded-full text-[10px] font-dm-sans font-bold uppercase tracking-widest hover:bg-primary hover:text-secondary transition-all shadow-xl active:scale-95 whitespace-nowrap">Sign Up</a>
             <button id="theme-toggle"
-                class="p-2.5 rounded-full border border-border/40 hover:bg-black/5 dark:hover:bg-white/5 transition-all shadow-sm"
+                class="hidden lg:block p-2.5 rounded-full border border-border/40 hover:bg-black/5 dark:hover:bg-white/5 transition-all shadow-sm"
                 title="Toggle Theme">
                 <i class="fas fa-moon"></i>
             </button>
@@ -113,7 +112,10 @@
             <a href="signup.html" class="bg-accentGreen text-white px-6 py-3 rounded-xl text-center font-bold uppercase tracking-widest hover:bg-primary transition-all shadow-lg mt-4">Sign Up</a>
         </div>
 
-        <div class="mt-auto pt-8 border-t border-border flex justify-center">
+        <div class="mt-auto pt-8 border-t border-border flex justify-center gap-4">
+            <button id="mobile-theme-toggle" class="p-4 bg-white dark:bg-card rounded-2xl border border-border shadow-md hover:scale-110 active:scale-95 transition-all text-accentGreen" title="Toggle Theme">
+                <i class="fas fa-moon text-2xl"></i>
+            </button>
             <button id="mobile-rtl-toggle" class="p-4 bg-white dark:bg-card rounded-2xl border border-border shadow-md hover:scale-110 active:scale-95 transition-all text-accentGreen" title="Switch Language Direction">
                 <i class="fas fa-language text-2xl"></i>
             </button>
@@ -121,30 +123,29 @@
     </div>
 
     <!-- Header / Shop Title -->
-    <header class="relative pt-40 pb-24 px-6 lg:px-24 overflow-hidden min-h-[400px] flex items-center">
-        <!-- Botanical Background Overlay -->
-        <div class="absolute inset-0 z-0">
-            <img src="https://images.unsplash.com/photo-1545239351-ef35f43d514b?w=1600&q=80" alt="Botanical Pattern" 
-                 class="w-full h-full object-cover opacity-20 dark:opacity-40 grayscale group-hover:grayscale-0 transition-all duration-1000">
-            <div class="absolute inset-0 bg-gradient-to-r from-secondary via-secondary/80 to-transparent"></div>
-        </div>
+    <header class="relative pt-48 pb-32 px-6 lg:px-24 overflow-hidden min-h-[500px] flex items-center bg-cover bg-center"
+            style="background-image: url('https://images.pexels.com/photos/29251991/pexels-photo-29251991.jpeg');">
+        <!-- Replicating Pricing Page Overlay -->
+        <div class="absolute inset-0 bg-black/50 backdrop-blur-[1px] z-0"></div>
 
-        <div class="max-w-7xl mx-auto relative z-10 w-full">
-            <div class="flex flex-col md:flex-row justify-between items-end gap-8 mb-16">
-                <div>
-                    <h1 class="text-5xl md:text-7xl font-playfair font-bold italic mb-6 animate-fadeIn">Rare Plant Collection.</h1>
-                    <p class="text-lg opacity-70 leading-relaxed italic max-w-2xl">
+        <div class="max-w-7xl mx-auto relative z-10 w-full text-white">
+            <div class="flex flex-col md:flex-row justify-between items-end gap-12">
+                <div class="animate-fadeIn">
+                    <span class="text-xs font-bold uppercase tracking-[0.5em] text-accentGold block mb-4">Botanical Archive</span>
+                    <h1 class="text-6xl md:text-8xl font-playfair font-bold italic mb-6 drop-shadow-lg">Rare Plant Collection.</h1>
+                    <p class="text-lg text-white/80 leading-relaxed italic max-w-2xl drop-shadow-md">
                         Restocked every Monday at 9AM IST. Limited-run collector species from sustainable growers with our signature survival guarantee.
                     </p>
                 </div>
+                <!-- Time Indicator -->
                 <div class="flex flex-col gap-4">
-                    <div class="p-4 rounded-3xl backdrop-blur-md flex items-center gap-6 border border-theme-border"
-                         style="background-color: var(--overlay-bg)">
+                    <div class="p-6 rounded-[2.5rem] backdrop-blur-xl bg-white/10 flex items-center gap-6 border border-white/20 shadow-2xl"
+                         style="background-color: rgba(255, 255, 255, 0.05)">
                         <div class="text-right">
-                            <p class="text-xs uppercase opacity-60">Next Restock</p>
-                            <p class="text-2xl font-playfair font-bold">02d : 14h : 45m</p>
+                            <p class="text-[10px] uppercase tracking-widest text-accentGold font-bold mb-1">Next Restock</p>
+                            <p class="text-3xl font-playfair font-bold text-white whitespace-nowrap">02d : 14h : 45m</p>
                         </div>
-                        <i class="fas fa-clock text-accentGold text-2xl animate-pulse"></i>
+                        <i class="fas fa-clock text-accentGold text-3xl animate-pulse"></i>
                     </div>
                 </div>
             </div>
@@ -152,12 +153,12 @@
     </header>
 
     <!-- Main Shop Area -->
-    <main class="max-w-7xl mx-auto px-6 mb-24">
+    <main class="max-w-7xl mx-auto px-6 py-20 mb-24 min-h-screen">
                 <div class="flex flex-col lg:flex-row gap-12">
                     <!-- Sidebar Filters -->
-                    <aside class="w-full lg:w-72 flex flex-col md:flex-row lg:flex-col items-start gap-12 md:gap-32 lg:gap-12">
+                    <aside class="w-full lg:w-72 flex flex-col md:grid md:grid-cols-3 lg:flex lg:flex-col items-start gap-8 lg:gap-12">
                         <div>
-                            <h4 class="text-lg font-bold mb-6 flex items-center gap-2">
+                            <h4 class="text-lg font-bold mb-6 flex items-center gap-2 whitespace-nowrap">
                                 <i class="fas fa-filter text-accentGreen text-sm"></i> Curated Filters
                             </h4>
                             <div class="flex flex-wrap md:flex-row lg:flex-col gap-x-8 gap-y-4 lg:space-y-4 lg:gap-0">
@@ -181,8 +182,8 @@
                         </div>
 
                         <div>
-                            <h4 class="text-lg font-bold mb-6">Difficulty Level</h4>
-                            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-2 gap-4">
+                            <h4 class="text-lg font-bold mb-6 whitespace-nowrap">Difficulty Level</h4>
+                            <div class="grid grid-cols-2 md:grid-cols-1 lg:grid-cols-2 gap-3">
                                 <button
                                     class="px-4 py-2 bg-accentGreen text-white rounded-xl text-sm font-bold hover:opacity-90 transition-all active:scale-95">Easy</button>
                                 <button
@@ -194,7 +195,7 @@
 
                         <div class="p-6 rounded-3xl border border-accentGold/40"
                              style="background-color: rgba(212, 168, 83, 0.12)">
-                            <h4 class="text-accentGold font-bold mb-3 uppercase tracking-widest text-xs">Curator's Tip</h4>
+                            <h4 class="text-accentGold font-bold mb-3 uppercase tracking-widest text-xs whitespace-nowrap">Curator's Tip</h4>
                             <p class="text-sm text-primary leading-relaxed italic font-medium">
                                 "If you're starting with your first Albo, ensure it's in a well-draining aroid mix. They
                                 hate wet feet!"
@@ -205,17 +206,24 @@
 
                     <!-- Product Grid -->
                     <div class="flex-1">
-                        <!-- Sorting Bar -->
-                        <div class="flex justify-between items-center mb-12">
-                            <p class="opacity-60 text-sm">Showing <span
-                                    class="font-bold text-primary">24 Rare Specimens</span></p>
-                            <select
-                                class="bg-transparent border-b-2 border-primary/10 py-2 focus:border-accentGreen outline-none text-sm font-medium">
-                                <option>Sort by: Most Coveted</option>
-                                <option>Price: Low to High</option>
-                                <option>Price: High to Low</option>
-                                <option>Date: Newest Arrival</option>
-                            </select>
+                        <!-- Search and Sorting Bar -->
+                        <div class="flex flex-col md:flex-row justify-between items-center gap-8 mb-16">
+                            <div class="relative w-full md:w-96 group">
+                                <i class="fas fa-search absolute left-5 top-1/2 -translate-y-1/2 text-primary/40 group-focus-within:text-accentGreen group-focus-within:opacity-100 transition-all"></i>
+                                <input type="text" placeholder="Search for rare specimens..."
+                                       class="w-full pl-14 pr-6 py-4 rounded-2xl bg-card border border-border/40 focus:border-accentGreen focus:ring-4 focus:ring-accentGreen/5 outline-none transition-all shadow-sm font-medium">
+                            </div>
+                            <div class="flex items-center justify-between md:justify-end gap-10 w-full md:w-auto">
+                                <p class="opacity-60 text-sm whitespace-nowrap">Showing <span
+                                        class="font-bold text-primary">24 Rare Specimens</span></p>
+                                <select
+                                    class="bg-transparent border-b-2 border-primary/10 py-3 focus:border-accentGreen outline-none text-sm font-bold cursor-pointer">
+                                    <option>Sort by: Most Coveted</option>
+                                    <option>Price: Low to High</option>
+                                    <option>Price: High to Low</option>
+                                    <option>Date: Newest Arrival</option>
+                                </select>
+                            </div>
                         </div>
 
                         <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
@@ -225,7 +233,7 @@
                                     <img src="https://images.unsplash.com/photo-1614594975525-e45190c55d0b?w=600&q=80"
                                         alt="" class="w-full h-full object-cover">
                                     <div
-                                        class="absolute top-4 left-4 bg-accentGold text-primary text-[10px] font-bold px-3 py-1 rounded-full uppercase">
+                                        class="absolute top-4 left-4 bg-accentGold text-primary dark:text-secondary text-[10px] font-bold px-3 py-1 rounded-full uppercase">
                                         Rare Import</div>
                                     <div
                                         class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
@@ -310,12 +318,12 @@
                                         class="absolute top-4 right-4 bg-black/50 text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase backdrop-blur-md">
                                         Sold Out</div>
                                 </div>
-                                <div class="py-6 text-center opacity-60">
-                                    <h3 class="font-playfair text-xl font-bold mb-1">Rare Thai Constellation</h3>
-                                    <p class="text-sm italic mb-2">Coming soon</p>
-                                    <span class="text-xl font-bold block mb-4">$1,200.00</span>
+                                <div class="py-6 text-center">
+                                    <h3 class="font-playfair text-xl font-bold mb-1 opacity-60">Rare Thai Constellation</h3>
+                                    <p class="text-sm italic mb-2 opacity-40">Coming soon</p>
+                                    <span class="text-xl font-bold block mb-4 opacity-60">$1,200.00</span>
                                     <a href="contact.html?subject=Thai Constellation Waitlist" 
-                                       class="inline-block bg-accentGold text-primary px-10 py-3 rounded-full text-[10px] font-bold uppercase tracking-[0.2em] hover:scale-105 hover:bg-white transition-all shadow-lg active:scale-95 whitespace-nowrap">
+                                       class="inline-block bg-accentGold text-primary dark:text-secondary px-10 py-3 rounded-full text-[10px] font-bold uppercase tracking-[0.2em] hover:scale-105 hover:bg-white dark:hover:text-secondary transition-all shadow-lg active:scale-95 whitespace-nowrap font-bold">
                                         Join Waitlist
                                     </a>
                                 </div>
@@ -355,14 +363,13 @@
         </div>
     </main>
 
-    <!-- Newsletter CTA -->
     <section class="max-w-7xl mx-auto px-6 mb-32 mt-20">
-        <div class="bg-accentGreen p-12 lg:p-24 rounded-[4rem] text-white flex flex-col md:flex-row items-center justify-between gap-12 relative overflow-hidden">
+        <div class="bg-accentGreen p-10 lg:p-24 rounded-[4rem] text-white flex flex-col lg:flex-row items-center justify-between gap-12 relative overflow-hidden">
             <i class="fas fa-seedling absolute -top-8 -left-8 text-[15rem] text-white/5 -rotate-12"></i>
-            <div class="max-w-2xl relative z-10 text-left">
+            <div class="max-w-xl relative z-10 text-center lg:text-left">
                 <span class="text-xs font-bold uppercase tracking-[0.3em] mb-4 inline-block">Collector's Inner Circle</span>
                 <h2 class="text-4xl lg:text-5xl font-playfair font-bold italic mb-6">Get Notified Before the Restock Drops.</h2>
-                <p class="text-white/70 italic">Join 2,500+ collectors receiving weekly dossiers on rare species and care hacks. No spam, only chlorophyll.</p>
+                <p class="text-white/70 italic">Join 2,500+ collectors receiving weekly dossiers on rare species and care hacks.</p>
             </div>
             <div class="w-full md:w-auto relative z-10 shrink-0">
                 <form class="flex flex-col md:flex-row gap-4">
@@ -373,24 +380,7 @@
         </div>
     </section>
 
-    <!-- Footer same as index -->
-    <!-- Newsletter CTA -->
-    <section class="max-w-7xl mx-auto px-6 mb-32 mt-40">
-        <div class="bg-accentGreen p-12 lg:p-24 rounded-[4rem] text-white flex flex-col xl:flex-row items-center justify-between gap-12 relative overflow-hidden">
-            <i class="fas fa-seedling absolute -top-8 -left-8 text-[15rem] text-white/5 -rotate-12"></i>
-            <div class="max-w-2xl relative z-10 text-center xl:text-left">
-                <span class="text-xs font-bold uppercase tracking-[0.3em] mb-4 inline-block">Collector's Inner Circle</span>
-                <h2 class="text-4xl lg:text-5xl font-playfair font-bold italic mb-6">Get Notified Before the Restock Drops.</h2>
-                <p class="text-white/70 italic">Join 2,500+ collectors receiving weekly dossiers on rare species and care hacks. No spam, only chlorophyll.</p>
-            </div>
-            <div class="w-full xl:w-auto relative z-10 shrink-0 flex justify-center">
-                <form class="flex flex-col md:flex-row gap-4 w-full md:w-auto">
-                    <input type="email" placeholder="Your best email..." class="px-8 py-5 rounded-full bg-white/10 border border-white/20 text-white placeholder:text-white/40 outline-none focus:bg-white/20 transition-all min-w-[300px]">
-                    <button class="bg-white text-accentGreen px-10 py-5 rounded-full font-bold uppercase tracking-widest shadow-xl hover:scale-105 active:scale-95 transition-all">Cultivate</button>
-                </form>
-            </div>
-        </div>
-    </section>
+
 
     <footer class="bg-secondary text-primary transition-colors duration-300 pt-24 pb-12 px-6 lg:px-24">
         <div class="max-w-7xl mx-auto">

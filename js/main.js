@@ -11,16 +11,17 @@ const initTheme = () => {
 };
 
 const updateThemeIcon = (theme) => {
-    const themeToggle = document.getElementById('theme-toggle');
-    if (!themeToggle) return;
-    const icon = themeToggle.querySelector('i');
-    if (icon) {
-        if (theme === 'dark') {
-            icon.className = 'fas fa-sun text-accentGold';
-        } else {
-            icon.className = 'fas fa-moon text-accentGreen';
+    const themeToggles = document.querySelectorAll('#theme-toggle, #mobile-theme-toggle, #dashboard-mobile-theme-toggle');
+    themeToggles.forEach(toggle => {
+        const icon = toggle.querySelector('i');
+        if (icon) {
+            if (theme === 'dark') {
+                icon.className = 'fas fa-sun text-accentGold';
+            } else {
+                icon.className = 'fas fa-moon text-accentGreen';
+            }
         }
-    }
+    });
 };
 
 const toggleTheme = () => {
@@ -42,10 +43,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // Re-initialize to ensure icon state is correct
     initTheme();
 
-    const themeToggle = document.getElementById('theme-toggle');
-    if (themeToggle) {
-        themeToggle.addEventListener('click', toggleTheme);
-    }
+    const themeToggles = document.querySelectorAll('#theme-toggle, #mobile-theme-toggle, #dashboard-mobile-theme-toggle');
+    themeToggles.forEach(toggle => {
+        toggle.addEventListener('click', toggleTheme);
+    });
 
     // RTL Toggle Logic
     const rtlToggles = document.querySelectorAll('#rtl-toggle, #mobile-rtl-toggle, #dashboard-rtl-toggle');
@@ -162,7 +163,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (dashHamburger && dashSidebar) {
         dashHamburger.addEventListener('click', () => {
-            dashSidebar.classList.remove('-translate-x-full');
+            const isRTL = document.documentElement.getAttribute('dir') === 'rtl';
+            if (isRTL) {
+                dashSidebar.classList.remove('translate-x-full');
+            } else {
+                dashSidebar.classList.remove('-translate-x-full');
+            }
             if (sidebarOverlay) {
                 sidebarOverlay.classList.remove('hidden');
                 setTimeout(() => sidebarOverlay.classList.add('opacity-100'), 10);
@@ -173,7 +179,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const hideDashSidebar = () => {
         if (!dashSidebar) return;
-        dashSidebar.classList.add('-translate-x-full');
+        const isRTL = document.documentElement.getAttribute('dir') === 'rtl';
+        if (isRTL) {
+            dashSidebar.classList.add('translate-x-full');
+        } else {
+            dashSidebar.classList.add('-translate-x-full');
+        }
         if (sidebarOverlay) {
             sidebarOverlay.classList.remove('opacity-100');
             setTimeout(() => sidebarOverlay.classList.add('hidden'), 300);

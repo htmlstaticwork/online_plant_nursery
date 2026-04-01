@@ -39,12 +39,12 @@
 
     <!-- Navigation -->
     <nav class="fixed top-0 inset-x-0 z-[1000] flex items-center justify-between h-16 md:h-[72px] px-6 lg:px-12 xl:px-24 w-full bg-secondary border-b border-[#E0E0E0] dark:border-[#2D4A3C] shadow-sm transition-all duration-300">
-        <a href="index.html" class="brand-logo text-xl sm:text-2xl lg:text-3xl font-playfair font-bold flex items-center gap-2 group whitespace-nowrap">
+        <a href="index.html" class="brand-logo text-xl sm:text-2xl xl:text-3xl font-playfair font-bold flex items-center gap-2 group whitespace-nowrap">
             <i class="fas fa-leaf text-accentGreen transform group-hover:rotate-12 transition-transform"></i>
             <span class="whitespace-nowrap">Verdant Vault</span>
         </a>
 
-        <div class="hidden lg:flex items-center gap-5 xl:gap-10 font-medium ml-auto mr-8 xl:mr-12 whitespace-nowrap">
+        <div class="hidden lg:flex items-center gap-3 xl:gap-8 font-medium ml-auto mr-4 xl:mr-12 text-sm xl:text-base whitespace-nowrap">
             <a href="index.html" class="hover:text-accentGreen">Home 1</a>
             <a href="home-2.html" class="hover:text-accentGreen">Home 2</a>
             <a href="shop.html" class="hover:text-accentGreen">Shop</a>
@@ -59,7 +59,7 @@
             <a href="signup.html" class="hidden lg:block bg-accentGreen text-white px-6 py-2.5 rounded-full text-[10px] font-dm-sans font-bold uppercase tracking-widest hover:bg-primary transition-all shadow-lg active:scale-95">Sign Up</a>
 
             
-            <button id="theme-toggle" class="p-2.5 rounded-full border border-border/40 hover:bg-black/5 dark:hover:bg-white/5 transition-all shadow-sm"
+            <button id="theme-toggle" class="hidden lg:block p-2.5 rounded-full border border-border/40 hover:bg-black/5 dark:hover:bg-white/5 transition-all shadow-sm"
                 title="Toggle Theme">
                 <i class="fas fa-moon"></i>
             </button>
@@ -100,7 +100,10 @@
             <a href="signup.html" class="bg-accentGreen text-white px-6 py-3 rounded-xl text-center font-bold uppercase tracking-widest hover:bg-primary transition-all shadow-lg mt-4">Sign Up</a>
         </div>
 
-        <div class="mt-auto pt-8 border-t border-border flex justify-center">
+        <div class="mt-auto pt-8 border-t border-border flex justify-center gap-4">
+            <button id="mobile-theme-toggle" class="p-4 bg-white dark:bg-card rounded-2xl border border-border shadow-md hover:scale-110 active:scale-95 transition-all text-accentGreen" title="Toggle Theme">
+                <i class="fas fa-moon text-2xl"></i>
+            </button>
             <button id="mobile-rtl-toggle" class="p-4 bg-white dark:bg-card rounded-2xl border border-border shadow-md hover:scale-110 active:scale-95 transition-all text-accentGreen" title="Switch Language Direction">
                 <i class="fas fa-language text-2xl"></i>
             </button>
@@ -133,20 +136,20 @@
                 </div>
                 
                 <div class="flex flex-col items-center lg:items-start space-y-6 mb-12">
-                    <div class="flex items-center gap-4 text-sm text-center lg:text-left">
-                        <i class="fas fa-check text-accentGreen"></i>
+                    <div class="flex items-start gap-4 text-sm text-left">
+                        <i class="fas fa-check text-accentGreen mt-1"></i>
                         <span class="opacity-80">1 High-Aesthetic Tropical Plant</span>
                     </div>
-                    <div class="flex items-center gap-4 text-sm text-center lg:text-left">
-                        <i class="fas fa-check text-accentGreen"></i>
+                    <div class="flex items-start gap-4 text-sm text-left">
+                        <i class="fas fa-check text-accentGreen mt-1"></i>
                         <span class="opacity-80">Boutique Ceramic Pot</span>
                     </div>
-                    <div class="flex items-center gap-4 text-sm text-center lg:text-left">
-                        <i class="fas fa-check text-accentGreen"></i>
+                    <div class="flex items-start gap-4 text-sm text-left">
+                        <i class="fas fa-check text-accentGreen mt-1"></i>
                         <span class="opacity-80">Foundation Care Blueprint</span>
                     </div>
-                    <div class="flex items-center gap-4 text-sm opacity-30 text-center lg:text-left">
-                        <i class="fas fa-times"></i>
+                    <div class="flex items-start gap-4 text-sm opacity-30 text-left">
+                        <i class="fas fa-times mt-1"></i>
                         <span>No Rare / Variegated Species</span>
                     </div>
                 </div>
@@ -156,14 +159,14 @@
                         <span class="text-5xl font-bold font-display italic">$45</span>
                         <span class="text-sm opacity-40 mb-2">/ month</span>
                     </div>
-                    <button class="w-full btn-secondary justify-center text-lg uppercase tracking-widest text-sm hover:translate-y-0">Join Starter Tier</button>
+                    <button class="w-full btn-secondary justify-center uppercase tracking-widest text-sm hover:translate-y-0 whitespace-nowrap">Join Starter Tier</button>
                 </div>
             </div>
 
             <!-- Tier 2: Collector Box (POPULAR) -->
             <div class="bg-primary text-secondary p-12 rounded-[3.5rem] flex flex-col justify-between scale-105 shadow-2xl relative overflow-hidden group">
                 <div class="absolute top-8 right-8 rotate-12">
-                    <span class="bg-accentGold text-primary px-4 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest shadow-xl">Most Coveted</span>
+                    <span class="bg-accentGold text-primary dark:text-secondary px-4 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest shadow-xl">Most Coveted</span>
                 </div>
                 <div class="absolute -bottom-10 -right-10 text-[15rem] text-white/5 -rotate-12 pointer-events-none">
                     <i class="fas fa-leaf"></i>
@@ -178,20 +181,20 @@
                 </div>
                 
                 <div class="flex flex-col items-center lg:items-start space-y-6 mb-12">
-                    <div class="flex items-center gap-4 text-sm text-center lg:text-left">
-                        <i class="fas fa-star text-accentGold"></i>
+                    <div class="flex items-start gap-4 text-sm text-left">
+                        <i class="fas fa-star text-accentGold mt-1"></i>
                         <span class="opacity-80">1 High-Variegation Specimen</span>
                     </div>
-                    <div class="flex items-center gap-4 text-sm text-center lg:text-left">
-                        <i class="fas fa-check text-accentGold"></i>
+                    <div class="flex items-start gap-4 text-sm text-left">
+                        <i class="fas fa-check text-accentGold mt-1"></i>
                         <span class="opacity-80">Artisanal Terracotta Vessel</span>
                     </div>
-                    <div class="flex items-center gap-4 text-sm text-center lg:text-left">
-                        <i class="fas fa-check text-accentGold"></i>
+                    <div class="flex items-start gap-4 text-sm text-left">
+                        <i class="fas fa-check text-accentGold mt-1"></i>
                         <span class="opacity-80">Curator's Growth Log</span>
                     </div>
-                    <div class="flex items-center gap-4 text-sm text-center lg:text-left">
-                        <i class="fas fa-check text-accentGold"></i>
+                    <div class="flex items-start gap-4 text-sm text-left">
+                        <i class="fas fa-check text-accentGold mt-1"></i>
                         <span class="opacity-80">Early Restock SMS Alerts</span>
                     </div>
                 </div>
@@ -201,7 +204,7 @@
                         <span class="text-5xl font-bold font-display italic">$125</span>
                         <span class="text-sm opacity-40 mb-2">/ month</span>
                     </div>
-                    <button class="w-full bg-[#3FA36C] text-white py-5 rounded-full font-bold uppercase tracking-widest text-sm hover:scale-105 active:scale-95 transition-all shadow-xl shadow-accentGreen/20">Elevate Collection</button>
+                    <button class="w-full bg-[#3FA36C] text-white py-5 rounded-full font-bold uppercase tracking-widest text-sm hover:scale-105 active:scale-95 transition-all shadow-xl shadow-accentGreen/20 whitespace-nowrap">Elevate Collection</button>
                 </div>
             </div>
 
@@ -216,20 +219,20 @@
                 </div>
                 
                 <div class="flex flex-col items-center lg:items-start space-y-6 mb-12">
-                    <div class="flex items-center gap-4 text-sm text-center lg:text-left">
-                        <i class="fas fa-crown text-accentGold"></i>
+                    <div class="flex items-start gap-4 text-sm text-left">
+                        <i class="fas fa-crown text-accentGold mt-1"></i>
                         <span class="opacity-80 font-bold uppercase tracking-tighter">1 Ultra-Rare specimen (e.g. Albo)</span>
                     </div>
-                    <div class="flex items-center gap-4 text-sm text-center lg:text-left">
-                        <i class="fas fa-check text-accentGold"></i>
+                    <div class="flex items-start gap-4 text-sm text-left">
+                        <i class="fas fa-check text-accentGold mt-1"></i>
                         <span class="opacity-80">Personalized Greenhouse Consultant</span>
                     </div>
-                    <div class="flex items-center gap-4 text-sm text-center lg:text-left">
-                        <i class="fas fa-check text-accentGold"></i>
+                    <div class="flex items-start gap-4 text-sm text-left">
+                        <i class="fas fa-check text-accentGold mt-1"></i>
                         <span class="opacity-80">Climate-Controlled Vault Case</span>
                     </div>
-                    <div class="flex items-center gap-4 text-sm text-center lg:text-left">
-                        <i class="fas fa-check text-accentGold"></i>
+                    <div class="flex items-start gap-4 text-sm text-left">
+                        <i class="fas fa-check text-accentGold mt-1"></i>
                         <span class="opacity-80">Guaranteed Stable Variegation</span>
                     </div>
                 </div>
@@ -239,7 +242,7 @@
                         <span class="text-5xl font-bold font-display italic text-accentGreen">$350</span>
                         <span class="text-sm opacity-40 mb-2">/ month</span>
                     </div>
-                    <button class="w-full btn-secondary border-accentGold text-accentGold hover:bg-accentGold hover:text-white justify-center text-lg uppercase tracking-widest text-sm">Join Elite Club</button>
+                    <button class="w-full btn-secondary border-accentGold text-accentGold hover:bg-accentGold hover:text-white justify-center uppercase tracking-widest text-sm whitespace-nowrap">Join Elite Club</button>
                 </div>
             </div>
         </div>
@@ -251,10 +254,10 @@
             <div class="space-y-6">
                 <!-- FAQ 1 -->
                 <details class="group bg-card rounded-[2.5rem] border border-primary/10 overflow-hidden transition-all duration-300">
-                    <summary class="flex items-center justify-between p-8 cursor-pointer list-none list-inside outline-none">
-                        <div class="flex items-center gap-6">
-                            <span class="w-10 h-10 bg-accentGreen/10 text-accentGreen rounded-full flex items-center justify-center text-xs font-bold leading-none">Q</span>
-                            <h4 class="text-xl font-bold font-playfair italic">Can I skip a month?</h4>
+                    <summary class="flex items-center justify-between p-6 md:p-8 cursor-pointer list-none list-inside outline-none">
+                        <div class="flex items-center gap-4 md:gap-6">
+                            <span class="w-8 h-8 md:w-10 md:h-10 bg-accentGreen/10 text-accentGreen rounded-full flex items-center justify-center text-[10px] md:text-xs font-bold leading-none shrink-0">Q</span>
+                            <h4 class="text-lg md:text-xl font-bold font-playfair italic whitespace-nowrap">Can I skip a month?</h4>
                         </div>
                         <i class="fas fa-chevron-down text-accentGreen/40 group-open:rotate-180 transition-transform duration-300"></i>
                     </summary>
@@ -267,10 +270,10 @@
                 
                 <!-- FAQ 2 -->
                 <details class="group bg-card rounded-[2.5rem] border border-primary/10 overflow-hidden transition-all duration-300">
-                    <summary class="flex items-center justify-between p-8 cursor-pointer list-none list-inside outline-none">
-                        <div class="flex items-center gap-6">
-                            <span class="w-10 h-10 bg-accentGreen/10 text-accentGreen rounded-full flex items-center justify-center text-xs font-bold leading-none">Q</span>
-                            <h4 class="text-xl font-bold font-playfair italic">How do you ship in winter?</h4>
+                    <summary class="flex items-center justify-between p-6 md:p-8 cursor-pointer list-none list-inside outline-none">
+                        <div class="flex items-center gap-4 md:gap-6">
+                            <span class="w-8 h-8 md:w-10 md:h-10 bg-accentGreen/10 text-accentGreen rounded-full flex items-center justify-center text-[10px] md:text-xs font-bold leading-none shrink-0">Q</span>
+                            <h4 class="text-lg md:text-xl font-bold font-playfair italic whitespace-nowrap">How do you ship in winter?</h4>
                         </div>
                         <i class="fas fa-chevron-down text-accentGreen/40 group-open:rotate-180 transition-transform duration-300"></i>
                     </summary>
@@ -286,14 +289,14 @@
 
     <!-- Newsletter CTA -->
     <section class="max-w-7xl mx-auto px-6 mb-32 mt-40">
-        <div class="bg-accentGreen p-12 lg:p-24 rounded-[4rem] text-white flex flex-col xl:flex-row items-center justify-between gap-12 relative overflow-hidden">
+        <div class="bg-accentGreen p-12 lg:p-24 rounded-[4rem] text-white flex flex-col lg:flex-row items-center justify-between gap-12 relative overflow-hidden">
             <i class="fas fa-seedling absolute -top-8 -left-8 text-[15rem] text-white/5 -rotate-12"></i>
-            <div class="max-w-2xl relative z-10 text-center xl:text-left">
+            <div class="max-w-2xl relative z-10 text-center lg:text-left">
                 <span class="text-xs font-bold uppercase tracking-[0.3em] mb-4 inline-block">Collector's Inner Circle</span>
                 <h2 class="text-4xl lg:text-5xl font-playfair font-bold italic mb-6">Get Notified Before the Restock Drops.</h2>
                 <p class="text-white/70 italic">Join 2,500+ collectors receiving weekly dossiers on rare species and care hacks. No spam, only chlorophyll.</p>
             </div>
-            <div class="w-full xl:w-auto relative z-10 shrink-0 flex justify-center">
+            <div class="w-full lg:w-auto relative z-10 shrink-0 flex justify-center">
                 <form class="flex flex-col md:flex-row gap-4 w-full md:w-auto">
                     <input type="email" placeholder="Your best email..." class="px-8 py-5 rounded-full bg-white/10 border border-white/20 text-white placeholder:text-white/40 outline-none focus:bg-white/20 transition-all min-w-[300px]">
                     <button class="bg-white text-accentGreen px-10 py-5 rounded-full font-bold uppercase tracking-widest shadow-xl hover:scale-105 active:scale-95 transition-all">Cultivate</button>

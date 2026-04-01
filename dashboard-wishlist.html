@@ -42,8 +42,13 @@
         <div id="sidebar-overlay" class="fixed inset-0 bg-black/50 z-[45] hidden opacity-0 transition-opacity duration-300"></div>
 
         <!-- Dashboard Header -->
-        <header class="fixed top-0 left-0 lg:left-72 right-0 h-24 bg-secondary/80 backdrop-blur-md border-b border-border z-[45] flex items-center justify-between px-8 lg:px-12 transition-all duration-300">
-            <div class="flex items-center gap-4 ml-auto">
+        <header class="fixed top-0 inset-x-0 lg:ps-72 h-24 bg-secondary/80 backdrop-blur-md border-b border-border z-[45] flex items-center justify-between px-8 lg:px-12 transition-all duration-300">
+            <div class="flex items-center gap-4">
+                <span class="text-xs font-bold uppercase tracking-[0.2em] opacity-40 hidden md:block">Vault</span>
+                <div class="h-4 w-px bg-primary/10 hidden md:block"></div>
+                <h2 class="text-sm font-bold uppercase tracking-widest text-accentGreen">Wishlist</h2>
+            </div>
+            <div class="flex items-center gap-4 ms-auto">
                 <button id="dashboard-hamburger" class="lg:hidden p-3 bg-white dark:bg-darkSurface rounded-2xl border border-primary/5 shadow-sm hover:scale-110 active:scale-90 transition-all text-primary dark:text-primary" title="Open Menu">
                     <i class="fas fa-bars"></i>
                 </button>
@@ -56,7 +61,7 @@
             </div>
         </header>
         <!-- Sidebar Navigation -->
-        <aside id="dashboard-sidebar" class="w-72 fixed h-full bg-card border-r border-border p-8 flex flex-col justify-between transition-all duration-300 z-50 transform -translate-x-full lg:translate-x-0">
+        <aside id="dashboard-sidebar" class="w-72 fixed inset-y-0 start-0 bg-card border-e border-border p-8 flex flex-col justify-between transition-all duration-300 z-50 transform -translate-x-full rtl:translate-x-full lg:translate-x-0 rtl:lg:translate-x-0">
             <div class="space-y-4">
                 <div class="mb-10 px-4 flex items-center justify-between">
                     <a href="index.html" class="text-xl font-display font-bold flex items-center gap-2 group">
@@ -100,7 +105,7 @@
         </aside>
 
         <!-- Main Dashboard Content -->
-        <main class="flex-1 ml-0 lg:ml-72 pt-32 p-6 lg:p-12 transition-all duration-300">
+        <main class="flex-1 ms-0 lg:ms-72 pt-32 p-6 lg:p-12 transition-all duration-300">
             
             <div class="mb-12 animate-plantGrow">
                 <h1 class="text-4xl font-bold font-playfair italic mb-2 text-primary">Rare Desire.</h1>
