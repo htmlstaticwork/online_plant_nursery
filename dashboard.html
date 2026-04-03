@@ -60,10 +60,24 @@
 
         <!-- Dashboard Header -->
         <header
-            class="fixed top-0 inset-x-0 lg:ps-72 h-24 bg-secondary/80 backdrop-blur-md border-b border-border z-[45] flex items-center justify-between px-4 lg:px-6 transition-all duration-300">
+            class="fixed top-0 inset-x-0 lg:ps-72 h-24 bg-secondary border-b border-border z-[45] flex items-center justify-between px-4 lg:px-6 transition-all duration-300">
             <div class="flex items-center gap-4">
+                <div class="flex items-center gap-3 bg-accentGreen/5 px-4 py-2 rounded-2xl border border-accentGreen/10">
+                    <div class="w-8 h-8 bg-accentGreen rounded-lg flex items-center justify-center text-white shadow-lg shadow-accentGreen/20">
+                        <i class="fas fa-user-shield text-xs"></i>
+                    </div>
+                    <div>
+                        <p class="text-[10px] font-bold opacity-50 uppercase tracking-widest leading-none mb-1">Welcome,</p>
+                        <h2 class="text-xs font-bold text-primary leading-none">Admin</h2>
+                    </div>
+                </div>
             </div>
             <div class="flex items-center gap-4 ms-auto">
+                <a href="dashboard-settings.html"
+                    class="p-3 bg-white dark:bg-darkSurface rounded-2xl border border-primary/5 shadow-sm hover:scale-110 active:scale-90 transition-all text-primary dark:text-primary"
+                    title="Settings">
+                    <i class="fas fa-cog text-accentGold"></i>
+                </a>
                 <button id="dashboard-hamburger"
                     class="lg:hidden p-3 bg-white dark:bg-darkSurface rounded-2xl border border-primary/5 shadow-sm hover:scale-110 active:scale-90 transition-all text-primary dark:text-primary"
                     title="Open Menu">
@@ -75,7 +89,7 @@
                     <i class="fas fa-moon"></i>
                 </button>
                 <button id="rtl-toggle"
-                    class="p-3 bg-card rounded-2xl border border-border shadow-sm hover:scale-110 active:scale-90 transition-all text-primary dark:text-primary"
+                    class="p-3 bg-white dark:bg-darkSurface rounded-2xl border border-primary/5 shadow-sm hover:scale-110 active:scale-90 transition-all text-primary dark:text-primary"
                     title="Toggle RTL">
                     <i class="fas fa-language"></i>
                 </button>
@@ -123,10 +137,9 @@
                 </a>
             </div>
 
-            <div class="p-4 lg:p-6 bg-accentGreen/5 rounded-3xl border border-accentGreen/20 hidden lg:block">
+            <div class="p-4 lg:p-6 bg-accentGreen/5 rounded-3xl border border-accentGreen/20 mx-4 lg:mx-0">
                 <p class="text-xs font-bold text-accentGreen uppercase tracking-widest mb-2">Member Support</p>
-                <p class="text-sm opacity-70 mb-4 italic leading-relaxed">"Your Variegated Hearts is ready for
-                    repotting."</p>
+                <p class="text-sm opacity-70 mb-4 italic leading-relaxed">"Your Variegated Hearts is ready for repotting."</p>
                 <a href="#"
                     class="inline-flex items-center gap-2 text-accentGreen text-xs font-bold transition-all duration-300 transform hover:-translate-y-0.5 hover:bg-accentGreen hover:text-white hover:px-5 hover:py-2 hover:rounded-full group/chat">
                     <i class="fas fa-comment-dots text-[10px] group-hover/chat:scale-110"></i>
@@ -210,7 +223,7 @@
                     </div>
 
                     <div
-                        class="bg-card border border-border p-10 rounded-[3rem] shadow-xl relative overflow-hidden group">
+                        class="bg-card border border-border p-10 rounded-[3rem] shadow-xl relative overflow-hidden">
                         <div class="flex flex-col md:flex-row items-center gap-12 relative z-10 text-primary">
                             <img src="https://images.unsplash.com/photo-1614594975525-e45190c55d0b?w=200&q=80"
                                 class="w-32 h-32 rounded-2xl object-cover shadow-lg" alt="Albo">
@@ -218,7 +231,7 @@
                                 <div class="flex items-center justify-center md:justify-start gap-4 mb-2">
                                     <h4 class="text-xl font-bold">Monstera Albo #VV-2026-08</h4>
                                     <span
-                                        class="px-3 py-1 bg-blue-50 text-blue-500 text-[10px] font-bold rounded-full uppercase tracking-widest">En
+                                        class="px-3 py-1 bg-blue-50 text-blue-500 text-[10px] font-bold rounded-full uppercase tracking-widest whitespace-nowrap shrink-0">En
                                         Route</span>
                                 </div>
                                 <p class="text-sm opacity-60 mb-6 italic">Expected delivery: Tomorrow, 4pm IST</p>
@@ -230,25 +243,25 @@
                                         class="h-1 bg-accentGreen rounded-full w-2/3 absolute top-9 left-0 z-10 transition-all">
                                     </div>
                                     <div class="flex justify-between relative z-20">
-                                        <div class="text-center group">
+                                        <div class="text-center">
                                             <div
                                                 class="w-5 h-5 bg-accentGreen rounded-full mx-auto mb-2 border-4 border-white dark:border-darkCard">
                                             </div>
                                             <p class="text-[10px] font-bold opacity-40 uppercase">Kerala</p>
                                         </div>
-                                        <div class="text-center group">
+                                        <div class="text-center">
                                             <div
                                                 class="w-5 h-5 bg-accentGreen rounded-full mx-auto mb-2 border-4 border-white dark:border-darkCard">
                                             </div>
                                             <p class="text-[10px] font-bold opacity-40 uppercase">Customs</p>
                                         </div>
-                                        <div class="text-center group">
+                                        <div class="text-center">
                                             <div
                                                 class="w-5 h-5 bg-accentGreen rounded-full mx-auto mb-2 border-4 border-white dark:border-darkCard">
                                             </div>
                                             <p class="text-[10px] font-bold opacity-40 uppercase">In Hub</p>
                                         </div>
-                                        <div class="text-center group">
+                                        <div class="text-center">
                                             <div
                                                 class="w-5 h-5 bg-white dark:bg-darkSurface border-2 border-primary/20 rounded-full mx-auto mb-2">
                                             </div>
@@ -272,44 +285,44 @@
                     <h3 class="font-playfair font-bold text-2xl text-primary">Wishlist</h3>
                     <div class="space-y-4">
                         <div
-                            class="p-4 bg-card border border-border rounded-3xl flex items-center gap-4 group hover:border-accentGreen transition-all text-primary">
+                            class="p-4 bg-card border border-border rounded-3xl flex items-center gap-2 xl:gap-4 group hover:border-accentGreen transition-all text-primary">
                             <img src="https://images.unsplash.com/photo-1604762524889-3e2fcc145683?w=200&q=80"
-                                class="w-20 h-20 rounded-2xl object-cover" alt="">
+                                class="w-14 h-14 xl:w-16 xl:h-16 rounded-2xl object-cover shrink-0" alt="">
                             <div class="flex-1 min-w-0">
-                                <h4 class="font-bold text-sm truncate">Thai Constellation</h4>
-                                <p class="text-xs text-accentGreen font-bold">$1200.00</p>
+                                <h4 class="font-bold text-[13px] xl:text-sm truncate">Thai Constellation</h4>
+                                <p class="text-[10px] xl:text-xs text-accentGreen font-bold">$1200.00</p>
                             </div>
                             <button
-                                class="w-10 h-10 bg-primary/2 hover:bg-accentGreen hover:text-white rounded-full transition-colors flex items-center justify-center">
-                                <i class="fas fa-plus"></i>
+                                class="w-9 h-9 xl:w-10 xl:h-10 bg-primary/2 hover:bg-accentGreen hover:text-white rounded-full transition-colors flex items-center justify-center shrink-0">
+                                <i class="fas fa-plus text-xs"></i>
                             </button>
                         </div>
 
                         <div
-                            class="bg-card p-4 rounded-3xl border border-border flex items-center gap-6 hover:shadow-md transition-all group">
+                            class="bg-card p-4 rounded-3xl border border-border flex items-center gap-4 xl:gap-6 hover:shadow-md transition-all group">
                             <img src="https://images.unsplash.com/photo-1596547609652-9cf5d8d76921?w=200&q=80"
-                                class="w-20 h-20 rounded-2xl object-cover grayscale opacity-50" alt="">
+                                class="w-14 h-14 xl:w-16 xl:h-16 rounded-2xl object-cover grayscale opacity-50 shrink-0" alt="">
                             <div class="flex-1 min-w-0">
-                                <h4 class="font-bold text-sm opacity-50 truncate">Clarinervium</h4>
-                                <p class="text-xs text-red-400 font-bold">Out of Stock</p>
+                                <h4 class="font-bold text-[13px] xl:text-sm opacity-50 truncate">Clarinervium</h4>
+                                <p class="text-[10px] xl:text-xs text-red-400 font-bold">Out of Stock</p>
                             </div>
                             <button
-                                class="w-10 h-10 bg-primary/2 rounded-full flex items-center justify-center opacity-30 cursor-not-allowed">
-                                <i class="fas fa-bell"></i>
+                                class="w-9 h-9 xl:w-10 xl:h-10 bg-primary/2 rounded-full flex items-center justify-center opacity-30 cursor-not-allowed shrink-0">
+                                <i class="fas fa-bell text-xs"></i>
                             </button>
                         </div>
                     </div>
 
                     <!-- Care Guides Sidebar Promo -->
                     <div
-                        class="p-8 rounded-[2rem] relative overflow-hidden group transition-all duration-500 bg-primary text-secondary dark:bg-card dark:text-primary border border-primary/5 dark:border-accentGreen/20 shadow-xl">
+                        class="p-8 rounded-[2.5rem] relative overflow-hidden group transition-all duration-500 bg-white dark:bg-card text-primary border border-primary/5 dark:border-accentGreen/20 shadow-xl">
                         <i
-                            class="fas fa-leaf absolute -bottom-4 -right-4 text-7xl text-white/5 dark:text-white/2 rotate-12 group-hover:rotate-45 transition-transform duration-700"></i>
+                            class="fas fa-leaf absolute -bottom-4 -right-4 text-7xl text-accentGreen/10 rotate-12 group-hover:rotate-45 transition-transform duration-700"></i>
                         <h4 class="text-xl font-playfair italic font-bold mb-4">Care Hub</h4>
                         <p class="text-xs opacity-60 mb-6 leading-relaxed">Personalized moisture and light schedules for
                             your current collection.</p>
                         <a href="blog.html"
-                            class="inline-block px-6 py-2 bg-accentGold text-primary dark:text-secondary rounded-full text-xs font-bold hover:scale-110 active:scale-95 transition-transform shadow-lg whitespace-nowrap">Access
+                            class="inline-block px-6 py-2 bg-accentGold text-primary rounded-full text-xs font-bold hover:scale-110 active:scale-95 transition-transform shadow-lg whitespace-nowrap">Access
                             Guide</a>
                     </div>
                 </div>
@@ -330,7 +343,7 @@
                 </div>
 
                 <div class="grid md:grid-cols-3 gap-8">
-                    <div class="bg-card p-8 rounded-[2.5rem] border border-border shadow-sm">
+                    <div class="bg-card p-8 rounded-[2.5rem] border border-border shadow-sm hover:shadow-lg transition-all group">
                         <div class="flex items-center gap-4 mb-6">
                             <div
                                 class="w-12 h-12 bg-blue-50/10 text-blue-500 rounded-2xl flex items-center justify-center text-xl">
@@ -344,11 +357,11 @@
                         <p class="text-sm opacity-70 leading-relaxed mb-6 italic">Current soil moisture predicted at
                             15%. Ideal watering time: Tomorrow morning.</p>
                         <button
-                            class="text-xs font-bold text-accentGreen border-b border-accentGreen/30 pb-1 uppercase tracking-widest transition-all duration-300 hover:bg-accentGreen hover:text-white hover:px-6 hover:py-2 hover:rounded-full hover:border-transparent hover:-translate-y-0.5">Mark
+                            class="text-xs font-bold px-6 py-2 rounded-full bg-accentGreen text-white hover:scale-105 transition-all duration-300">Mark
                             as Watered</button>
                     </div>
 
-                    <div class="bg-card p-8 rounded-[2.5rem] border border-border shadow-sm">
+                    <div class="bg-card p-8 rounded-[2.5rem] border border-border shadow-sm hover:shadow-lg transition-all group">
                         <div class="flex items-center gap-4 mb-6">
                             <div
                                 class="w-12 h-12 bg-accentGold/10 text-accentGold rounded-2xl flex items-center justify-center text-xl">
@@ -362,11 +375,11 @@
                         <p class="text-sm opacity-70 leading-relaxed mb-6 italic">Expected low-cloud index. Move your
                             Albo 2ft away from the window to prevent.</p>
                         <button
-                            class="text-xs font-bold text-primary dark:text-accentGold border-b border-primary/10 dark:border-accentGold/20 pb-1 uppercase tracking-widest transition-all duration-300 hover:bg-accentGreen hover:text-white hover:px-6 hover:py-2 hover:rounded-full hover:border-transparent hover:-translate-y-0.5">See
+                            class="text-xs font-bold px-6 py-2 rounded-full bg-accentGold text-primary hover:scale-105 transition-all duration-300">See
                             Full Forecast</button>
                     </div>
 
-                    <div class="bg-card p-8 rounded-[2.5rem] border border-border shadow-sm">
+                    <div class="bg-card p-8 rounded-[2.5rem] border border-border shadow-sm hover:shadow-lg transition-all group">
                         <div class="flex items-center gap-4 mb-6">
                             <div
                                 class="w-12 h-12 bg-accentGreen/10 text-accentGreen rounded-2xl flex items-center justify-center text-xl">
@@ -380,7 +393,7 @@
                         <p class="text-sm opacity-70 leading-relaxed mb-6 italic">Your Thai Constellation has pushed its
                             4th leaf this month! Share a progress photo.</p>
                         <button
-                            class="text-xs font-bold text-accentGreen border-b border-accentGreen/30 pb-1 uppercase tracking-widest transition-all duration-300 hover:bg-accentGreen hover:text-white hover:px-6 hover:py-2 hover:rounded-full hover:border-transparent hover:-translate-y-0.5">Upload
+                            class="text-xs font-bold px-6 py-2 rounded-full bg-accentGreen text-white hover:scale-105 transition-all duration-300">Upload
                             Gallery</button>
                     </div>
                 </div>

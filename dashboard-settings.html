@@ -50,17 +50,37 @@
         <div id="sidebar-overlay" class="fixed inset-0 bg-black/50 z-[45] hidden opacity-0 transition-opacity duration-300"></div>
 
         <!-- Dashboard Header -->
-        <header class="fixed top-0 inset-x-0 lg:ps-72 h-24 bg-secondary/80 backdrop-blur-md border-b border-border z-[45] flex items-center justify-between px-4 lg:px-6 transition-all duration-300">
+        <header class="fixed top-0 inset-x-0 lg:ps-72 h-24 bg-secondary border-b border-border z-[45] flex items-center justify-between px-4 lg:px-6 transition-all duration-300">
             <div class="flex items-center gap-4">
+                <div class="flex items-center gap-3 bg-accentGreen/5 px-4 py-2 rounded-2xl border border-accentGreen/10">
+                    <div class="w-8 h-8 bg-accentGreen rounded-lg flex items-center justify-center text-white shadow-lg shadow-accentGreen/20">
+                        <i class="fas fa-user-shield text-xs"></i>
+                    </div>
+                    <div>
+                        <p class="text-[10px] font-bold opacity-50 uppercase tracking-widest leading-none mb-1">Welcome,</p>
+                        <h2 class="text-xs font-bold text-primary leading-none">Admin</h2>
+                    </div>
+                </div>
             </div>
-            <div class="flex items-center gap-4 ms-auto">
-                <button id="dashboard-hamburger" class="lg:hidden p-3 bg-white dark:bg-darkSurface rounded-2xl border border-primary/5 shadow-sm hover:scale-110 active:scale-90 transition-all text-primary dark:text-primary" title="Open Menu">
+            <div class="flex items-center gap-2 lg:gap-4 ms-auto">
+                <a href="dashboard-settings.html"
+                    class="p-3 bg-white dark:bg-darkSurface rounded-2xl border border-primary/5 shadow-sm hover:scale-110 active:scale-90 transition-all text-primary dark:text-primary"
+                    title="Settings">
+                    <i class="fas fa-cog text-accentGold"></i>
+                </a>
+                <button id="dashboard-hamburger"
+                    class="lg:hidden p-3 bg-white dark:bg-darkSurface rounded-2xl border border-primary/5 shadow-sm hover:scale-110 active:scale-90 transition-all text-primary dark:text-primary"
+                    title="Open Menu">
                     <i class="fas fa-bars"></i>
                 </button>
-                <button id="theme-toggle" class="p-3 bg-white dark:bg-darkSurface rounded-2xl border border-primary/5 shadow-sm hover:scale-110 active:scale-90 transition-all text-primary dark:text-primary" title="Toggle Theme">
+                <button id="theme-toggle"
+                    class="p-3 bg-white dark:bg-darkSurface rounded-2xl border border-primary/5 shadow-sm hover:scale-110 active:scale-90 transition-all text-primary dark:text-primary"
+                    title="Toggle Theme">
                     <i class="fas fa-moon"></i>
                 </button>
-                <button id="rtl-toggle" class="p-3 bg-white dark:bg-darkSurface rounded-2xl border border-primary/5 shadow-sm hover:scale-110 active:scale-90 transition-all text-primary dark:text-primary" title="Toggle RTL">
+                <button id="rtl-toggle"
+                    class="p-3 bg-white dark:bg-darkSurface rounded-2xl border border-primary/5 shadow-sm hover:scale-110 active:scale-90 transition-all text-primary dark:text-primary"
+                    title="Toggle RTL">
                     <i class="fas fa-language"></i>
                 </button>
             </div>
@@ -104,12 +124,26 @@
                 </a>
             </div>
 
+            <div class="p-4 lg:p-6 bg-accentGreen/5 rounded-3xl border border-accentGreen/20 mx-4 lg:mx-0">
+                <p class="text-xs font-bold text-accentGreen uppercase tracking-widest mb-2">Member Support</p>
+                <p class="text-sm opacity-70 mb-4 italic leading-relaxed">"Your Variegated Hearts is ready for repotting."</p>
+                <a href="#"
+                    class="inline-flex items-center gap-2 text-accentGreen text-xs font-bold transition-all duration-300 transform hover:-translate-y-0.5 hover:bg-accentGreen hover:text-white hover:px-5 hover:py-2 hover:rounded-full group/chat">
+                    <i class="fas fa-comment-dots text-[10px] group-hover/chat:scale-110"></i>
+                    Chat with Arjun
+                </a>
+            </div>
+
             <div class="mt-auto px-4 pb-8 space-y-4">
                 <div class="flex items-center justify-between p-4 bg-accentGreen/10 rounded-3xl border border-accentGreen/20 lg:hidden">
-                    <button id="dashboard-mobile-theme-toggle" class="p-4 bg-white dark:bg-card rounded-2xl border border-border shadow-md hover:scale-110 active:scale-95 transition-all text-accentGreen" title="Toggle Theme">
-                         <i class="fas fa-moon text-2xl"></i>
+                    <button id="dashboard-mobile-theme-toggle"
+                        class="p-4 bg-white dark:bg-card rounded-2xl border border-border shadow-md hover:scale-110 active:scale-95 transition-all text-accentGreen"
+                        title="Toggle Theme">
+                        <i class="fas fa-moon text-2xl"></i>
                     </button>
-                    <button id="dashboard-rtl-toggle" class="p-4 bg-white dark:bg-card rounded-2xl border border-border shadow-md hover:scale-110 active:scale-95 transition-all text-accentGreen" title="Switch Language Direction">
+                    <button id="dashboard-rtl-toggle"
+                        class="p-4 bg-white dark:bg-card rounded-2xl border border-border shadow-md hover:scale-110 active:scale-95 transition-all text-accentGreen"
+                        title="Switch Language Direction">
                         <i class="fas fa-language text-2xl"></i>
                     </button>
                 </div>
@@ -134,23 +168,23 @@
                 <section class="bg-card p-10 rounded-[3rem] border border-border shadow-sm text-primary">
                     <h3 class="text-xl font-bold font-playfair italic mb-8">Alert Protocols</h3>
                     <div class="space-y-10">
-                       <div class="flex items-center justify-between group">
-                          <div>
+                       <div class="flex items-center justify-between group gap-6">
+                          <div class="min-w-0">
                              <h4 class="font-bold text-sm">Weekly Drop SMS Notifications</h4>
                              <p class="text-xs opacity-50 italic">Be first to access rare species restocks.</p>
                           </div>
-                          <label class="relative inline-flex items-center cursor-pointer">
+                          <label class="relative inline-flex items-center cursor-pointer shrink-0">
                              <input type="checkbox" value="" class="sr-only peer" checked>
                              <div class="w-11 h-6 bg-primary/20 border border-primary/10 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-200 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-accentGreen"></div>
                           </label>
                        </div>
 
-                       <div class="flex items-center justify-between group">
-                          <div>
+                       <div class="flex items-center justify-between group gap-6">
+                          <div class="min-w-0">
                              <h4 class="font-bold text-sm">Plant Health Alerts</h4>
                              <p class="text-xs opacity-50 italic">Personalized humidity and temperature push-alerts.</p>
                           </div>
-                          <label class="relative inline-flex items-center cursor-pointer">
+                          <label class="relative inline-flex items-center cursor-pointer shrink-0">
                              <input type="checkbox" value="" class="sr-only peer">
                              <div class="w-11 h-6 bg-primary/20 border border-primary/10 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-200 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-accentGreen"></div>
                           </label>
@@ -161,15 +195,15 @@
                 <section class="bg-card p-10 rounded-[3rem] border border-border shadow-sm">
                     <h3 class="text-xl font-bold font-playfair italic mb-8">Advanced Options</h3>
                     <div class="space-y-8">
-                       <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between p-6 bg-primary/2 rounded-3xl border border-primary/5 gap-6">
-                          <div class="flex items-center gap-4">
+                       <div class="flex flex-col sm:flex-row items-center justify-between p-6 bg-primary/2 rounded-3xl border border-primary/5 gap-6">
+                          <div class="flex items-center gap-4 text-center sm:text-left">
                              <i class="fas fa-moon text-accentGold shrink-0"></i>
                              <div class="min-w-0">
                                 <h4 class="text-sm font-bold truncate md:whitespace-normal">Automatic Botanical Mode</h4>
                                 <p class="text-[10px] opacity-40 uppercase tracking-widest font-bold whitespace-normal sm:whitespace-nowrap">Sync theme with seasonal Kerala daylight</p>
                              </div>
                           </div>
-                          <button class="text-xs font-bold text-accentGreen uppercase tracking-widest transition-all duration-300 hover:bg-accentGreen hover:text-white hover:px-5 hover:py-2 hover:rounded-full hover:-translate-y-0.5 shadow-sm hover:shadow-md whitespace-nowrap shrink-0">Activate</button>
+                          <button class="w-full sm:w-auto flex justify-center text-xs font-bold text-accentGreen uppercase tracking-widest transition-all duration-300 hover:bg-accentGreen hover:text-white px-6 py-3 border border-accentGreen/20 hover:border-transparent rounded-full hover:-translate-y-0.5 shadow-sm hover:shadow-md whitespace-nowrap shrink-0">Activate</button>
                        </div>
                        </div>
                     </div>
