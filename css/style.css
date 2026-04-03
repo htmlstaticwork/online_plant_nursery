@@ -354,6 +354,39 @@ nav a[href="signup.html"].bg-accentGreen:hover,
     opacity: 1;
 }
 
-#mobile-menu-overlay {
-    backdrop-filter: blur(4px);
+/* --- BRAND LOGO CONSISTENCY --- */
+.brand-logo {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.75rem !important;
+    font-family: 'Playfair Display', serif !important;
+    font-weight: 700 !important;
+    font-size: 1.75rem !important; /* Fixed size for all screen sizes */
+    color: var(--text-main) !important;
+    transition: all 0.3s ease !important;
+    white-space: nowrap !important;
+    text-decoration: none !important;
+    line-height: 1 !important;
 }
+
+.brand-logo i {
+    color: var(--accent-green) !important;
+    font-size: 1.5rem !important;
+    transition: transform 0.3s ease !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.brand-logo:hover i {
+    transform: rotate(12deg) scale(1.1) !important;
+}
+
+.footer-themed .brand-logo {
+    color: inherit !important;
+}
+
+[data-theme='dark'] .brand-logo {
+    color: var(--primary) !important;
+}
+
