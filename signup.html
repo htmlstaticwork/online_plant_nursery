@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth" data-theme="light">
+
 <head>
     <link rel="icon" type="image/png" href="img/favicon.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Begin Your Journey | Signup | Verdant Vault</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@400;500;600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <!-- Theme Script (Inline to prevent flicker) -->
     <script>
-        (function() {
+        (function () {
             const theme = localStorage.getItem('theme') || 'light';
             document.documentElement.setAttribute('data-theme', theme);
             if (theme === 'dark') document.documentElement.classList.add('dark');
         })();
     </script>
-    
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -38,17 +41,21 @@
     </script>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="bg-theme-main min-h-screen flex items-center justify-center py-12 px-6 relative transition-colors duration-500">
-    
+
+<body
+    class="bg-theme-main min-h-screen flex items-center justify-center py-12 px-6 relative transition-colors duration-500">
+
     <!-- Background Image with Theme Overlay -->
     <div class="fixed inset-0 z-0">
-        <img src="https://images.unsplash.com/photo-1545239351-ef35f43d514b?w=1600&q=80" alt="" class="w-full h-full object-cover grayscale opacity-20 transition-all duration-1000">
+        <img src="https://images.unsplash.com/photo-1545239351-ef35f43d514b?w=1600&q=80" alt=""
+            class="w-full h-full object-cover grayscale opacity-20 transition-all duration-1000">
         <div class="absolute inset-0 transition-colors duration-500" style="background-color: var(--overlay-bg)"></div>
     </div>
 
     <!-- Floating Controls (Desktop/Tablet) -->
     <div class="hidden sm:flex fixed top-6 right-6 z-[1100] items-center flex-nowrap gap-4">
-        <button id="theme-toggle" class="w-12 h-12 flex items-center justify-center rounded-full bg-theme-card border border-theme text-theme-main hover:scale-110 transition-all shadow-lg backdrop-blur-md"
+        <button id="theme-toggle"
+            class="w-12 h-12 flex items-center justify-center rounded-full bg-theme-card border border-theme text-theme-main hover:scale-110 transition-all shadow-lg backdrop-blur-md"
             title="Toggle Theme">
             <i class="fas fa-moon text-base"></i>
         </button>
@@ -61,109 +68,133 @@
 
     <!-- Signup Container -->
     <div class="max-w-[480px] w-full relative z-10 animate-plantGrow py-12 mt-20 sm:mt-0">
-        <div class="bg-theme-card pt-16 pb-8 md:pt-10 md:pb-10 px-8 md:px-10 rounded-[2.5rem] border border-theme shadow-2xl backdrop-blur-md relative">
-            
+        <div
+            class="bg-theme-card pt-16 pb-8 md:pt-10 md:pb-10 px-8 md:px-10 rounded-[2.5rem] border border-theme shadow-2xl backdrop-blur-md relative">
+
             <!-- Mobile Controls (Inside Card) -->
             <div class="sm:hidden absolute top-6 right-6 flex items-center gap-2">
-                <button onclick="document.getElementById('theme-toggle').click()" class="w-9 h-9 flex items-center justify-center rounded-full bg-theme-main border border-theme text-theme-main transition-all active:scale-95 shadow-sm">
+                <button onclick="document.getElementById('theme-toggle').click()"
+                    class="w-9 h-9 flex items-center justify-center rounded-full bg-theme-main border border-theme text-theme-main transition-all active:scale-95 shadow-sm">
                     <i class="fas fa-moon text-[10px]"></i>
                 </button>
-                <button onclick="document.getElementById('rtl-toggle').click()" class="w-9 h-9 flex items-center justify-center rounded-full bg-theme-main border border-theme text-theme-main transition-all active:scale-95 shadow-sm">
+                <button onclick="document.getElementById('rtl-toggle').click()"
+                    class="w-9 h-9 flex items-center justify-center rounded-full bg-theme-main border border-theme text-theme-main transition-all active:scale-95 shadow-sm">
                     <i class="fas fa-language text-[10px]"></i>
                 </button>
             </div>
-            
+
             <div class="text-center mb-8">
                 <a href="index.html" class="brand-logo group justify-center mb-6">
                     <i class="fas fa-leaf"></i>
                     <span>Verdant Vault</span>
                 </a>
                 <h1 class="text-3xl font-playfair font-bold italic text-theme-main mb-2">Create Account.</h1>
-                <p class="opacity-50 text-[10px] tracking-widest uppercase mb-10 font-bold">Join the elite plant collector network.</p>
+                <p class="opacity-50 text-[10px] tracking-widest uppercase mb-10 font-bold">Join the elite plant
+                    collector network.</p>
 
                 <!-- Select Login/Signup Toggle -->
                 <div class="flex gap-2 p-1 bg-theme-main rounded-full border border-theme mb-8 mx-auto max-w-[240px]">
-                    <a href="login.html" class="flex-1 py-2 text-theme-main rounded-full font-bold text-xs text-center hover:bg-black/5 dark:hover:bg-white/5 transition-all">Login</a>
-                    <a href="signup.html" class="flex-1 py-2 bg-accentGreen text-white rounded-full font-bold text-xs text-center transition-all shadow-sm btn-signup-main">Signup</a>
+                    <a href="login.html"
+                        class="flex-1 py-2 text-theme-main rounded-full font-bold text-xs text-center hover:bg-black/5 dark:hover:bg-white/5 transition-all">Login</a>
+                    <a href="signup.html"
+                        class="flex-1 py-2 bg-accentGreen text-white rounded-full font-bold text-xs text-center transition-all shadow-sm btn-signup-main">Signup</a>
                 </div>
             </div>
 
             <form class="space-y-5">
                 <div class="space-y-5">
                     <div class="space-y-2 text-start">
-                        <label for="firstName" class="text-[10px] font-bold text-theme-main opacity-70 uppercase tracking-widest ml-2">First Name</label>
-                        <input type="text" id="firstName" required placeholder="Arjun" 
+                        <label for="firstName"
+                            class="text-[10px] font-bold text-theme-main opacity-70 uppercase tracking-widest ml-2">First
+                            Name</label>
+                        <input type="text" id="firstName" required placeholder="Enter your name"
                             class="w-full py-3.5 px-5 bg-theme-main border border-theme rounded-xl text-theme-main outline-none focus:border-accentGreen transition-all placeholder:text-theme-main placeholder:opacity-50 text-sm">
                     </div>
-                    
+
                     <div class="space-y-2 text-start">
-                        <label for="lastName" class="text-[10px] font-bold text-theme-main opacity-70 uppercase tracking-widest ml-2">Last Name</label>
-                        <input type="text" id="lastName" required placeholder="Iyer" 
+                        <label for="lastName"
+                            class="text-[10px] font-bold text-theme-main opacity-70 uppercase tracking-widest ml-2">Last
+                            Name</label>
+                        <input type="text" id="lastName" required placeholder="Enter your last name"
                             class="w-full py-3.5 px-5 bg-theme-main border border-theme rounded-xl text-theme-main outline-none focus:border-accentGreen transition-all placeholder:text-theme-main placeholder:opacity-50 text-sm">
                     </div>
                 </div>
 
                 <div class="space-y-2 text-start">
-                    <label for="email" class="text-[10px] font-bold text-theme-main opacity-70 uppercase tracking-widest ml-2">Email Address</label>
-                    <input type="email" id="email" required placeholder="arjun@collector.com" 
+                    <label for="email"
+                        class="text-[10px] font-bold text-theme-main opacity-70 uppercase tracking-widest ml-2">Email
+                        Address</label>
+                    <input type="email" id="email" required placeholder="enter your Email"
                         class="w-full py-3.5 px-5 bg-theme-main border border-theme rounded-xl text-theme-main outline-none focus:border-accentGreen transition-all placeholder:text-theme-main placeholder:opacity-50 text-sm">
                 </div>
 
                 <div class="space-y-2 text-start relative">
-                    <label for="password" class="text-[10px] font-bold text-theme-main opacity-70 uppercase tracking-widest ml-2">Password</label>
+                    <label for="password"
+                        class="text-[10px] font-bold text-theme-main opacity-70 uppercase tracking-widest ml-2">Password</label>
                     <div class="relative">
-                        <input type="password" id="password" required placeholder="••••••••" 
+                        <input type="password" id="password" required placeholder="••••••••"
                             class="w-full py-3.5 pl-5 pr-12 bg-theme-main border border-theme rounded-xl text-theme-main outline-none focus:border-accentGreen transition-all placeholder:text-theme-main placeholder:opacity-50 text-sm">
-                        <button type="button" onclick="togglePassword('password', this)" 
-                            class="absolute right-4 top-1/2 -translate-y-1/2 text-theme-main opacity-40 hover:opacity-100 transition-opacity" aria-label="Show password">
+                        <button type="button" onclick="togglePassword('password', this)"
+                            class="absolute right-4 top-1/2 -translate-y-1/2 text-theme-main opacity-40 hover:opacity-100 transition-opacity"
+                            aria-label="Show password">
                             <i class="fas fa-eye"></i>
                         </button>
                     </div>
                 </div>
 
                 <div class="space-y-2 text-start relative">
-                    <label for="confirmPassword" class="text-[10px] font-bold text-theme-main opacity-70 uppercase tracking-widest ml-2">Confirm Password</label>
+                    <label for="confirmPassword"
+                        class="text-[10px] font-bold text-theme-main opacity-70 uppercase tracking-widest ml-2">Confirm
+                        Password</label>
                     <div class="relative">
-                        <input type="password" id="confirmPassword" required placeholder="••••••••" 
+                        <input type="password" id="confirmPassword" required placeholder="••••••••"
                             class="w-full py-3.5 pl-5 pr-12 bg-theme-main border border-theme rounded-xl text-theme-main outline-none focus:border-accentGreen transition-all placeholder:text-theme-main placeholder:opacity-50 text-sm">
-                        <button type="button" onclick="togglePassword('confirmPassword', this)" 
-                            class="absolute right-4 top-1/2 -translate-y-1/2 text-theme-main opacity-40 hover:opacity-100 transition-opacity" aria-label="Show password">
+                        <button type="button" onclick="togglePassword('confirmPassword', this)"
+                            class="absolute right-4 top-1/2 -translate-y-1/2 text-theme-main opacity-40 hover:opacity-100 transition-opacity"
+                            aria-label="Show password">
                             <i class="fas fa-eye"></i>
                         </button>
                     </div>
                 </div>
 
                 <div class="flex items-center gap-3 px-2 pt-2">
-                    <input type="checkbox" id="terms" required 
+                    <input type="checkbox" id="terms" required
                         class="w-4 h-4 accent-accentGreen rounded outline-none cursor-pointer border-theme">
-                    <label for="terms" class="text-[10px] opacity-70 cursor-pointer hover:text-accentGreen transition-all uppercase tracking-widest font-bold">
+                    <label for="terms"
+                        class="text-[10px] opacity-70 cursor-pointer hover:text-accentGreen transition-all uppercase tracking-widest font-bold">
                         I agree to the <a href="#" class="text-accentGreen hover:underline">Terms & Conditions</a>
                     </label>
                 </div>
 
-                <button type="submit" 
-                    class="w-full py-4 bg-accentGreen text-white rounded-md font-bold uppercase tracking-widest text-sm hover:translate-y-[-2px] transition-all shadow-lg shadow-accentGreen/20 active:scale-[0.98] mt-4 btn-signup-main">
+                <button type="submit"
+                    class="w-full py-4 bg-accentGreen text-white rounded-md font-bold uppercase tracking-widest text-xs sm:text-sm hover:translate-y-[-2px] hover:scale-[1.02] hover:bg-primary transition-all shadow-lg shadow-accentGreen/20 active:scale-[0.98] mt-4 btn-signup-main">
                     Create Account
                 </button>
             </form>
 
             <div class="relative flex items-center justify-center my-10">
                 <div class="h-px bg-theme-main w-full absolute border-t border-theme"></div>
-                <span class="relative px-4 bg-theme-card text-theme-main opacity-20 text-[10px] uppercase tracking-[0.2em] font-bold">or continue with</span>
+                <span
+                    class="relative px-4 bg-theme-card text-theme-main opacity-20 text-[10px] uppercase tracking-[0.2em] font-bold">or
+                    continue with</span>
             </div>
 
             <div class="grid grid-cols-2 gap-4">
-                <button type="button" class="flex items-center justify-center gap-3 py-3 px-4 border border-theme rounded-xl text-theme-main hover:border-accentGreen hover:text-accentGreen hover:shadow-xl hover:bg-accentGreen/5 transition-all text-[10px] font-bold uppercase tracking-widest active:scale-95 group">
-                    <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" class="w-4 h-4 group-hover:scale-110 transition-transform" alt="Google">
+                <button type="button"
+                    class="flex items-center justify-center gap-3 py-3 px-4 border border-theme rounded-xl text-theme-main hover:border-accentGreen hover:text-accentGreen hover:shadow-xl hover:bg-accentGreen/5 transition-all text-[10px] md:text-xs font-bold uppercase tracking-widest active:scale-95 group">
+                    <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg"
+                        class="w-4 h-4 group-hover:scale-110 transition-transform" alt="Google">
                     Google
                 </button>
-                <button type="button" class="flex items-center justify-center gap-3 py-3 px-4 border border-theme rounded-xl text-theme-main hover:bg-[#1877F2] hover:text-white hover:border-transparent hover:shadow-xl transition-all text-[10px] font-bold uppercase tracking-widest active:scale-95 group">
-                    <i class="fab fa-facebook text-[#1877F2] group-hover:text-white group-hover:scale-110 transition-all text-lg"></i>
+                <button type="button"
+                    class="flex items-center justify-center gap-3 py-3 px-4 border border-theme rounded-xl text-theme-main hover:bg-[#1877F2] hover:text-white hover:border-transparent hover:shadow-xl transition-all text-[10px] md:text-xs font-bold uppercase tracking-widest active:scale-95 group">
+                    <i
+                        class="fab fa-facebook text-[#1877F2] group-hover:text-white group-hover:scale-110 transition-all text-lg"></i>
                     Facebook
                 </button>
             </div>
         </div>
-        
+
 
     </div>
 
@@ -186,5 +217,5 @@
 
     <script src="js/main.js"></script>
 </body>
-</html>
 
+</html>
