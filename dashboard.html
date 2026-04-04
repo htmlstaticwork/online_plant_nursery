@@ -68,17 +68,12 @@
                         <i class="fas fa-user-shield text-xs"></i>
                     </div>
                     <div>
-                        <p class="text-[10px] font-bold opacity-50 uppercase tracking-widest leading-none mb-1">Welcome,</p>
-                        <h2 class="text-xs font-bold text-primary leading-none">Admin</h2>
+                        <p class="text-xs font-bold opacity-50 uppercase tracking-widest leading-none mb-1">Welcome,</p>
+                        <h2 class="text-base font-bold text-primary leading-none">Admin</h2>
                     </div>
                 </div>
             </div>
             <div class="flex items-center gap-4 ms-auto">
-                <a href="dashboard-settings.html"
-                    class="p-3 bg-white dark:bg-darkSurface rounded-2xl border border-primary/5 shadow-sm hover:scale-110 active:scale-90 transition-all text-primary dark:text-primary"
-                    title="Settings">
-                    <i class="fas fa-cog text-accentGold"></i>
-                </a>
                 <button id="dashboard-hamburger"
                     class="lg:hidden p-3 bg-white dark:bg-darkSurface rounded-2xl border border-primary/5 shadow-sm hover:scale-110 active:scale-90 transition-all text-primary dark:text-primary"
                     title="Open Menu">
@@ -98,7 +93,7 @@
         </header>
         <!-- Sidebar Navigation -->
         <aside id="dashboard-sidebar"
-            class="w-72 fixed inset-y-0 start-0 bg-card border-e border-border p-8 flex flex-col justify-between transition-all duration-300 z-50 transform -translate-x-full rtl:translate-x-full lg:translate-x-0 rtl:lg:translate-x-0">
+            class="w-72 fixed inset-y-0 start-0 bg-card border-e border-border p-8 flex flex-col justify-between transition-all duration-300 z-50 transform -translate-x-full rtl:translate-x-full lg:translate-x-0 rtl:lg:translate-x-0 overflow-y-auto">
             <div class="space-y-4">
                 <div class="mb-10 px-4 flex items-center justify-between">
                     <a href="index.html" class="brand-logo group">
@@ -137,7 +132,7 @@
                 </a>
             </div>
 
-            <div class="p-4 lg:p-6 bg-accentGreen/5 rounded-3xl border border-accentGreen/20 mx-4 lg:mx-0">
+            <div class="p-4 lg:p-6 bg-accentGreen/5 rounded-3xl border border-accentGreen/20 mx-4 lg:mx-0 mt-8">
                 <p class="text-xs font-bold text-accentGreen uppercase tracking-widest mb-2">Member Support</p>
                 <p class="text-sm opacity-70 mb-4 italic leading-relaxed">"Your Variegated Hearts is ready for repotting."</p>
                 <a href="#"
@@ -343,58 +338,67 @@
                 </div>
 
                 <div class="grid md:grid-cols-3 gap-8">
-                    <div class="bg-card p-8 rounded-[2.5rem] border border-border shadow-sm hover:shadow-lg transition-all group">
-                        <div class="flex items-center gap-4 mb-6">
+                    <!-- Card 1 -->
+                    <div class="bg-card p-8 rounded-[2.5rem] border border-border shadow-sm hover:shadow-lg transition-all group flex flex-col h-full">
+                        <div class="flex items-center gap-4 mb-6 shrink-0">
                             <div
                                 class="w-12 h-12 bg-blue-50/10 text-blue-500 rounded-2xl flex items-center justify-center text-xl">
                                 <i class="fas fa-tint"></i>
                             </div>
                             <div>
-                                <h4 class="font-bold">Watering Alert</h4>
+                                <h4 class="font-bold whitespace-nowrap">Watering Alert</h4>
                                 <p class="text-[10px] font-bold uppercase opacity-40">Hearts of String</p>
                             </div>
                         </div>
-                        <p class="text-sm opacity-70 leading-relaxed mb-6 italic">Current soil moisture predicted at
+                        <p class="text-sm opacity-70 leading-relaxed mb-6 italic flex-1">Current soil moisture predicted at
                             15%. Ideal watering time: Tomorrow morning.</p>
-                        <button
-                            class="text-xs font-bold px-6 py-2 rounded-full bg-accentGreen text-white hover:scale-105 transition-all duration-300">Mark
-                            as Watered</button>
+                        <div class="mt-auto">
+                            <button
+                                class="w-full text-xs font-bold px-6 py-3 rounded-full bg-accentGreen text-white hover:scale-105 transition-all duration-300">Mark
+                                as Watered</button>
+                        </div>
                     </div>
 
-                    <div class="bg-card p-8 rounded-[2.5rem] border border-border shadow-sm hover:shadow-lg transition-all group">
-                        <div class="flex items-center gap-4 mb-6">
+                    <!-- Card 2 -->
+                    <div class="bg-card p-8 rounded-[2.5rem] border border-border shadow-sm hover:shadow-lg transition-all group flex flex-col h-full">
+                        <div class="flex items-center gap-4 mb-6 shrink-0">
                             <div
                                 class="w-12 h-12 bg-accentGold/10 text-accentGold rounded-2xl flex items-center justify-center text-xl">
                                 <i class="fas fa-sun"></i>
                             </div>
                             <div>
-                                <h4 class="font-bold">Light Optimizer</h4>
+                                <h4 class="font-bold whitespace-nowrap">Light Optimizer</h4>
                                 <p class="text-[10px] font-bold uppercase opacity-40">Kerala Sun</p>
                             </div>
                         </div>
-                        <p class="text-sm opacity-70 leading-relaxed mb-6 italic">Expected low-cloud index. Move your
+                        <p class="text-sm opacity-70 leading-relaxed mb-6 italic flex-1">Expected low-cloud index. Move your
                             Albo 2ft away from the window to prevent.</p>
-                        <button
-                            class="text-xs font-bold px-6 py-2 rounded-full bg-accentGold text-primary hover:scale-105 transition-all duration-300">See
-                            Full Forecast</button>
+                        <div class="mt-auto">
+                            <button
+                                class="w-full text-xs font-bold px-6 py-3 rounded-full bg-accentGold text-primary hover:scale-105 transition-all duration-300">See
+                                Full Forecast</button>
+                        </div>
                     </div>
 
-                    <div class="bg-card p-8 rounded-[2.5rem] border border-border shadow-sm hover:shadow-lg transition-all group">
-                        <div class="flex items-center gap-4 mb-6">
+                    <!-- Card 3 -->
+                    <div class="bg-card p-8 rounded-[2.5rem] border border-border shadow-sm hover:shadow-lg transition-all group flex flex-col h-full">
+                        <div class="flex items-center gap-4 mb-6 shrink-0">
                             <div
                                 class="w-12 h-12 bg-accentGreen/10 text-accentGreen rounded-2xl flex items-center justify-center text-xl">
                                 <i class="fas fa-heartbeat"></i>
                             </div>
                             <div>
-                                <h4 class="font-bold">Specimen Checkup</h4>
+                                <h4 class="font-bold whitespace-nowrap">Specimen Checkup</h4>
                                 <p class="text-[10px] font-bold uppercase opacity-40">Monthly Review</p>
                             </div>
                         </div>
-                        <p class="text-sm opacity-70 leading-relaxed mb-6 italic">Your Thai Constellation has pushed its
+                        <p class="text-sm opacity-70 leading-relaxed mb-6 italic flex-1">Your Thai Constellation has pushed its
                             4th leaf this month! Share a progress photo.</p>
-                        <button
-                            class="text-xs font-bold px-6 py-2 rounded-full bg-accentGreen text-white hover:scale-105 transition-all duration-300">Upload
-                            Gallery</button>
+                        <div class="mt-auto">
+                            <button
+                                class="w-full text-xs font-bold px-6 py-3 rounded-full bg-accentGreen text-white hover:scale-105 transition-all duration-300">Upload
+                                Gallery</button>
+                        </div>
                     </div>
                 </div>
             </section>

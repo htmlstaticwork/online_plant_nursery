@@ -50,17 +50,12 @@
                         <i class="fas fa-user-shield text-xs"></i>
                     </div>
                     <div>
-                        <p class="text-[10px] font-bold opacity-50 uppercase tracking-widest leading-none mb-1">Welcome,</p>
-                        <h2 class="text-xs font-bold text-primary leading-none">Admin</h2>
+                        <p class="text-xs font-bold opacity-50 uppercase tracking-widest leading-none mb-1">Welcome,</p>
+                        <h2 class="text-base font-bold text-primary leading-none">Admin</h2>
                     </div>
                 </div>
             </div>
             <div class="flex items-center gap-2 lg:gap-4 ms-auto">
-                <a href="dashboard-settings.html"
-                    class="p-3 bg-white dark:bg-darkSurface rounded-2xl border border-primary/5 shadow-sm hover:scale-110 active:scale-90 transition-all text-primary dark:text-primary"
-                    title="Settings">
-                    <i class="fas fa-cog text-accentGold"></i>
-                </a>
                 <button id="dashboard-hamburger"
                     class="lg:hidden p-3 bg-white dark:bg-darkSurface rounded-2xl border border-primary/5 shadow-sm hover:scale-110 active:scale-90 transition-all text-primary dark:text-primary"
                     title="Open Menu">
@@ -79,7 +74,7 @@
             </div>
         </header>
         <!-- Sidebar Navigation -->
-        <aside id="dashboard-sidebar" class="w-72 fixed inset-y-0 start-0 bg-card border-e border-border p-8 flex flex-col justify-between transition-all duration-300 z-50 transform -translate-x-full rtl:translate-x-full lg:translate-x-0 rtl:lg:translate-x-0">
+        <aside id="dashboard-sidebar" class="w-72 fixed inset-y-0 start-0 bg-card border-e border-border p-8 flex flex-col justify-between transition-all duration-300 z-50 transform -translate-x-full rtl:translate-x-full lg:translate-x-0 rtl:lg:translate-x-0 overflow-y-auto">
             <div class="space-y-4">
                 <div class="mb-10 px-4 flex items-center justify-between">
                     <a href="index.html" class="brand-logo group">
@@ -117,7 +112,7 @@
                 </a>
             </div>
 
-            <div class="p-4 lg:p-6 bg-accentGreen/5 rounded-3xl border border-accentGreen/20 mx-4 lg:mx-0">
+            <div class="p-4 lg:p-6 bg-accentGreen/5 rounded-3xl border border-accentGreen/20 mx-4 lg:mx-0 mt-8">
                 <p class="text-xs font-bold text-accentGreen uppercase tracking-widest mb-2">Member Support</p>
                 <p class="text-sm opacity-70 mb-4 italic leading-relaxed">"Your Variegated Hearts is ready for repotting."</p>
                 <a href="#"
@@ -210,7 +205,7 @@
                       <i class="fas fa-leaf absolute -bottom-10 -right-10 text-[15rem] text-accentGreen/5 -rotate-12 transition-transform duration-700 group-hover:rotate-45"></i>
                       <h3 class="text-2xl font-playfair font-bold italic mb-6">Ask the Curator.</h3>
                       <p class="text-sm opacity-80 leading-relaxed italic mb-8">Direct priority access to Arjun Iyer for specific growth concerns or specimen health reviews.</p>
-                      <button class="group/btn flex items-center justify-center gap-3 bg-white dark:bg-accentGreen text-accentGreen dark:text-white px-8 py-4 rounded-full text-[10px] md:text-xs font-bold uppercase tracking-widest hover:scale-105 hover:-translate-y-1 hover:shadow-2xl hover:shadow-accentGreen/30 transition-all shadow-xl active:scale-95 w-full md:w-auto">
+                      <button class="group/btn flex items-center justify-center gap-3 bg-accentGreen text-white px-8 py-4 rounded-full text-[10px] md:text-xs font-bold uppercase tracking-widest hover:scale-105 hover:-translate-y-1 hover:shadow-2xl hover:shadow-accentGreen/30 hover:bg-primary transition-all shadow-xl active:scale-95 w-full md:w-auto">
                          <i class="fas fa-comment-dots text-sm transition-all duration-300 group-hover/btn:scale-125 group-hover/btn:rotate-12"></i>
                          <span>Initialize Consultation</span>
                       </button>

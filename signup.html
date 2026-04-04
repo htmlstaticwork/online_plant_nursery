@@ -38,7 +38,7 @@
     </script>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="bg-theme-main min-h-screen flex items-center justify-center p-6 relative overflow-x-hidden transition-colors duration-500">
+<body class="bg-theme-main min-h-screen flex items-center justify-center py-12 px-6 relative transition-colors duration-500">
     
     <!-- Background Image with Theme Overlay -->
     <div class="fixed inset-0 z-0">
@@ -46,22 +46,32 @@
         <div class="absolute inset-0 transition-colors duration-500" style="background-color: var(--overlay-bg)"></div>
     </div>
 
-    <!-- Floating Controls -->
-    <div class="fixed top-6 right-6 z-[1001] flex items-center gap-3">
-        <button id="theme-toggle" class="w-9 h-9 sm:w-12 sm:h-12 flex items-center justify-center rounded-full bg-theme-card border border-theme text-theme-main hover:scale-110 transition-all shadow-lg"
+    <!-- Floating Controls (Desktop/Tablet) -->
+    <div class="hidden sm:flex fixed top-6 right-6 z-[1100] items-center flex-nowrap gap-4">
+        <button id="theme-toggle" class="w-12 h-12 flex items-center justify-center rounded-full bg-theme-card border border-theme text-theme-main hover:scale-110 transition-all shadow-lg backdrop-blur-md"
             title="Toggle Theme">
-            <i class="fas fa-moon text-xs sm:text-base"></i>
+            <i class="fas fa-moon text-base"></i>
         </button>
         <button id="rtl-toggle"
-            class="w-9 h-9 sm:w-12 sm:h-12 flex items-center justify-center rounded-full bg-theme-card border border-theme text-theme-main hover:scale-110 transition-all shadow-lg"
+            class="w-12 h-12 flex items-center justify-center rounded-full bg-theme-card border border-theme text-theme-main hover:scale-110 transition-all shadow-lg backdrop-blur-md"
             title="Switch Language Direction">
-            <i class="fas fa-language text-xs sm:text-base"></i>
+            <i class="fas fa-language text-base"></i>
         </button>
     </div>
 
     <!-- Signup Container -->
     <div class="max-w-[480px] w-full relative z-10 animate-plantGrow py-12 mt-20 sm:mt-0">
-        <div class="bg-theme-card p-8 md:p-10 rounded-[2.5rem] border border-theme shadow-2xl backdrop-blur-md">
+        <div class="bg-theme-card pt-16 pb-8 md:pt-10 md:pb-10 px-8 md:px-10 rounded-[2.5rem] border border-theme shadow-2xl backdrop-blur-md relative">
+            
+            <!-- Mobile Controls (Inside Card) -->
+            <div class="sm:hidden absolute top-6 right-6 flex items-center gap-2">
+                <button onclick="document.getElementById('theme-toggle').click()" class="w-9 h-9 flex items-center justify-center rounded-full bg-theme-main border border-theme text-theme-main transition-all active:scale-95 shadow-sm">
+                    <i class="fas fa-moon text-[10px]"></i>
+                </button>
+                <button onclick="document.getElementById('rtl-toggle').click()" class="w-9 h-9 flex items-center justify-center rounded-full bg-theme-main border border-theme text-theme-main transition-all active:scale-95 shadow-sm">
+                    <i class="fas fa-language text-[10px]"></i>
+                </button>
+            </div>
             
             <div class="text-center mb-8">
                 <a href="index.html" class="brand-logo group justify-center mb-6">
