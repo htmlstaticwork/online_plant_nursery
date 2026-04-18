@@ -33,7 +33,8 @@
                         accentGold: 'var(--accent-gold)',
                         card: 'var(--card-bg)',
                         border: 'var(--border-color)',
-                        surface: 'var(--bg-main)'
+                        surface: 'var(--bg-main)',
+                        darkBg: '#000000'
                     }
                 }
             }
@@ -60,10 +61,8 @@
             <i class="fas fa-moon text-base"></i>
         </button>
         <button id="rtl-toggle"
-            class="w-12 h-12 flex items-center justify-center rounded-full bg-theme-card border border-theme text-theme-main hover:scale-110 transition-all shadow-lg backdrop-blur-md"
-            title="Switch Language Direction">
-            <i class="fas fa-language text-base"></i>
-        </button>
+            class="h-12 px-4 flex items-center justify-center text-[10px] font-bold border border-theme rounded-full bg-theme-card text-theme-main hover:bg-accentGreen hover:text-white transition-all uppercase shadow-md backdrop-blur-md leading-none"
+            title="Switch Language Direction">RTL</button>
     </div>
 
     <!-- Signup Container -->
@@ -78,8 +77,8 @@
                     <i class="fas fa-moon text-[10px]"></i>
                 </button>
                 <button onclick="document.getElementById('rtl-toggle').click()"
-                    class="w-9 h-9 flex items-center justify-center rounded-full bg-theme-main border border-theme text-theme-main transition-all active:scale-95 shadow-sm">
-                    <i class="fas fa-language text-[10px]"></i>
+                    class="w-9 h-9 flex items-center justify-center rounded-full bg-theme-main border border-theme text-theme-main font-bold text-[10px] transition-all active:scale-95 shadow-sm">
+                    RTL
                 </button>
             </div>
 
@@ -173,24 +172,28 @@
             </form>
 
             <div class="relative flex items-center justify-center my-10">
-                <div class="h-px bg-theme-main w-full absolute border-t border-theme"></div>
                 <span
-                    class="relative px-4 bg-theme-card text-theme-main opacity-20 text-[10px] uppercase tracking-[0.2em] font-bold">or
+                    class="relative px-4 bg-theme-card text-theme-main opacity-60 text-[10px] uppercase tracking-[0.2em] font-bold">or
                     continue with</span>
             </div>
 
-            <div class="grid grid-cols-2 gap-4">
+            <div class="grid grid-cols-3 gap-3">
                 <button type="button"
-                    class="flex items-center justify-center gap-3 py-3 px-4 border border-theme rounded-xl text-theme-main hover:border-accentGreen hover:text-accentGreen hover:shadow-xl hover:bg-accentGreen/5 transition-all text-[10px] md:text-xs font-bold uppercase tracking-widest active:scale-95 group">
+                    class="flex items-center justify-center py-4 border border-theme rounded-xl text-theme-main hover:border-accentGreen hover:shadow-xl hover:bg-accentGreen/5 transition-all active:scale-95 group"
+                    title="Continue with Google">
                     <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg"
-                        class="w-4 h-4 group-hover:scale-110 transition-transform" alt="Google">
-                    Google
+                        class="w-5 h-5 group-hover:scale-110 transition-transform" alt="Google">
                 </button>
                 <button type="button"
-                    class="flex items-center justify-center gap-3 py-3 px-4 border border-theme rounded-xl text-theme-main hover:bg-[#1877F2] hover:text-white hover:border-transparent hover:shadow-xl transition-all text-[10px] md:text-xs font-bold uppercase tracking-widest active:scale-95 group">
+                    class="flex items-center justify-center py-4 border border-theme rounded-xl text-theme-main hover:bg-[#1877F2] hover:text-white hover:border-transparent hover:shadow-xl transition-all active:scale-95 group"
+                    title="Continue with Facebook">
                     <i
-                        class="fab fa-facebook text-[#1877F2] group-hover:text-white group-hover:scale-110 transition-all text-lg"></i>
-                    Facebook
+                        class="fab fa-facebook text-xl group-hover:scale-110 transition-all"></i>
+                </button>
+                <button type="button"
+                    class="flex items-center justify-center py-4 border border-theme rounded-xl text-theme-main hover:bg-black hover:text-white hover:border-transparent hover:shadow-xl transition-all active:scale-95 group"
+                    title="Continue with Apple">
+                    <i class="fab fa-apple text-xl group-hover:scale-110 transition-all"></i>
                 </button>
             </div>
         </div>

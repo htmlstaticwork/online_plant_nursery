@@ -23,7 +23,8 @@
                         accentGold: 'var(--accent-gold)',
                         card: 'var(--card-bg)',
                         border: 'var(--border-color)',
-                        surface: 'var(--bg-main)'
+                        surface: 'var(--bg-main)',
+                        darkBg: '#000000'
                     },
                     fontFamily: {
                         'dm-sans': ['DM Sans', 'sans-serif'],
@@ -167,12 +168,14 @@
             </div>
 
             <!-- Tier 2: Collector Box (POPULAR) -->
-            <div class="bg-primary text-secondary p-12 rounded-[3.5rem] flex flex-col justify-between scale-105 shadow-2xl relative overflow-hidden group">
-                <div class="absolute top-8 right-8 rotate-12">
-                    <span class="bg-accentGold text-primary dark:text-secondary px-4 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest shadow-xl">Most Coveted</span>
+            <div class="bg-primary text-secondary p-12 rounded-[3.5rem] flex flex-col justify-between scale-105 shadow-2xl relative group">
+                <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
+                    <span class="bg-accentGold text-primary dark:text-secondary px-8 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest shadow-2xl whitespace-nowrap">Most Coveted</span>
                 </div>
-                <div class="absolute -bottom-10 -right-10 text-[15rem] text-white/5 -rotate-12 pointer-events-none">
-                    <i class="fas fa-leaf"></i>
+                <div class="absolute inset-0 rounded-[3.5rem] overflow-hidden pointer-events-none">
+                    <div class="absolute -bottom-10 -right-10 text-[15rem] text-white/5 -rotate-12">
+                        <i class="fas fa-leaf"></i>
+                    </div>
                 </div>
                 
                 <div class="text-center">
@@ -204,7 +207,7 @@
                     </div>
                 </div>
                 
-                <div class="pt-8 border-t border-white/10">
+                <div class="pt-8 border-t border-white/5">
                     <div class="flex items-end justify-center lg:justify-start gap-2 mb-8">
                         <span class="text-5xl font-bold font-display italic">$125</span>
                         <span class="text-sm opacity-40 mb-2">/ month</span>
@@ -305,7 +308,7 @@
             </div>
             <div class="w-full lg:w-auto relative z-10 shrink-0 flex justify-center">
                 <form class="flex flex-col md:flex-row gap-4 w-full md:w-auto">
-                    <input type="email" placeholder="Your best email..." class="px-8 py-5 rounded-full bg-white/10 border border-white/20 text-white placeholder:text-white/40 outline-none focus:bg-white/20 transition-all min-w-[300px]">
+                    <input type="email" placeholder="Your best email..." class="px-8 py-5 rounded-full bg-white/10 border border-white/5 text-white placeholder:text-white/40 outline-none focus:bg-white/20 transition-all min-w-[300px]">
                     <button class="bg-white text-accentGreen px-10 py-5 rounded-full font-bold uppercase tracking-widest shadow-xl hover:scale-105 active:scale-95 transition-all">Cultivate</button>
                 </form>
             </div>
@@ -316,7 +319,7 @@
         <div class="max-w-7xl mx-auto">
             <div class="grid grid-cols-2 lg:grid-cols-5 gap-12 mb-20">
                 <div class="col-span-2">
-                    <a href="index.html" class="brand-logo group">
+                    <a href="index.html" class="brand-logo group mb-8">
                         <i class="fas fa-leaf"></i>
                         <span>Verdant Vault</span>
                     </a>

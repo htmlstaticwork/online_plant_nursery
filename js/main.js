@@ -49,18 +49,36 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // RTL Toggle Logic
+    const updateRTLText = (isRTL) => {
+        const rtlToggles = document.querySelectorAll('#rtl-toggle, #mobile-rtl-toggle, #dashboard-rtl-toggle');
+        rtlToggles.forEach(toggle => {
+            if (toggle.querySelector('i')) {
+                // If it still has an icon, we could change the icon or the whole content
+                toggle.innerHTML = isRTL ? 'LTR' : 'RTL';
+            } else {
+                toggle.innerText = isRTL ? 'LTR' : 'RTL';
+            }
+        });
+    };
+
     const rtlToggles = document.querySelectorAll('#rtl-toggle, #mobile-rtl-toggle, #dashboard-rtl-toggle');
     rtlToggles.forEach(toggle => {
         toggle.addEventListener('click', () => {
             const isRTL = document.documentElement.getAttribute('dir') === 'rtl';
-            document.documentElement.setAttribute('dir', isRTL ? 'ltr' : 'rtl');
-            localStorage.setItem('dir', isRTL ? 'ltr' : 'rtl');
+            const nextRTL = !isRTL;
+            document.documentElement.setAttribute('dir', nextRTL ? 'rtl' : 'ltr');
+            localStorage.setItem('dir', nextRTL ? 'rtl' : 'ltr');
+            updateRTLText(nextRTL);
         });
     });
 
     // Restore RTL state
-    if (localStorage.getItem('dir') === 'rtl') {
+    const savedDir = localStorage.getItem('dir');
+    if (savedDir === 'rtl') {
         document.documentElement.setAttribute('dir', 'rtl');
+        updateRTLText(true);
+    } else {
+        updateRTLText(false);
     }
 
     // Mobile Menu Logic

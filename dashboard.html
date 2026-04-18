@@ -35,6 +35,7 @@
                         card: 'var(--card-bg)',
                         border: 'var(--border-color)',
                         surface: 'var(--bg-main)',
+                        darkBg: '#000000',
                         darkCard: 'var(--card-bg)',
                         darkSurface: 'var(--bg-main)'
                     },
@@ -62,33 +63,36 @@
         <!-- Dashboard Header -->
         <header
             class="fixed top-0 inset-x-0 lg:ps-72 h-24 bg-secondary border-b border-border z-[45] flex items-center justify-between px-4 lg:px-6 transition-all duration-300">
+            <div class="flex items-center gap-4 lg:ms-auto">
+                <!-- Empty for alignment -->
+            </div>
             <div class="flex items-center gap-4">
                 <div class="flex items-center gap-3 bg-accentGreen/5 px-4 py-2 rounded-2xl border border-accentGreen/10">
                     <div class="w-8 h-8 bg-accentGreen rounded-lg flex items-center justify-center text-white shadow-lg shadow-accentGreen/20">
                         <i class="fas fa-user-shield text-xs"></i>
                     </div>
-                    <div>
-                        <p class="text-xs font-bold opacity-50 uppercase tracking-widest leading-none mb-1">Welcome,</p>
-                        <h2 class="text-base font-bold text-primary leading-none">Admin</h2>
+                    <div class="hidden sm:block">
+                        <p class="text-[9px] font-bold opacity-50 uppercase tracking-widest leading-none mb-1">Authenticated</p>
+                        <h2 class="text-xs font-bold text-primary leading-none">Meera K.</h2>
                     </div>
                 </div>
-            </div>
-            <div class="flex items-center gap-4 ms-auto">
-                <button id="dashboard-hamburger"
-                    class="lg:hidden p-3 bg-white dark:bg-darkSurface rounded-2xl border border-primary/5 shadow-sm hover:scale-110 active:scale-90 transition-all text-primary dark:text-primary"
-                    title="Open Menu">
-                    <i class="fas fa-bars"></i>
-                </button>
-                <button id="theme-toggle"
-                    class="p-3 bg-white dark:bg-darkSurface rounded-2xl border border-primary/5 shadow-sm hover:scale-110 active:scale-90 transition-all text-primary dark:text-primary"
-                    title="Toggle Theme">
-                    <i class="fas fa-moon"></i>
-                </button>
-                <button id="rtl-toggle"
-                    class="p-3 bg-white dark:bg-darkSurface rounded-2xl border border-primary/5 shadow-sm hover:scale-110 active:scale-90 transition-all text-primary dark:text-primary"
-                    title="Toggle RTL">
-                    <i class="fas fa-language"></i>
-                </button>
+                <div class="flex items-center gap-3">
+                    <button id="dashboard-hamburger"
+                        class="lg:hidden p-3 bg-white dark:bg-darkSurface rounded-2xl border border-primary/5 shadow-sm hover:scale-110 active:scale-90 transition-all text-primary dark:text-primary"
+                        title="Open Menu">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <button id="theme-toggle"
+                        class="p-3 bg-white dark:bg-darkSurface rounded-2xl border border-primary/5 shadow-sm hover:scale-110 active:scale-90 transition-all text-primary dark:text-primary"
+                        title="Toggle Theme">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <button id="rtl-toggle"
+                        class="p-3 bg-white dark:bg-darkSurface rounded-2xl border border-primary/5 shadow-sm hover:scale-110 active:scale-90 transition-all text-primary dark:text-primary"
+                        title="Toggle RTL">
+                        <i class="fas fa-language"></i>
+                    </button>
+                </div>
             </div>
         </header>
         <!-- Sidebar Navigation -->
@@ -160,8 +164,8 @@
 
             <!-- Welcome Header -->
             <div class="mb-12 animate-plantGrow">
-                <h1 class="text-4xl font-bold font-playfair italic mb-3 text-primary drop-shadow-sm">Grow with us, Meera K.</h1>
-                <p class="text-primary opacity-70 font-medium tracking-wide">Tracking 3 rare specimens in transit.</p>
+                <h1 class="text-4xl font-bold font-playfair italic mb-3 text-primary drop-shadow-sm">Welcome back to your Sanctuary, Meera K.</h1>
+                <p class="text-primary opacity-70 font-medium tracking-wide">Your private collection is thriving today. We are currently tracking 3 rare specimens en route to you.</p>
             </div>
 
             <!-- Stats Overview -->
@@ -229,19 +233,19 @@
                                     <div class="flex justify-between relative z-20">
                                         <div class="text-center">
                                             <div
-                                                class="w-5 h-5 bg-accentGreen rounded-full mx-auto mb-2 border-4 border-white dark:border-darkCard">
+                                                class="w-5 h-5 bg-accentGreen rounded-full mx-auto mb-2 border-4 border-secondary dark:border-darkCard">
                                             </div>
                                             <p class="text-[10px] font-bold opacity-40 uppercase">Kerala</p>
                                         </div>
                                         <div class="text-center">
                                             <div
-                                                class="w-5 h-5 bg-accentGreen rounded-full mx-auto mb-2 border-4 border-white dark:border-darkCard">
+                                                class="w-5 h-5 bg-accentGreen rounded-full mx-auto mb-2 border-4 border-secondary dark:border-darkCard">
                                             </div>
                                             <p class="text-[10px] font-bold opacity-40 uppercase">Customs</p>
                                         </div>
                                         <div class="text-center">
                                             <div
-                                                class="w-5 h-5 bg-accentGreen rounded-full mx-auto mb-2 border-4 border-white dark:border-darkCard">
+                                                class="w-5 h-5 bg-accentGreen rounded-full mx-auto mb-2 border-4 border-secondary dark:border-darkCard">
                                             </div>
                                             <p class="text-[10px] font-bold opacity-40 uppercase">In Hub</p>
                                         </div>

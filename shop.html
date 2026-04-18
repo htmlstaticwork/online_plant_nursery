@@ -35,7 +35,8 @@
                         accentGold: 'var(--accent-gold)',
                         card: 'var(--card-bg)',
                         border: 'var(--border-color)',
-                        surface: 'var(--bg-main)'
+                        surface: 'var(--bg-main)',
+                        darkBg: '#000000'
                     },
                     fontFamily: {
                         'dm-sans': ['DM Sans', 'sans-serif'],
@@ -140,7 +141,7 @@
                 </div>
                 <!-- Time Indicator -->
                 <div class="flex flex-col gap-4 w-full lg:w-auto">
-                    <div class="p-6 md:p-8 rounded-[2.5rem] backdrop-blur-xl bg-white/10 flex items-center justify-between lg:justify-start gap-6 border border-white/20 shadow-2xl"
+                    <div class="p-6 md:p-8 rounded-[2.5rem] backdrop-blur-xl bg-white/10 flex items-center justify-between lg:justify-start gap-6 border border-white/5 shadow-2xl"
                          style="background-color: rgba(255, 255, 255, 0.05)">
                         <div class="text-right">
                             <p class="text-[10px] uppercase tracking-widest text-accentGold font-bold mb-1">Next Restock</p>
@@ -372,7 +373,7 @@
             </div>
             <div class="w-full md:w-auto relative z-10 shrink-0 flex justify-center">
                 <form class="flex flex-col md:flex-row gap-4">
-                    <input type="email" placeholder="Your best email..." class="px-8 py-5 rounded-full bg-white/10 border border-white/20 text-white placeholder:text-white/40 outline-none focus:bg-white/20 transition-all min-w-[300px]">
+                    <input type="email" placeholder="Your best email..." class="px-8 py-5 rounded-full bg-white/10 border border-white/5 text-white placeholder:text-white/40 outline-none focus:bg-white/20 transition-all min-w-[300px]">
                     <button class="bg-white text-accentGreen px-10 py-5 rounded-full font-bold uppercase tracking-widest shadow-xl hover:scale-105 active:scale-95 transition-all">Cultivate</button>
                 </form>
             </div>
@@ -386,7 +387,7 @@
             <div class="grid grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
                 <!-- Brand Content -->
                 <div class="col-span-2">
-                    <a href="index.html" class="brand-logo group">
+                    <a href="index.html" class="brand-logo group mb-8">
                         <i class="fas fa-leaf"></i>
                         <span>Verdant Vault</span>
                     </a>
