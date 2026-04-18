@@ -45,17 +45,17 @@
         <!-- Dashboard Header -->
         <header
             class="fixed top-0 inset-x-0 lg:ps-72 h-24 bg-secondary border-b border-border z-[45] flex items-center justify-between px-4 lg:px-6 transition-all duration-300">
-            <div class="flex items-center gap-4 lg:ms-auto">
-                <!-- Empty for alignment -->
+            <div class="flex items-center gap-4 overflow-hidden">
+                <h2 class="hidden md:block text-sm font-bold uppercase tracking-[0.3em] opacity-60 italic whitespace-nowrap">Welcome Back.</h2>
             </div>
-            <div class="flex items-center gap-4">
+            <div class="flex items-center gap-4 ms-auto">
                 <div class="flex items-center gap-3 bg-accentGreen/5 px-4 py-2 rounded-2xl border border-accentGreen/10">
                     <div class="w-8 h-8 bg-accentGreen rounded-lg flex items-center justify-center text-white shadow-lg shadow-accentGreen/20">
                         <i class="fas fa-user-shield text-xs"></i>
                     </div>
-                    <div class="hidden sm:block">
-                        <p class="text-[9px] font-bold opacity-50 uppercase tracking-widest leading-none mb-1">Authenticated</p>
-                        <h2 class="text-xs font-bold text-primary leading-none">Meera K.</h2>
+                    <div class="block">
+                        <p class="text-[8px] md:text-[9px] font-bold opacity-50 uppercase tracking-widest leading-none mb-1">Authenticated</p>
+                        <h2 class="text-[10px] md:text-xs font-bold text-primary leading-none">Meera K.</h2>
                     </div>
                 </div>
                 <div class="flex items-center gap-3">
@@ -199,9 +199,9 @@
                       <i class="fas fa-leaf absolute -bottom-10 -right-10 text-[15rem] text-accentGreen/5 -rotate-12 transition-transform duration-700 group-hover:rotate-45"></i>
                       <h3 class="text-2xl font-playfair font-bold italic mb-6">Ask the Curator.</h3>
                       <p class="text-sm opacity-80 leading-relaxed italic mb-8">Direct priority access to Arjun Iyer for specific growth concerns or specimen health reviews.</p>
-                      <button class="group/btn flex items-center justify-center gap-3 bg-accentGreen text-white px-8 py-4 rounded-full text-[10px] md:text-xs font-bold uppercase tracking-widest hover:bg-white hover:text-accentGreen hover:scale-105 transition-all shadow-xl hover:shadow-accentGreen/30 active:scale-95 w-full md:w-auto border-2 border-transparent hover:border-accentGreen">
-                         <i class="fas fa-comment-dots text-sm transition-all duration-300 group-hover/btn:scale-125 group-hover/btn:rotate-12"></i>
-                         <span>Initialize Consultation</span>
+                      <button class="group/btn flex items-center justify-center gap-4 bg-accentGreen text-white px-8 py-5 rounded-2xl text-[10px] md:text-xs font-bold uppercase tracking-[0.25em] hover:bg-primary transition-all shadow-2xl hover:shadow-accentGreen/40 active:scale-95 w-full transition-all duration-500">
+                         <i class="fas fa-comment-dots text-lg transition-all duration-500 group-hover/btn:scale-125 group-hover/btn:rotate-[15deg]"></i>
+                         <span class="whitespace-nowrap">Initialize Consultation</span>
                       </button>
                    </div>
 
