@@ -54,7 +54,7 @@
     </div>
 
     <!-- Floating Controls (Desktop/Tablet/Mobile) -->
-    <div class="floating-controls flex fixed top-6 right-6 z-[1100] items-center flex-nowrap gap-4">
+    <div class="floating-controls flex absolute top-6 right-6 z-[1100] items-center flex-nowrap gap-4">
         <button id="theme-toggle"
             class="w-12 h-12 flex items-center justify-center rounded-full bg-theme-card border border-theme text-theme-main hover:scale-110 transition-all shadow-lg backdrop-blur-md"
             title="Toggle Theme">
@@ -150,7 +150,7 @@
                     <input type="checkbox" id="terms" required
                         class="w-4 h-4 accent-accentGreen rounded outline-none cursor-pointer border-theme">
                     <label for="terms"
-                        class="text-[10px] opacity-70 cursor-pointer hover:text-accentGreen transition-all uppercase tracking-widest font-bold">
+                        class="text-[10px] opacity-70 cursor-pointer hover:text-accentGreen transition-all uppercase tracking-widest font-bold whitespace-nowrap">
                         I agree to the <a href="#" class="text-accentGreen hover:underline">Terms & Conditions</a>
                     </label>
                 </div>

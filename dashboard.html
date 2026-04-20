@@ -63,13 +63,23 @@
         <!-- Dashboard Header -->
         <header
             class="fixed top-0 inset-x-0 xl:ps-72 h-24 bg-secondary border-b border-border z-[45] flex items-center justify-between px-4 xl:px-6 transition-all duration-300">
-            <div class="flex items-center gap-4 overflow-hidden ps-12">
-                <h2 class="hidden md:block text-xl font-bold uppercase tracking-[0.3em] opacity-80 italic whitespace-nowrap">Welcome Back.</h2>
+            <div class="flex items-center gap-2 overflow-hidden ps-2 md:ps-12">
+                <h2 class="text-[10px] sm:text-sm md:text-xl font-bold uppercase tracking-[0.2em] md:tracking-[0.3em] opacity-80 italic whitespace-nowrap">Welcome Back.</h2>
             </div>
             <div class="flex items-center gap-4 ms-auto">
-                <div class="flex items-center gap-3 bg-accentGreen/5 px-4 py-2 rounded-2xl border border-accentGreen/10">
+                <div class="flex items-center gap-2 bg-accentGreen/5 px-3 py-2 rounded-2xl">
+                    <div class="w-7 h-7 bg-accentGreen rounded-lg flex items-center justify-center text-white shadow-lg shadow-accentGreen/20">
+                        <i class="fas fa-user-shield text-[10px]"></i>
+                    </div>
+                    <div class="hidden sm:block">
+                        <p class="text-[8px] md:text-[9px] font-bold opacity-50 uppercase tracking-widest leading-none mb-1">Authenticated</p>
+                        <h2 class="text-[10px] md:text-xs font-bold text-primary leading-none">Meera K.</h2>
+                    </div>
+                </div>
                 <div class="floating-controls flex items-center gap-3">
-                    <button id="dashboard-hamburger" class="xl:hidden w-10 h-10 border border-border rounded-xl flex items-center justify-center text-primary">
+                    <button id="dashboard-hamburger"
+                        class="xl:hidden p-3 bg-white dark:bg-darkSurface rounded-2xl border border-primary/5 shadow-sm hover:scale-110 active:scale-90 transition-all text-primary dark:text-primary"
+                        title="Open Menu">
                         <i class="fas fa-bars"></i>
                     </button>
                     <button id="theme-toggle"
@@ -159,7 +169,7 @@
             </div>
 
             <!-- Stats Overview -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-6 mb-12 text-primary">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12 text-primary">
                 <div class="bg-card p-8 rounded-[2rem] border border-border shadow-sm hover:shadow-lg transition-all">
                     <p class="text-xs uppercase tracking-widest opacity-50 mb-4 font-bold">Plants Owned</p>
                     <div class="flex items-end gap-3">
@@ -179,13 +189,6 @@
                     <div class="flex items-end gap-3">
                         <span class="text-4xl font-playfair font-bold">4</span>
                         <span class="text-primary/40 text-xs mb-1">Out of Stock: 1</span>
-                    </div>
-                </div>
-                <div class="bg-card p-8 rounded-[2rem] border border-border shadow-sm hover:shadow-lg transition-all">
-                    <p class="text-xs uppercase tracking-widest opacity-50 mb-4 font-bold">Care Success</p>
-                    <div class="flex items-end gap-3">
-                        <span class="text-4xl font-playfair font-bold">98%</span>
-                        <span class="text-accentGreen text-sm mb-1"><i class="fas fa-check-circle"></i></span>
                     </div>
                 </div>
             </div>

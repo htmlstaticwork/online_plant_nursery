@@ -44,48 +44,50 @@
 
         <!-- Dashboard Header -->
         <header
-            class="fixed top-0 inset-x-0 lg:ps-72 h-24 bg-secondary border-b border-border z-[45] flex items-center justify-between px-4 lg:px-6 transition-all duration-300">
-            <div class="flex items-center gap-4 overflow-hidden ps-12">
-                <h2 class="hidden md:block text-xl font-bold uppercase tracking-[0.3em] opacity-80 italic whitespace-nowrap">Welcome Back.</h2>
+            class="fixed top-0 inset-x-0 xl:ps-72 h-24 bg-secondary border-b border-border z-[45] flex items-center justify-between px-4 xl:px-6 transition-all duration-300">
+            <div class="flex items-center gap-2 overflow-hidden ps-2 md:ps-12">
+                <h2 class="text-[10px] sm:text-sm md:text-xl font-bold uppercase tracking-[0.2em] md:tracking-[0.3em] opacity-80 italic whitespace-nowrap">Welcome Back.</h2>
             </div>
             <div class="flex items-center gap-4 ms-auto">
-                <div class="flex items-center gap-3 bg-accentGreen/5 px-4 py-2 rounded-2xl border border-accentGreen/10">
-                    <div class="w-8 h-8 bg-accentGreen rounded-lg flex items-center justify-center text-white shadow-lg shadow-accentGreen/20">
-                        <i class="fas fa-user-shield text-xs"></i>
+                <div class="flex items-center gap-2 bg-accentGreen/5 px-3 py-2 rounded-2xl">
+                    <div class="w-7 h-7 bg-accentGreen rounded-lg flex items-center justify-center text-white shadow-lg shadow-accentGreen/20">
+                        <i class="fas fa-user-shield text-[10px]"></i>
                     </div>
-                    <div class="block">
+                    <div class="hidden sm:block">
                         <p class="text-[8px] md:text-[9px] font-bold opacity-50 uppercase tracking-widest leading-none mb-1">Authenticated</p>
                         <h2 class="text-[10px] md:text-xs font-bold text-primary leading-none">Meera K.</h2>
                     </div>
                 </div>
                 <div class="flex items-center gap-3">
-                    <button id="dashboard-hamburger"
-                        class="lg:hidden p-3 bg-white dark:bg-darkSurface rounded-2xl border border-primary/5 shadow-sm hover:scale-110 active:scale-90 transition-all text-primary dark:text-primary"
-                        title="Open Menu">
-                        <i class="fas fa-bars"></i>
-                    </button>
-                    <button id="theme-toggle"
-                        class="p-3 bg-white dark:bg-darkSurface rounded-2xl border border-primary/5 shadow-sm hover:scale-110 active:scale-90 transition-all text-primary dark:text-primary"
-                        title="Toggle Theme">
-                        <i class="fas fa-moon"></i>
-                    </button>
-                    <button id="rtl-toggle"
-                        class="p-3 bg-white dark:bg-darkSurface rounded-2xl border border-primary/5 shadow-sm hover:scale-110 active:scale-90 transition-all text-primary dark:text-primary"
-                        title="Toggle RTL">
-                        <i class="fas fa-language"></i>
-                    </button>
+                    <div class="floating-controls flex items-center gap-3">
+                        <button id="dashboard-hamburger"
+                            class="xl:hidden p-3 bg-white dark:bg-darkSurface rounded-2xl border border-primary/5 shadow-sm hover:scale-110 active:scale-90 transition-all text-primary dark:text-primary"
+                            title="Open Menu">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle"
+                            class="p-3 bg-white dark:bg-darkSurface rounded-2xl border border-primary/5 shadow-sm hover:scale-110 active:scale-90 transition-all text-primary dark:text-primary"
+                            title="Toggle Theme">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                        <button id="rtl-toggle"
+                            class="p-3 bg-white dark:bg-darkSurface rounded-2xl border border-primary/5 shadow-sm hover:scale-110 active:scale-90 transition-all text-primary dark:text-primary"
+                            title="Toggle RTL">
+                            <i class="fas fa-language"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
         </header>
         <!-- Sidebar Navigation -->
-        <aside id="dashboard-sidebar" class="w-72 fixed inset-y-0 start-0 bg-card border-e border-border p-8 flex flex-col justify-between transition-all duration-300 z-50 transform -translate-x-full rtl:translate-x-full lg:translate-x-0 rtl:lg:translate-x-0 overflow-y-auto">
+        <aside id="dashboard-sidebar" class="w-72 fixed inset-y-0 start-0 bg-card border-e border-border p-8 flex flex-col justify-between transition-all duration-300 z-50 transform -translate-x-full rtl:translate-x-full xl:translate-x-0 rtl:xl:translate-x-0 overflow-y-auto">
             <div class="space-y-4">
                 <div class="mb-10 px-4 flex items-center justify-between">
                     <a href="index.html" class="brand-logo group">
                         <i class="fas fa-leaf"></i>
                         <span>Verdant Vault</span>
                     </a>
-                    <button id="close-sidebar" class="lg:hidden p-2 text-primary/50 hover:text-accentGreen transition-colors">
+                    <button id="close-sidebar" class="xl:hidden p-2 text-primary/50 hover:text-accentGreen transition-colors">
                         <i class="fas fa-times text-xl"></i>
                     </button>
                 </div>
@@ -138,7 +140,7 @@
         </aside>
 
         <!-- Main Dashboard Content -->
-        <main class="flex-1 ms-0 lg:ms-72 pt-24 p-6 lg:p-12 transition-all duration-300">
+        <main class="flex-1 ms-0 xl:ms-72 pt-24 p-6 xl:p-12 transition-all duration-300">
             <!-- Architectural Spacer to clear fixed header -->
             <div class="h-12 pointer-events-none"></div>
             <div class="mb-12 animate-plantGrow">

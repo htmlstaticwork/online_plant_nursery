@@ -212,10 +212,11 @@
         </div>
     </main>
 
-    <footer class="bg-primary text-secondary pt-24 pb-12 px-6 lg:px-24 rounded-t-[5rem] mt-24">
+    <footer class="footer-themed pt-24 pb-12 px-6 lg:px-24 mt-24">
         <div class="max-w-7xl mx-auto">
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
-                <div>
+            <div class="grid grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
+                <!-- Brand Content -->
+                <div class="col-span-2">
                     <a href="index.html" class="brand-logo group mb-8">
                         <i class="fas fa-leaf"></i>
                         <span>Verdant Vault</span>
@@ -225,13 +226,16 @@
                         collector. Based in Kerala, shipping worldwide.
                     </p>
                     <div class="flex gap-4">
-                        <a href="#" class="w-10 h-10 border border-border rounded-full flex items-center justify-center hover:bg-accentGreen hover:border-accentGreen hover:scale-110 hover:rotate-[10deg] transition-all duration-300">
+                        <a href="#"
+                            class="w-10 h-10 border border-border rounded-full flex items-center justify-center hover:bg-accentGreen hover:border-accentGreen hover:scale-110 hover:rotate-[10deg] transition-all duration-300">
                             <i class="fab fa-instagram"></i>
                         </a>
-                        <a href="#" class="w-10 h-10 border border-border rounded-full flex items-center justify-center hover:bg-accentGreen hover:border-accentGreen hover:scale-110 hover:rotate-[10deg] transition-all duration-300">
+                        <a href="#"
+                            class="w-10 h-10 border border-border rounded-full flex items-center justify-center hover:bg-accentGreen hover:border-accentGreen hover:scale-110 hover:rotate-[10deg] transition-all duration-300">
                             <i class="fab fa-pinterest-p"></i>
                         </a>
-                        <a href="#" class="w-10 h-10 border border-border rounded-full flex items-center justify-center hover:bg-accentGreen hover:border-accentGreen hover:scale-110 hover:rotate-[10deg] transition-all duration-300">
+                        <a href="#"
+                            class="w-10 h-10 border border-border rounded-full flex items-center justify-center hover:bg-accentGreen hover:border-accentGreen hover:scale-110 hover:rotate-[10deg] transition-all duration-300">
                             <i class="fab fa-facebook-f"></i>
                         </a>
                     </div>
@@ -258,20 +262,24 @@
                 </div>
 
                 <!-- Newsletter Column -->
-                <div class="min-w-[200px]">
+                <div class="col-span-2 lg:col-span-1 min-w-[200px]">
                     <h4 class="font-bold mb-8 uppercase tracking-widest text-sm text-accentGreen">Newsletter</h4>
                     <p class="text-xs opacity-60 mb-6 italic">Subscribe for rare specimen alerts.</p>
                     <form class="space-y-3">
-                        <input type="email" placeholder="collector@email.com" class="w-full bg-card/50 border border-border rounded-xl px-4 py-3 text-sm italic outline-none focus:border-accentGreen transition-colors">
-                        <button class="w-full bg-primary text-secondary py-3 rounded-xl text-[10px] font-bold uppercase tracking-widest hover:bg-accentGreen transition-colors">Enroll</button>
+                        <input type="email" placeholder="collector@email.com"
+                            class="w-full bg-card/50 border border-border rounded-xl px-4 py-3 text-sm italic outline-none focus:border-accentGreen transition-colors">
+                        <button
+                            class="w-full bg-primary text-secondary py-3 rounded-xl text-[10px] font-bold uppercase tracking-widest hover:bg-accentGreen transition-colors">Enroll</button>
                     </form>
                 </div>
             </div>
 
-            <div class="pt-12 border-t border-border flex flex-col items-center justify-center text-center gap-6 text-sm opacity-50 relative w-full">
+            <div
+                class="pt-12 border-t border-border flex flex-col items-center justify-center text-center gap-6 text-sm opacity-50 relative w-full">
                 <p>&copy; 2026 Verdant Vault. All Rights Reserved.</p>
                 <!-- Back to top arrow -->
-                <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="md:absolute md:right-0 w-10 h-10 bg-accentGreen text-white rounded-full flex items-center justify-center hover:scale-110 transition-transform shadow-lg">
+                <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+                    class="md:absolute md:right-0 w-10 h-10 bg-accentGreen text-white rounded-full flex items-center justify-center hover:scale-110 transition-transform shadow-lg">
                     <i class="fas fa-arrow-up"></i>
                 </button>
             </div>

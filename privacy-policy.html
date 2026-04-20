@@ -75,8 +75,78 @@
         </div>
     </main>
 
-    <footer class="py-12 text-center opacity-30 text-[10px] font-bold uppercase tracking-[0.5em]">
-        &copy; 2026 Verdant Vault. Respecting Your Roots.
+    <footer class="footer-themed pt-24 pb-12 px-6 lg:px-24 mt-24">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
+                <!-- Brand Content -->
+                <div class="col-span-2">
+                    <a href="index.html" class="brand-logo group mb-8">
+                        <i class="fas fa-leaf"></i>
+                        <span>Verdant Vault</span>
+                    </a>
+                    <p class="max-w-md opacity-60 mb-8 leading-relaxed">
+                        Curating the world's most rare and exotic botanical specimens for the discerning plant
+                        collector. Based in Kerala, shipping worldwide.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#"
+                            class="w-10 h-10 border border-border rounded-full flex items-center justify-center hover:bg-accentGreen hover:border-accentGreen hover:scale-110 hover:rotate-[10deg] transition-all duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 border border-border rounded-full flex items-center justify-center hover:bg-accentGreen hover:border-accentGreen hover:scale-110 hover:rotate-[10deg] transition-all duration-300">
+                            <i class="fab fa-pinterest-p"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 border border-border rounded-full flex items-center justify-center hover:bg-accentGreen hover:border-accentGreen hover:scale-110 hover:rotate-[10deg] transition-all duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-bold mb-8 uppercase tracking-widest text-sm text-accentGreen">The Studio</h4>
+                    <ul class="space-y-4 opacity-70">
+                        <li><a href="shop.html" class="hover:text-accentGreen transition-colors">Rare Plants</a></li>
+                        <li><a href="subscriptions.html" class="hover:text-accentGreen transition-colors">Plant Clubs</a></li>
+                        <li><a href="blog.html" class="hover:text-accentGreen transition-colors">Care Tutorials</a></li>
+                        <li><a href="pre-orders.html" class="hover:text-accentGreen transition-colors">Pre-orders</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-bold mb-8 uppercase tracking-widest text-sm text-accentGreen">Expertise</h4>
+                    <ul class="space-y-4 opacity-70">
+                        <li><a href="#" class="hover:text-accentGreen transition-colors">Shipping Guarantee</a></li>
+                        <li><a href="#" class="hover:text-accentGreen transition-colors">Returns Policy</a></li>
+                        <li><a href="dashboard.html" class="hover:text-accentGreen transition-colors">Plant Tracker</a></li>
+                        <li><a href="#" class="hover:text-accentGreen transition-colors">Contact Curator</a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter Column -->
+                <div class="col-span-2 lg:col-span-1 min-w-[200px]">
+                    <h4 class="font-bold mb-8 uppercase tracking-widest text-sm text-accentGreen">Newsletter</h4>
+                    <p class="text-xs opacity-60 mb-6 italic">Subscribe for rare specimen alerts.</p>
+                    <form class="space-y-3">
+                        <input type="email" placeholder="collector@email.com"
+                            class="w-full bg-card/50 border border-border rounded-xl px-4 py-3 text-sm italic outline-none focus:border-accentGreen transition-colors">
+                        <button
+                            class="w-full bg-primary text-secondary py-3 rounded-xl text-[10px] font-bold uppercase tracking-widest hover:bg-accentGreen transition-colors">Enroll</button>
+                    </form>
+                </div>
+            </div>
+
+            <div
+                class="pt-12 border-t border-border flex flex-col items-center justify-center text-center gap-6 text-sm opacity-50 relative w-full">
+                <p>&copy; 2026 Verdant Vault. All Rights Reserved.</p>
+                <!-- Back to top arrow -->
+                <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})"
+                    class="md:absolute md:right-0 w-10 h-10 bg-accentGreen text-white rounded-full flex items-center justify-center hover:scale-110 transition-transform shadow-lg">
+                    <i class="fas fa-arrow-up"></i>
+                </button>
+            </div>
+        </div>
     </footer>
 
     <script src="js/main.js"></script>
