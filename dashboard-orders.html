@@ -43,9 +43,9 @@
 
         <!-- Dashboard Header -->
         <header
-            class="fixed top-0 inset-x-0 lg:ps-72 h-24 bg-secondary border-b border-border z-[45] flex items-center justify-between px-4 lg:px-6 transition-all duration-300">
-            <div class="flex items-center gap-4 overflow-hidden">
-                <h2 class="hidden md:block text-sm font-bold uppercase tracking-[0.3em] opacity-60 italic whitespace-nowrap">Welcome Back.</h2>
+            class="fixed top-0 inset-x-0 xl:ps-72 h-24 bg-secondary border-b border-border z-[45] flex items-center justify-between px-4 xl:px-6 transition-all duration-300">
+            <div class="flex items-center gap-4 overflow-hidden ps-12">
+                <h2 class="hidden md:block text-xl font-bold uppercase tracking-[0.3em] opacity-80 italic whitespace-nowrap">Welcome Back.</h2>
             </div>
             <div class="flex items-center gap-4 ms-auto">
                 <div class="flex items-center gap-3 bg-accentGreen/5 px-4 py-2 rounded-2xl border border-accentGreen/10">
@@ -57,36 +57,34 @@
                         <h2 class="text-[10px] md:text-xs font-bold text-primary leading-none">Meera K.</h2>
                     </div>
                 </div>
-                <div class="flex items-center gap-3">
+                <div class="floating-controls flex items-center gap-3">
                     <button id="dashboard-hamburger"
-                        class="lg:hidden p-3 bg-white dark:bg-darkSurface rounded-2xl border border-primary/5 shadow-sm hover:scale-110 active:scale-90 transition-all text-primary dark:text-primary"
+                        class="xl:hidden p-3 bg-white dark:bg-darkSurface rounded-2xl border border-primary/5 shadow-sm hover:scale-110 active:scale-90 transition-all text-primary dark:text-primary"
                         title="Open Menu">
                         <i class="fas fa-bars"></i>
                     </button>
-                    <div class="floating-controls flex items-center gap-3">
-                        <button id="theme-toggle"
-                            class="p-3 bg-white dark:bg-darkSurface rounded-2xl border border-primary/5 shadow-sm hover:scale-110 active:scale-90 transition-all text-primary dark:text-primary"
-                            title="Toggle Theme">
-                            <i class="fas fa-moon"></i>
-                        </button>
-                        <button id="rtl-toggle"
-                            class="p-3 bg-white dark:bg-darkSurface rounded-2xl border border-primary/5 shadow-sm hover:scale-110 active:scale-90 transition-all text-primary dark:text-primary"
-                            title="Toggle RTL">
-                            <i class="fas fa-language"></i>
-                        </button>
-                    </div>
+                    <button id="theme-toggle"
+                        class="p-3 bg-white dark:bg-darkSurface rounded-2xl border border-primary/5 shadow-sm hover:scale-110 active:scale-90 transition-all text-primary dark:text-primary"
+                        title="Toggle Theme">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <button id="rtl-toggle"
+                        class="p-3 bg-white dark:bg-darkSurface rounded-2xl border border-primary/5 shadow-sm hover:scale-110 active:scale-90 transition-all text-primary dark:text-primary"
+                        title="Toggle RTL">
+                        <i class="fas fa-language"></i>
+                    </button>
                 </div>
             </div>
         </header>
         <!-- Sidebar Navigation -->
-        <aside id="dashboard-sidebar" class="w-72 fixed inset-y-0 start-0 bg-card border-e border-border p-8 flex flex-col justify-between transition-all duration-300 z-50 transform -translate-x-full rtl:translate-x-full lg:translate-x-0 rtl:lg:translate-x-0 overflow-y-auto">
+        <aside id="dashboard-sidebar" class="w-72 fixed inset-y-0 start-0 bg-card border-e border-border p-8 flex flex-col justify-between transition-all duration-300 z-50 transform -translate-x-full rtl:translate-x-full xl:translate-x-0 rtl:xl:translate-x-0 overflow-y-auto">
             <div class="space-y-4">
                 <div class="mb-10 px-4 flex items-center justify-between">
                     <a href="index.html" class="brand-logo group">
                         <i class="fas fa-leaf"></i>
                         <span>Verdant Vault</span>
                     </a>
-                    <button id="close-sidebar" class="lg:hidden p-2 text-primary/50 hover:text-accentGreen transition-colors">
+                    <button id="close-sidebar" class="xl:hidden p-2 text-primary/50 hover:text-accentGreen transition-colors">
                         <i class="fas fa-times text-xl"></i>
                     </button>
                 </div>
@@ -139,7 +137,7 @@
         </aside>
 
         <!-- Main Dashboard Content -->
-        <main class="flex-1 ms-0 lg:ms-72 pt-24 p-6 lg:p-12 transition-all duration-300">
+        <main class="flex-1 ms-0 xl:ms-72 pt-24 p-6 xl:p-12 transition-all duration-300">
             <!-- Architectural Spacer to clear fixed header -->
             <div class="h-12 pointer-events-none"></div>
 
@@ -155,15 +153,15 @@
                     <div class="p-5 md:p-8 bg-primary/2 border-b border-border flex flex-col lg:flex-row justify-between items-center gap-6 md:gap-8">
                         <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 md:gap-10">
                             <div class="text-center md:text-left">
-                                <p class="text-[10px] font-bold uppercase opacity-50 mb-1 tracking-wider">Order ID</p>
+                                <p class="text-xs font-bold uppercase opacity-60 mb-1 tracking-wider">Order ID</p>
                                 <p class="text-xs md:text-base font-bold">#VV-98022-K8</p>
                             </div>
                             <div class="text-center md:text-left">
-                                <p class="text-[10px] font-bold uppercase opacity-50 mb-1 tracking-wider">Placed On</p>
+                                <p class="text-xs font-bold uppercase opacity-60 mb-1 tracking-wider">Placed On</p>
                                 <p class="text-xs md:text-base font-bold">March 28, 2026</p>
                             </div>
                             <div class="text-center md:text-left">
-                                <p class="text-[10px] font-bold uppercase opacity-50 mb-1 tracking-wider">Total Premium</p>
+                                <p class="text-xs font-bold uppercase opacity-60 mb-1 tracking-wider">Total Premium</p>
                                 <p class="text-xs md:text-base font-bold text-accentGreen">$639.00</p>
                             </div>
                         </div>
@@ -199,15 +197,15 @@
                     <div class="p-5 md:p-8 bg-primary/5 border-b border-border flex flex-col lg:flex-row justify-between items-center gap-6">
                         <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 md:gap-10">
                             <div class="text-center md:text-left">
-                                <p class="text-[10px] font-bold uppercase opacity-50 mb-1 tracking-wider">Order ID</p>
+                                <p class="text-xs font-bold uppercase opacity-60 mb-1 tracking-wider">Order ID</p>
                                 <p class="text-xs md:text-base font-bold">#VV-88200-Z1</p>
                             </div>
                             <div class="text-center md:text-left">
-                                <p class="text-[10px] font-bold uppercase opacity-50 mb-1 tracking-wider">Placed On</p>
+                                <p class="text-xs font-bold uppercase opacity-60 mb-1 tracking-wider">Placed On</p>
                                 <p class="text-xs md:text-base font-bold">June 12, 2025</p>
                             </div>
                             <div class="text-center md:text-left">
-                                <p class="text-[10px] font-bold uppercase opacity-50 mb-1 tracking-wider">Total</p>
+                                <p class="text-xs font-bold uppercase opacity-60 mb-1 tracking-wider">Total</p>
                                 <p class="text-xs md:text-base font-bold text-accentGreen">$145.00</p>
                             </div>
                         </div>

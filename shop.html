@@ -59,7 +59,7 @@
             <span>Verdant Vault</span>
         </a>
 
-        <div class="hidden lg:flex items-center gap-3 xl:gap-8 font-medium ml-auto mr-4 xl:mr-12 text-sm xl:text-base whitespace-nowrap">
+        <div class="hidden xl:flex items-center gap-3 xl:gap-8 font-medium ml-auto mr-4 xl:mr-12 text-sm xl:text-base whitespace-nowrap">
             <a href="index.html" class="hover:text-accentGreen">Home 1</a>
             <a href="home-2.html" class="hover:text-accentGreen">Home 2</a>
             <a href="shop.html" class="hover:text-accentGreen">Shop</a>
@@ -71,22 +71,20 @@
 
         <div class="flex items-center gap-4">
             <a href="signup.html"
-                class="hidden lg:block bg-accentGreen text-white px-6 py-2.5 rounded-full text-[10px] font-dm-sans font-bold uppercase tracking-widest hover:bg-primary hover:text-secondary transition-all shadow-xl active:scale-95 whitespace-nowrap">Sign Up</a>
+                class="hidden xl:grid h-10 place-items-center bg-accentGreen text-white px-6 rounded-full text-[10px] font-dm-sans font-bold uppercase tracking-widest hover:bg-primary hover:text-secondary transition-all shadow-lg active:scale-95 whitespace-nowrap leading-none">Sign Up</a>
             <div class="floating-controls flex items-center gap-4">
                 <button id="theme-toggle"
-                    class="hidden lg:block p-2.5 rounded-full border border-border/40 hover:bg-black/5 dark:hover:bg-white/5 transition-all shadow-sm"
+                    class="hidden xl:block p-2.5 rounded-full border border-border/40 hover:bg-black/5 dark:hover:bg-white/5 transition-all shadow-sm"
                     title="Toggle Theme">
                     <i class="fas fa-moon"></i>
                 </button>
                 <button id="rtl-toggle"
-                    class="hidden lg:block p-2.5 rounded-full border border-border/40 hover:bg-black/5 dark:hover:bg-white/5 transition-all shadow-sm"
-                    title="Switch Language Direction">
-                    <i class="fas fa-language"></i>
+                    class="hidden xl:grid h-10 px-4 place-items-center text-[10px] font-bold border border-border/40 rounded-full hover:bg-accentGreen hover:text-secondary transition-all uppercase leading-none"
+                    title="Switch Language Direction">RTL</button>
+                <button id="mobile-menu-btn" class="xl:hidden p-2 text-primary">
+                    <i class="fas fa-bars"></i>
                 </button>
             </div>
-            <button id="mobile-menu-btn" class="lg:hidden p-2 text-primary">
-                <i class="fas fa-bars"></i>
-            </button>
         </div>
     </nav>
 

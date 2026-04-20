@@ -40,13 +40,13 @@
 <body class="bg-secondary text-primary transition-colors duration-300 grain-effect overflow-x-hidden">
 
     <!-- Navigation -->
-    <nav class="fixed top-0 inset-x-0 z-[1000] flex items-center justify-between h-16 md:h-[72px] px-6 lg:px-24 w-full bg-secondary border-b border-[#E0E0E0] dark:border-[#2D4A3C] shadow-sm transition-all duration-300">
+    <nav class="fixed top-0 inset-x-0 z-[1000] flex items-center justify-between h-16 md:h-[72px] px-6 lg:px-12 xl:px-24 w-full bg-secondary border-b border-[#E0E0E0] dark:border-[#2D4A3C] shadow-sm transition-all duration-300">
         <a href="index.html" class="brand-logo group">
             <i class="fas fa-leaf"></i>
             <span>Verdant Vault</span>
         </a>
 
-        <div class="hidden md:flex items-center gap-10 font-medium">
+        <div class="hidden xl:flex items-center gap-3 xl:gap-8 font-medium ml-auto mr-4 xl:mr-12 text-sm xl:text-base whitespace-nowrap">
             <a href="index.html" class="hover:text-accentGreen">Home 1</a>
             <a href="home-2.html" class="hover:text-accentGreen">Home 2</a>
             <a href="shop.html" class="hover:text-accentGreen">Shop</a>
@@ -62,40 +62,53 @@
 
             
             <div class="floating-controls flex items-center gap-4">
-                <button id="theme-toggle" class="p-2.5 rounded-full border border-border/40 hover:bg-black/5 dark:hover:bg-white/5 transition-all shadow-sm"
+                <button id="theme-toggle" class="hidden xl:block p-2.5 rounded-full border border-border/40 hover:bg-black/5 dark:hover:bg-white/5 transition-all shadow-sm"
                     title="Toggle Theme">
                     <i class="fas fa-moon"></i>
                 </button>
                 <button id="rtl-toggle"
-                    class="p-2.5 rounded-full border border-border/40 hover:bg-black/5 dark:hover:bg-white/5 transition-all shadow-sm hidden md:block"
-                    title="Switch Language Direction">
-                    <i class="fas fa-language"></i>
+                    class="hidden xl:grid h-10 px-4 place-items-center text-[10px] font-bold border border-border/40 rounded-full hover:bg-accentGreen hover:text-secondary transition-all uppercase leading-none"
+                    title="Switch Language Direction">RTL</button>
+                <button id="mobile-menu-btn" class="xl:hidden p-2 text-2xl focus:outline-none text-primary">
+                    <i class="fas fa-bars"></i>
                 </button>
             </div>
-            <button id="mobile-menu-btn" class="md:hidden p-2">
-                <i class="fas fa-bars"></i>
-            </button>
         </div>
     </nav>
 
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu-overlay" class="fixed inset-0 bg-black/50 z-[1500] hidden opacity-0 transition-opacity duration-300"></div>
+
     <!-- Mobile Menu -->
     <div id="mobile-menu"
-        class="fixed inset-0 bg-secondary z-[60] hidden flex-col items-center justify-center gap-8 text-2xl font-playfair">
-        <button id="close-menu" onclick="document.getElementById('mobile-menu').classList.add('hidden')"
-            class="absolute top-8 right-8">
-            <i class="fas fa-times"></i>
-        </button>
-        <a href="index.html" class="hover:text-accentGreen">Home 1</a>
-        <a href="home-2.html" class="hover:text-accentGreen">Home 2</a>
-        <a href="shop.html" class="hover:text-accentGreen">Shop</a>
-        <a href="blog.html" class="hover:text-accentGreen">Blog</a>
-        <a href="subscriptions.html" class="hover:text-accentGreen">Pricing</a>
-        <a href="contact.html" class="hover:text-accentGreen">Contact</a>
-        <a href="dashboard.html" class="hover:text-accentGreen">My Jungle</a>
-        <div class="flex gap-6 mt-8">
-            <i class="fab fa-instagram"></i>
-            <i class="fab fa-pinterest"></i>
-            <i class="fab fa-twitter"></i>
+        class="fixed top-0 right-0 h-full w-[300px] bg-secondary dark:bg-darkBg z-[2000] flex flex-col p-8 transform translate-x-full transition-transform duration-300 ease-in-out shadow-2xl overflow-y-auto">
+        <div class="flex items-center justify-between mb-12">
+            <a href="index.html" class="brand-logo">
+                <i class="fas fa-leaf"></i>
+                <span>Verdant Vault</span>
+            </a>
+            <button id="close-menu" class="p-2 text-2xl focus:outline-none">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="flex flex-col gap-6 text-xl font-medium">
+            <a href="index.html" class="hover:text-accentGreen">Home 1</a>
+            <a href="home-2.html" class="hover:text-accentGreen">Home 2</a>
+            <a href="shop.html" class="hover:text-accentGreen">Shop</a>
+            <a href="blog.html" class="hover:text-accentGreen">Blog</a>
+            <a href="subscriptions.html" class="hover:text-accentGreen transition-colors">Pricing</a>
+            <a href="contact.html" class="hover:text-accentGreen transition-colors">Contact</a>
+            <a href="dashboard.html" class="hover:text-accentGreen transition-colors">Dashboard</a>
+            <a href="signup.html" class="bg-accentGreen text-white px-6 py-3 rounded-xl text-center font-bold uppercase tracking-widest hover:bg-primary transition-all shadow-lg mt-4">Sign Up</a>
+        </div>
+
+        <div class="mt-auto pt-8 border-t border-border flex justify-center gap-4">
+            <button id="mobile-theme-toggle" class="p-4 bg-white dark:bg-card rounded-2xl border border-border shadow-md hover:scale-110 active:scale-95 transition-all text-accentGreen" title="Toggle Theme">
+                <i class="fas fa-moon text-2xl"></i>
+            </button>
+            <button id="mobile-rtl-toggle" class="p-4 bg-white dark:bg-card rounded-2xl border border-border shadow-md hover:scale-110 active:scale-95 transition-all text-accentGreen" title="Switch Language Direction">
+                <i class="fas fa-language text-2xl"></i>
+            </button>
         </div>
     </div>
 

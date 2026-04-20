@@ -62,24 +62,16 @@
 
         <!-- Dashboard Header -->
         <header
-            class="fixed top-0 inset-x-0 xl:ps-72 h-24 bg-secondary border-b border-border z-[45] flex items-center justify-between px-4 lg:px-6 transition-all duration-300">
-            <div class="flex items-center gap-4 overflow-hidden">
-                <h2 class="hidden md:block text-sm font-bold uppercase tracking-[0.3em] opacity-60 italic whitespace-nowrap">Welcome Back.</h2>
+            class="fixed top-0 inset-x-0 xl:ps-72 h-24 bg-secondary border-b border-border z-[45] flex items-center justify-between px-4 xl:px-6 transition-all duration-300">
+            <div class="flex items-center gap-4 overflow-hidden ps-12">
+                <h2 class="hidden md:block text-xl font-bold uppercase tracking-[0.3em] opacity-80 italic whitespace-nowrap">Welcome Back.</h2>
             </div>
             <div class="flex items-center gap-4 ms-auto">
                 <div class="flex items-center gap-3 bg-accentGreen/5 px-4 py-2 rounded-2xl border border-accentGreen/10">
-                    <button id="sidebar-toggle" class="xl:hidden w-10 h-10 border border-border rounded-xl flex items-center justify-center text-primary">
+                <div class="floating-controls flex items-center gap-3">
+                    <button id="dashboard-hamburger" class="xl:hidden w-10 h-10 border border-border rounded-xl flex items-center justify-center text-primary">
                         <i class="fas fa-bars"></i>
                     </button>
-                    <div class="w-8 h-8 bg-accentGreen rounded-lg flex items-center justify-center text-white shadow-lg shadow-accentGreen/20">
-                        <i class="fas fa-user-shield text-xs"></i>
-                    </div>
-                    <div class="block">
-                        <p class="text-[8px] md:text-[9px] font-bold opacity-50 uppercase tracking-widest leading-none mb-1">Authenticated</p>
-                        <h2 class="text-[10px] md:text-xs font-bold text-primary leading-none">Meera K.</h2>
-                    </div>
-                </div>
-                <div class="floating-controls flex items-center gap-3">
                     <button id="theme-toggle"
                         class="p-3 bg-white dark:bg-darkSurface rounded-2xl border border-primary/5 shadow-sm hover:scale-110 active:scale-90 transition-all text-primary dark:text-primary"
                         title="Toggle Theme">
@@ -103,7 +95,7 @@
                         <span>Verdant Vault</span>
                     </a>
                     <button id="close-sidebar"
-                        class="lg:hidden p-2 text-primary/50 hover:text-accentGreen transition-colors">
+                        class="xl:hidden p-2 text-primary/50 hover:text-accentGreen transition-colors">
                         <i class="fas fa-times text-xl"></i>
                     </button>
                 </div>
@@ -156,14 +148,14 @@
         </aside>
 
         <!-- Main Dashboard Content -->
-        <main class="xl:ms-72 pt-24 min-h-screen transition-all duration-300">
+        <main class="xl:ms-72 pt-24 p-6 xl:p-12 min-h-screen transition-all duration-300">
             <!-- Architectural Spacer to clear fixed header -->
             <div class="h-12 pointer-events-none"></div>
 
             <!-- Welcome Header -->
             <div class="mb-12 animate-plantGrow">
                 <h1 class="text-4xl font-bold font-playfair italic mb-3 text-primary drop-shadow-sm">Welcome back to your Sanctuary, Meera K.</h1>
-                <p class="text-primary opacity-70 font-medium tracking-wide">Your private collection is thriving today. We are currently tracking 3 rare specimens en route to you.</p>
+                <p class="text-base md:text-lg text-primary opacity-100 font-medium tracking-wide">Monitor your acquisitions and rare specimen arrivals. We are currently tracking 3 rare specimens en route to you.</p>
             </div>
 
             <!-- Stats Overview -->
@@ -233,25 +225,25 @@
                                             <div
                                                 class="w-5 h-5 bg-accentGreen rounded-full mx-auto mb-2 border-4 border-secondary dark:border-darkCard">
                                             </div>
-                                            <p class="text-[10px] font-bold opacity-40 uppercase">Kerala</p>
+                                            <p class="text-xs font-bold opacity-60 uppercase">Kerala</p>
                                         </div>
                                         <div class="text-center">
                                             <div
                                                 class="w-5 h-5 bg-accentGreen rounded-full mx-auto mb-2 border-4 border-secondary dark:border-darkCard">
                                             </div>
-                                            <p class="text-[10px] font-bold opacity-40 uppercase">Customs</p>
+                                            <p class="text-xs font-bold opacity-60 uppercase">Customs</p>
                                         </div>
                                         <div class="text-center">
                                             <div
                                                 class="w-5 h-5 bg-accentGreen rounded-full mx-auto mb-2 border-4 border-secondary dark:border-darkCard">
                                             </div>
-                                            <p class="text-[10px] font-bold opacity-40 uppercase">In Hub</p>
+                                            <p class="text-xs font-bold opacity-60 uppercase">In Hub</p>
                                         </div>
                                         <div class="text-center">
                                             <div
                                                 class="w-5 h-5 bg-white dark:bg-darkSurface border-2 border-primary/20 rounded-full mx-auto mb-2">
                                             </div>
-                                            <p class="text-[10px] font-bold opacity-40 uppercase">Delivery</p>
+                                            <p class="text-xs font-bold opacity-60 uppercase">Delivery</p>
                                         </div>
                                     </div>
                                 </div>
@@ -338,7 +330,7 @@
                             </div>
                             <div>
                                 <h4 class="font-bold whitespace-normal">Watering Alert</h4>
-                                <p class="text-[10px] font-bold uppercase opacity-40">Hearts of String</p>
+                                <p class="text-xs font-bold uppercase opacity-60">Hearts of String</p>
                             </div>
                         </div>
                         <p class="text-sm opacity-70 leading-relaxed mb-6 italic flex-1">Current soil moisture predicted at
@@ -359,7 +351,7 @@
                             </div>
                             <div>
                                 <h4 class="font-bold whitespace-normal">Light Optimizer</h4>
-                                <p class="text-[10px] font-bold uppercase opacity-40">Kerala Sun</p>
+                                <p class="text-xs font-bold uppercase opacity-60">Kerala Sun</p>
                             </div>
                         </div>
                         <p class="text-sm opacity-70 leading-relaxed mb-6 italic flex-1">Expected low-cloud index. Move your
@@ -380,7 +372,7 @@
                             </div>
                             <div>
                                 <h4 class="font-bold whitespace-normal">Specimen Checkup</h4>
-                                <p class="text-[10px] font-bold uppercase opacity-40">Monthly Review</p>
+                                <p class="text-xs font-bold uppercase opacity-60">Monthly Review</p>
                             </div>
                         </div>
                         <p class="text-sm opacity-70 leading-relaxed mb-6 italic flex-1">Your Thai Constellation has pushed its
