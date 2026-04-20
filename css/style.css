@@ -391,3 +391,97 @@ nav a[href="signup.html"].bg-accentGreen:hover,
     color: var(--primary) !important;
 }
 
+/* --- FLOATING CONTROLS (MOBILE & TABLET) --- */
+@media (max-width: 1023px) {
+    /* Container for the toggles */
+    .floating-controls, 
+    .nav-controls-container,
+    header .flex.items-center.gap-3:has(#theme-toggle) {
+        position: fixed !important;
+        top: 12px !important;
+        right: 12px !important;
+        z-index: 2100 !important;
+        display: flex !important;
+        flex-direction: row !important;
+        gap: 8px !important;
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    /* Standardizing the toggle buttons */
+    #theme-toggle, 
+    #rtl-toggle,
+    #mobile-theme-toggle,
+    #mobile-rtl-toggle,
+    #dashboard-mobile-theme-toggle {
+        display: flex !important; /* Ensure they are visible */
+        width: 44px !important;
+        height: 44px !important;
+        min-width: 44px !important;
+        border-radius: 50% !important;
+        align-items: center !important;
+        justify-content: center !important;
+        cursor: pointer !important;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+        
+        /* Glassmorphism Design */
+        background: rgba(255, 255, 255, 0.8) !important;
+        backdrop-filter: blur(12px) !important;
+        -webkit-backdrop-filter: blur(12px) !important;
+        border: 1px solid rgba(0, 0, 0, 0.1) !important;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
+        color: var(--primary) !important;
+        
+        /* Reset positioning that might be applied elsewhere */
+        position: static !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* Dark Mode specific styles for glassmorphism */
+    [data-theme='dark'] #theme-toggle,
+    [data-theme='dark'] #rtl-toggle,
+    [data-theme='dark'] #mobile-theme-toggle,
+    [data-theme='dark'] #mobile-rtl-toggle {
+        background: rgba(10, 10, 10, 0.7) !important;
+        border-color: rgba(255, 255, 255, 0.1) !important;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5) !important;
+        color: white !important;
+    }
+
+    /* Hover & Active Effects */
+    #theme-toggle:hover, #rtl-toggle:hover {
+        transform: scale(1.05) translateY(-2px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
+    }
+
+    #theme-toggle:active, #rtl-toggle:active {
+        transform: scale(0.95);
+    }
+
+    /* RTL specific text style */
+    #rtl-toggle {
+        font-size: 10px !important;
+        font-weight: 700 !important;
+        letter-spacing: 0.05em !important;
+    }
+
+    /* Hide redundant toggles in existing mobile menus if they exist */
+    #mobile-menu #mobile-theme-toggle,
+    #mobile-menu #mobile-rtl-toggle,
+    #dashboard-sidebar #mobile-theme-toggle {
+        display: none !important;
+    }
+}
+
+/* Adjustments for Desktop to keep them in navbar */
+@media (min-width: 1024px) {
+    #theme-toggle, #rtl-toggle {
+        position: static !important;
+        /* Keep existing styles from tailwind classes unless overridden */
+    }
+}
+
